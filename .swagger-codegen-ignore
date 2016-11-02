@@ -1,2 +1,5 @@
 .gitignore
 git_push.sh
+test/*
+test-requirements.txt
+tox.ini
