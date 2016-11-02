@@ -51,13 +51,13 @@ echo "--- Cleaning up previously generated folders"
 rm -rf "${CLIENT_ROOT}/${PACKAGE_NAME}"
 rm -rf "${CLIENT_ROOT}/docs"
 rm -rf "${CLIENT_ROOT}/test"
-
+mv "${CLIENT_ROOT}/README.md" "${CLIENT_ROOT}/ROOT_README.md"
 echo "--- Generating client ..."
 mvn -f "${SCRIPT_ROOT}/pom.xml" clean generate-sources -Dgenerator.spec.path="${SWAGGER_FILE}" -Dgenerator.output.path="${CLIENT_ROOT}" -Dgenerator.package.name=${PACKAGE_NAME}
 
 echo "--- Patching generated code..."
-cp "${CLIENT_ROOT}/README.md" "${CLIENT_ROOT}/GEN_README.md"
-cp "${SCRIPT_ROOT}/ROOT_README.md" "${CLIENT_ROOT}/README.md"
+mv "${CLIENT_ROOT}/README.md" "${CLIENT_ROOT}/GEN_README.md"
+mv "${CLIENT_ROOT}/ROOT_README.md" "${CLIENT_ROOT}/README.md"
 cp "${SCRIPT_ROOT}/LICENSE" "${CLIENT_ROOT}"
 rm -rf "${CLIENT_ROOT}/test"
 echo "---Done."
