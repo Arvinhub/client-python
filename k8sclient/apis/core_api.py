@@ -51,7 +51,7 @@ class CoreApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def get_core_api_versions(self, **kwargs):
+    def get_api_versions(self, **kwargs):
         """
         
         get available API versions
@@ -62,7 +62,7 @@ class CoreApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_core_api_versions(callback=callback_function)
+        >>> thread = api.get_api_versions(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -72,12 +72,12 @@ class CoreApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_core_api_versions_with_http_info(**kwargs)
+            return self.get_api_versions_with_http_info(**kwargs)
         else:
-            (data) = self.get_core_api_versions_with_http_info(**kwargs)
+            (data) = self.get_api_versions_with_http_info(**kwargs)
             return data
 
-    def get_core_api_versions_with_http_info(self, **kwargs):
+    def get_api_versions_with_http_info(self, **kwargs):
         """
         
         get available API versions
@@ -88,7 +88,7 @@ class CoreApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_core_api_versions_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_versions_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -106,7 +106,7 @@ class CoreApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_core_api_versions" % key
+                    " to method get_api_versions" % key
                 )
             params[key] = val
         del params['kwargs']

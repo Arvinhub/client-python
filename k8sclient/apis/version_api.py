@@ -51,7 +51,7 @@ class VersionApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def get_code_version(self, **kwargs):
+    def get_code(self, **kwargs):
         """
         
         get the code version
@@ -62,7 +62,7 @@ class VersionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_code_version(callback=callback_function)
+        >>> thread = api.get_code(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -72,12 +72,12 @@ class VersionApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_code_version_with_http_info(**kwargs)
+            return self.get_code_with_http_info(**kwargs)
         else:
-            (data) = self.get_code_version_with_http_info(**kwargs)
+            (data) = self.get_code_with_http_info(**kwargs)
             return data
 
-    def get_code_version_with_http_info(self, **kwargs):
+    def get_code_with_http_info(self, **kwargs):
         """
         
         get the code version
@@ -88,7 +88,7 @@ class VersionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_code_version_with_http_info(callback=callback_function)
+        >>> thread = api.get_code_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -106,7 +106,7 @@ class VersionApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_code_version" % key
+                    " to method get_code" % key
                 )
             params[key] = val
         del params['kwargs']

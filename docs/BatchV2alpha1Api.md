@@ -4,11 +4,11 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_batch_v2alpha1_api_resources**](BatchV2alpha1Api.md#get_batch_v2alpha1_api_resources) | **GET** /apis/batch/v2alpha1/ | 
+[**get_api_resources**](BatchV2alpha1Api.md#get_api_resources) | **GET** /apis/batch/v2alpha1/ | 
 
 
-# **get_batch_v2alpha1_api_resources**
-> UnversionedAPIResourceList get_batch_v2alpha1_api_resources()
+# **get_api_resources**
+> UnversionedAPIResourceList get_api_resources()
 
 
 
@@ -31,10 +31,10 @@ k8sclient.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 api_instance = k8sclient.BatchV2alpha1Api()
 
 try: 
-    api_response = api_instance.get_batch_v2alpha1_api_resources()
+    api_response = api_instance.get_api_resources()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling BatchV2alpha1Api->get_batch_v2alpha1_api_resources: %s\n" % e)
+    print("Exception when calling BatchV2alpha1Api->get_api_resources: %s\n" % e)
 ```
 
 ### Parameters

@@ -51,7 +51,7 @@ class AuthorizationV1beta1Api(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_authorization_v1beta1_namespaced_local_subject_access_review(self, body, namespace, **kwargs):
+    def create_namespaced_local_subject_access_review(self, body, namespace, **kwargs):
         """
         
         create a LocalSubjectAccessReview
@@ -62,7 +62,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_authorization_v1beta1_namespaced_local_subject_access_review(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_local_subject_access_review(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -75,12 +75,12 @@ class AuthorizationV1beta1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_authorization_v1beta1_namespaced_local_subject_access_review_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_local_subject_access_review_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_authorization_v1beta1_namespaced_local_subject_access_review_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_local_subject_access_review_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_authorization_v1beta1_namespaced_local_subject_access_review_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_local_subject_access_review_with_http_info(self, body, namespace, **kwargs):
         """
         
         create a LocalSubjectAccessReview
@@ -91,7 +91,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_authorization_v1beta1_namespaced_local_subject_access_review_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_local_subject_access_review_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -112,16 +112,16 @@ class AuthorizationV1beta1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_authorization_v1beta1_namespaced_local_subject_access_review" % key
+                    " to method create_namespaced_local_subject_access_review" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_authorization_v1beta1_namespaced_local_subject_access_review`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_local_subject_access_review`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_authorization_v1beta1_namespaced_local_subject_access_review`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_local_subject_access_review`")
 
 
         collection_formats = {}
@@ -170,7 +170,7 @@ class AuthorizationV1beta1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_authorization_v1beta1_self_subject_access_review(self, body, **kwargs):
+    def create_self_subject_access_review(self, body, **kwargs):
         """
         
         create a SelfSubjectAccessReview
@@ -181,7 +181,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_authorization_v1beta1_self_subject_access_review(body, callback=callback_function)
+        >>> thread = api.create_self_subject_access_review(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -193,12 +193,12 @@ class AuthorizationV1beta1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_authorization_v1beta1_self_subject_access_review_with_http_info(body, **kwargs)
+            return self.create_self_subject_access_review_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_authorization_v1beta1_self_subject_access_review_with_http_info(body, **kwargs)
+            (data) = self.create_self_subject_access_review_with_http_info(body, **kwargs)
             return data
 
-    def create_authorization_v1beta1_self_subject_access_review_with_http_info(self, body, **kwargs):
+    def create_self_subject_access_review_with_http_info(self, body, **kwargs):
         """
         
         create a SelfSubjectAccessReview
@@ -209,7 +209,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_authorization_v1beta1_self_subject_access_review_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_self_subject_access_review_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -229,13 +229,13 @@ class AuthorizationV1beta1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_authorization_v1beta1_self_subject_access_review" % key
+                    " to method create_self_subject_access_review" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_authorization_v1beta1_self_subject_access_review`")
+            raise ValueError("Missing the required parameter `body` when calling `create_self_subject_access_review`")
 
 
         collection_formats = {}
@@ -282,7 +282,7 @@ class AuthorizationV1beta1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_authorization_v1beta1_subject_access_review(self, body, **kwargs):
+    def create_subject_access_review(self, body, **kwargs):
         """
         
         create a SubjectAccessReview
@@ -293,7 +293,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_authorization_v1beta1_subject_access_review(body, callback=callback_function)
+        >>> thread = api.create_subject_access_review(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -305,12 +305,12 @@ class AuthorizationV1beta1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_authorization_v1beta1_subject_access_review_with_http_info(body, **kwargs)
+            return self.create_subject_access_review_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_authorization_v1beta1_subject_access_review_with_http_info(body, **kwargs)
+            (data) = self.create_subject_access_review_with_http_info(body, **kwargs)
             return data
 
-    def create_authorization_v1beta1_subject_access_review_with_http_info(self, body, **kwargs):
+    def create_subject_access_review_with_http_info(self, body, **kwargs):
         """
         
         create a SubjectAccessReview
@@ -321,7 +321,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_authorization_v1beta1_subject_access_review_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_subject_access_review_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -341,13 +341,13 @@ class AuthorizationV1beta1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_authorization_v1beta1_subject_access_review" % key
+                    " to method create_subject_access_review" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_authorization_v1beta1_subject_access_review`")
+            raise ValueError("Missing the required parameter `body` when calling `create_subject_access_review`")
 
 
         collection_formats = {}
@@ -394,7 +394,7 @@ class AuthorizationV1beta1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def get_authorization_v1beta1_api_resources(self, **kwargs):
+    def get_api_resources(self, **kwargs):
         """
         
         get available resources
@@ -405,7 +405,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_authorization_v1beta1_api_resources(callback=callback_function)
+        >>> thread = api.get_api_resources(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -415,12 +415,12 @@ class AuthorizationV1beta1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_authorization_v1beta1_api_resources_with_http_info(**kwargs)
+            return self.get_api_resources_with_http_info(**kwargs)
         else:
-            (data) = self.get_authorization_v1beta1_api_resources_with_http_info(**kwargs)
+            (data) = self.get_api_resources_with_http_info(**kwargs)
             return data
 
-    def get_authorization_v1beta1_api_resources_with_http_info(self, **kwargs):
+    def get_api_resources_with_http_info(self, **kwargs):
         """
         
         get available resources
@@ -431,7 +431,7 @@ class AuthorizationV1beta1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_authorization_v1beta1_api_resources_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_resources_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -449,7 +449,7 @@ class AuthorizationV1beta1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_authorization_v1beta1_api_resources" % key
+                    " to method get_api_resources" % key
                 )
             params[key] = val
         del params['kwargs']

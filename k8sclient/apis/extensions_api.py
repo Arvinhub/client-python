@@ -51,7 +51,7 @@ class ExtensionsApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def get_extensions_api_group(self, **kwargs):
+    def get_api_group(self, **kwargs):
         """
         
         get information of a group
@@ -62,7 +62,7 @@ class ExtensionsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_extensions_api_group(callback=callback_function)
+        >>> thread = api.get_api_group(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -72,12 +72,12 @@ class ExtensionsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_extensions_api_group_with_http_info(**kwargs)
+            return self.get_api_group_with_http_info(**kwargs)
         else:
-            (data) = self.get_extensions_api_group_with_http_info(**kwargs)
+            (data) = self.get_api_group_with_http_info(**kwargs)
             return data
 
-    def get_extensions_api_group_with_http_info(self, **kwargs):
+    def get_api_group_with_http_info(self, **kwargs):
         """
         
         get information of a group
@@ -88,7 +88,7 @@ class ExtensionsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_extensions_api_group_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_group_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -106,7 +106,7 @@ class ExtensionsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_extensions_api_group" % key
+                    " to method get_api_group" % key
                 )
             params[key] = val
         del params['kwargs']

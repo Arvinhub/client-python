@@ -51,7 +51,7 @@ class CoreV1Api(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def connect_core_v1_delete_namespaced_pod_proxy(self, name, namespace, **kwargs):
+    def connect_delete_namespaced_pod_proxy(self, name, namespace, **kwargs):
         """
         
         connect DELETE requests to proxy of Pod
@@ -62,7 +62,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_pod_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_pod_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -75,12 +75,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_delete_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_delete_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_delete_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_delete_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_delete_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_delete_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect DELETE requests to proxy of Pod
@@ -91,7 +91,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -112,16 +112,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_delete_namespaced_pod_proxy" % key
+                    " to method connect_delete_namespaced_pod_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_delete_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_pod_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_delete_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_pod_proxy`")
 
 
         collection_formats = {}
@@ -170,7 +170,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_delete_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_delete_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect DELETE requests to proxy of Pod
@@ -181,7 +181,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -195,12 +195,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_delete_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_delete_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_delete_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_delete_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_delete_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_delete_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect DELETE requests to proxy of Pod
@@ -211,7 +211,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -233,19 +233,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_delete_namespaced_pod_proxy_with_path" % key
+                    " to method connect_delete_namespaced_pod_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_delete_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_delete_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_delete_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_delete_namespaced_pod_proxy_with_path`")
 
 
         collection_formats = {}
@@ -296,7 +296,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_delete_namespaced_service_proxy(self, name, namespace, **kwargs):
+    def connect_delete_namespaced_service_proxy(self, name, namespace, **kwargs):
         """
         
         connect DELETE requests to proxy of Service
@@ -307,7 +307,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_service_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_service_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -320,12 +320,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_delete_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_delete_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_delete_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_delete_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_delete_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_delete_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect DELETE requests to proxy of Service
@@ -336,7 +336,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -357,16 +357,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_delete_namespaced_service_proxy" % key
+                    " to method connect_delete_namespaced_service_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_delete_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_service_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_delete_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_service_proxy`")
 
 
         collection_formats = {}
@@ -415,7 +415,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_delete_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_delete_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect DELETE requests to proxy of Service
@@ -426,7 +426,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -440,12 +440,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_delete_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_delete_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_delete_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_delete_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_delete_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_delete_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect DELETE requests to proxy of Service
@@ -456,7 +456,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_delete_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -478,19 +478,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_delete_namespaced_service_proxy_with_path" % key
+                    " to method connect_delete_namespaced_service_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_delete_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_service_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_delete_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_service_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_delete_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_delete_namespaced_service_proxy_with_path`")
 
 
         collection_formats = {}
@@ -541,7 +541,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_delete_node_proxy(self, name, **kwargs):
+    def connect_delete_node_proxy(self, name, **kwargs):
         """
         
         connect DELETE requests to proxy of Node
@@ -552,7 +552,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_node_proxy(name, callback=callback_function)
+        >>> thread = api.connect_delete_node_proxy(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -564,12 +564,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_delete_node_proxy_with_http_info(name, **kwargs)
+            return self.connect_delete_node_proxy_with_http_info(name, **kwargs)
         else:
-            (data) = self.connect_core_v1_delete_node_proxy_with_http_info(name, **kwargs)
+            (data) = self.connect_delete_node_proxy_with_http_info(name, **kwargs)
             return data
 
-    def connect_core_v1_delete_node_proxy_with_http_info(self, name, **kwargs):
+    def connect_delete_node_proxy_with_http_info(self, name, **kwargs):
         """
         
         connect DELETE requests to proxy of Node
@@ -580,7 +580,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_node_proxy_with_http_info(name, callback=callback_function)
+        >>> thread = api.connect_delete_node_proxy_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -600,13 +600,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_delete_node_proxy" % key
+                    " to method connect_delete_node_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_delete_node_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_delete_node_proxy`")
 
 
         collection_formats = {}
@@ -653,7 +653,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_delete_node_proxy_with_path(self, name, path, **kwargs):
+    def connect_delete_node_proxy_with_path(self, name, path, **kwargs):
         """
         
         connect DELETE requests to proxy of Node
@@ -664,7 +664,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_node_proxy_with_path(name, path, callback=callback_function)
+        >>> thread = api.connect_delete_node_proxy_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -677,12 +677,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_delete_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            return self.connect_delete_node_proxy_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_delete_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.connect_delete_node_proxy_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def connect_core_v1_delete_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
+    def connect_delete_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         connect DELETE requests to proxy of Node
@@ -693,7 +693,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_delete_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.connect_delete_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -714,16 +714,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_delete_node_proxy_with_path" % key
+                    " to method connect_delete_node_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_delete_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_delete_node_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_delete_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_delete_node_proxy_with_path`")
 
 
         collection_formats = {}
@@ -772,7 +772,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_namespaced_pod_attach(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_attach(self, name, namespace, **kwargs):
         """
         
         connect GET requests to attach of Pod
@@ -783,7 +783,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_attach(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_attach(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -800,12 +800,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
+            return self.connect_get_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_get_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_get_namespaced_pod_attach_with_http_info(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_attach_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect GET requests to attach of Pod
@@ -816,7 +816,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_attach_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_attach_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -841,16 +841,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_namespaced_pod_attach" % key
+                    " to method connect_get_namespaced_pod_attach" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_namespaced_pod_attach`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_attach`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_get_namespaced_pod_attach`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_attach`")
 
 
         collection_formats = {}
@@ -907,7 +907,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_namespaced_pod_exec(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_exec(self, name, namespace, **kwargs):
         """
         
         connect GET requests to exec of Pod
@@ -918,7 +918,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_exec(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_exec(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -936,12 +936,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
+            return self.connect_get_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_get_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_get_namespaced_pod_exec_with_http_info(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_exec_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect GET requests to exec of Pod
@@ -952,7 +952,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_exec_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_exec_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -978,16 +978,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_namespaced_pod_exec" % key
+                    " to method connect_get_namespaced_pod_exec" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_namespaced_pod_exec`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_exec`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_get_namespaced_pod_exec`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_exec`")
 
 
         collection_formats = {}
@@ -1046,7 +1046,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_namespaced_pod_portforward(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_portforward(self, name, namespace, **kwargs):
         """
         
         connect GET requests to portforward of Pod
@@ -1057,7 +1057,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_portforward(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_portforward(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1069,12 +1069,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
+            return self.connect_get_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_get_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_get_namespaced_pod_portforward_with_http_info(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_portforward_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect GET requests to portforward of Pod
@@ -1085,7 +1085,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_portforward_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_portforward_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1105,16 +1105,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_namespaced_pod_portforward" % key
+                    " to method connect_get_namespaced_pod_portforward" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_namespaced_pod_portforward`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_portforward`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_get_namespaced_pod_portforward`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_portforward`")
 
 
         collection_formats = {}
@@ -1161,7 +1161,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_namespaced_pod_proxy(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_proxy(self, name, namespace, **kwargs):
         """
         
         connect GET requests to proxy of Pod
@@ -1172,7 +1172,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1185,12 +1185,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_get_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_get_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_get_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_get_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect GET requests to proxy of Pod
@@ -1201,7 +1201,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1222,16 +1222,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_namespaced_pod_proxy" % key
+                    " to method connect_get_namespaced_pod_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_get_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_proxy`")
 
 
         collection_formats = {}
@@ -1280,7 +1280,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_get_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect GET requests to proxy of Pod
@@ -1291,7 +1291,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1305,12 +1305,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_get_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_get_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_get_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_get_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect GET requests to proxy of Pod
@@ -1321,7 +1321,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1343,19 +1343,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_namespaced_pod_proxy_with_path" % key
+                    " to method connect_get_namespaced_pod_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_get_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_get_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_get_namespaced_pod_proxy_with_path`")
 
 
         collection_formats = {}
@@ -1406,7 +1406,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_namespaced_service_proxy(self, name, namespace, **kwargs):
+    def connect_get_namespaced_service_proxy(self, name, namespace, **kwargs):
         """
         
         connect GET requests to proxy of Service
@@ -1417,7 +1417,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_service_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_service_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1430,12 +1430,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_get_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_get_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_get_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_get_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect GET requests to proxy of Service
@@ -1446,7 +1446,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1467,16 +1467,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_namespaced_service_proxy" % key
+                    " to method connect_get_namespaced_service_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_service_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_get_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_service_proxy`")
 
 
         collection_formats = {}
@@ -1525,7 +1525,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_get_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect GET requests to proxy of Service
@@ -1536,7 +1536,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1550,12 +1550,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_get_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_get_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_get_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_get_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect GET requests to proxy of Service
@@ -1566,7 +1566,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_get_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1588,19 +1588,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_namespaced_service_proxy_with_path" % key
+                    " to method connect_get_namespaced_service_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_service_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_get_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_service_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_get_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_get_namespaced_service_proxy_with_path`")
 
 
         collection_formats = {}
@@ -1651,7 +1651,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_node_proxy(self, name, **kwargs):
+    def connect_get_node_proxy(self, name, **kwargs):
         """
         
         connect GET requests to proxy of Node
@@ -1662,7 +1662,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_node_proxy(name, callback=callback_function)
+        >>> thread = api.connect_get_node_proxy(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1674,12 +1674,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_node_proxy_with_http_info(name, **kwargs)
+            return self.connect_get_node_proxy_with_http_info(name, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_node_proxy_with_http_info(name, **kwargs)
+            (data) = self.connect_get_node_proxy_with_http_info(name, **kwargs)
             return data
 
-    def connect_core_v1_get_node_proxy_with_http_info(self, name, **kwargs):
+    def connect_get_node_proxy_with_http_info(self, name, **kwargs):
         """
         
         connect GET requests to proxy of Node
@@ -1690,7 +1690,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_node_proxy_with_http_info(name, callback=callback_function)
+        >>> thread = api.connect_get_node_proxy_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1710,13 +1710,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_node_proxy" % key
+                    " to method connect_get_node_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_node_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_node_proxy`")
 
 
         collection_formats = {}
@@ -1763,7 +1763,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_get_node_proxy_with_path(self, name, path, **kwargs):
+    def connect_get_node_proxy_with_path(self, name, path, **kwargs):
         """
         
         connect GET requests to proxy of Node
@@ -1774,7 +1774,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_node_proxy_with_path(name, path, callback=callback_function)
+        >>> thread = api.connect_get_node_proxy_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1787,12 +1787,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_get_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            return self.connect_get_node_proxy_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_get_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.connect_get_node_proxy_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def connect_core_v1_get_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
+    def connect_get_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         connect GET requests to proxy of Node
@@ -1803,7 +1803,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_get_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.connect_get_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1824,16 +1824,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_get_node_proxy_with_path" % key
+                    " to method connect_get_node_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_get_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_get_node_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_get_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_get_node_proxy_with_path`")
 
 
         collection_formats = {}
@@ -1882,7 +1882,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_head_namespaced_pod_proxy(self, name, namespace, **kwargs):
+    def connect_head_namespaced_pod_proxy(self, name, namespace, **kwargs):
         """
         
         connect HEAD requests to proxy of Pod
@@ -1893,7 +1893,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_pod_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_pod_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1906,12 +1906,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_head_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_head_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_head_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_head_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_head_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_head_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect HEAD requests to proxy of Pod
@@ -1922,7 +1922,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1943,16 +1943,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_head_namespaced_pod_proxy" % key
+                    " to method connect_head_namespaced_pod_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_head_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_pod_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_head_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_pod_proxy`")
 
 
         collection_formats = {}
@@ -2001,7 +2001,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_head_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_head_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect HEAD requests to proxy of Pod
@@ -2012,7 +2012,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2026,12 +2026,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_head_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_head_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_head_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_head_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_head_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_head_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect HEAD requests to proxy of Pod
@@ -2042,7 +2042,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2064,19 +2064,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_head_namespaced_pod_proxy_with_path" % key
+                    " to method connect_head_namespaced_pod_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_head_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_head_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_head_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_head_namespaced_pod_proxy_with_path`")
 
 
         collection_formats = {}
@@ -2127,7 +2127,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_head_namespaced_service_proxy(self, name, namespace, **kwargs):
+    def connect_head_namespaced_service_proxy(self, name, namespace, **kwargs):
         """
         
         connect HEAD requests to proxy of Service
@@ -2138,7 +2138,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_service_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_service_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2151,12 +2151,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_head_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_head_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_head_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_head_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_head_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_head_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect HEAD requests to proxy of Service
@@ -2167,7 +2167,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2188,16 +2188,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_head_namespaced_service_proxy" % key
+                    " to method connect_head_namespaced_service_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_head_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_service_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_head_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_service_proxy`")
 
 
         collection_formats = {}
@@ -2246,7 +2246,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_head_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_head_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect HEAD requests to proxy of Service
@@ -2257,7 +2257,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2271,12 +2271,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_head_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_head_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_head_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_head_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_head_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_head_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect HEAD requests to proxy of Service
@@ -2287,7 +2287,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_head_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2309,19 +2309,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_head_namespaced_service_proxy_with_path" % key
+                    " to method connect_head_namespaced_service_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_head_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_service_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_head_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_service_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_head_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_head_namespaced_service_proxy_with_path`")
 
 
         collection_formats = {}
@@ -2372,7 +2372,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_head_node_proxy(self, name, **kwargs):
+    def connect_head_node_proxy(self, name, **kwargs):
         """
         
         connect HEAD requests to proxy of Node
@@ -2383,7 +2383,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_node_proxy(name, callback=callback_function)
+        >>> thread = api.connect_head_node_proxy(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2395,12 +2395,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_head_node_proxy_with_http_info(name, **kwargs)
+            return self.connect_head_node_proxy_with_http_info(name, **kwargs)
         else:
-            (data) = self.connect_core_v1_head_node_proxy_with_http_info(name, **kwargs)
+            (data) = self.connect_head_node_proxy_with_http_info(name, **kwargs)
             return data
 
-    def connect_core_v1_head_node_proxy_with_http_info(self, name, **kwargs):
+    def connect_head_node_proxy_with_http_info(self, name, **kwargs):
         """
         
         connect HEAD requests to proxy of Node
@@ -2411,7 +2411,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_node_proxy_with_http_info(name, callback=callback_function)
+        >>> thread = api.connect_head_node_proxy_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2431,13 +2431,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_head_node_proxy" % key
+                    " to method connect_head_node_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_head_node_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_head_node_proxy`")
 
 
         collection_formats = {}
@@ -2484,7 +2484,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_head_node_proxy_with_path(self, name, path, **kwargs):
+    def connect_head_node_proxy_with_path(self, name, path, **kwargs):
         """
         
         connect HEAD requests to proxy of Node
@@ -2495,7 +2495,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_node_proxy_with_path(name, path, callback=callback_function)
+        >>> thread = api.connect_head_node_proxy_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2508,12 +2508,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_head_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            return self.connect_head_node_proxy_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_head_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.connect_head_node_proxy_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def connect_core_v1_head_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
+    def connect_head_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         connect HEAD requests to proxy of Node
@@ -2524,7 +2524,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_head_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.connect_head_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2545,16 +2545,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_head_node_proxy_with_path" % key
+                    " to method connect_head_node_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_head_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_head_node_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_head_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_head_node_proxy_with_path`")
 
 
         collection_formats = {}
@@ -2603,7 +2603,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_options_namespaced_pod_proxy(self, name, namespace, **kwargs):
+    def connect_options_namespaced_pod_proxy(self, name, namespace, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Pod
@@ -2614,7 +2614,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_pod_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_pod_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2627,12 +2627,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_options_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_options_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_options_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_options_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_options_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_options_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Pod
@@ -2643,7 +2643,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2664,16 +2664,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_options_namespaced_pod_proxy" % key
+                    " to method connect_options_namespaced_pod_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_options_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_pod_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_options_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_pod_proxy`")
 
 
         collection_formats = {}
@@ -2722,7 +2722,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_options_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_options_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Pod
@@ -2733,7 +2733,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2747,12 +2747,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_options_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_options_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_options_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_options_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_options_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_options_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Pod
@@ -2763,7 +2763,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2785,19 +2785,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_options_namespaced_pod_proxy_with_path" % key
+                    " to method connect_options_namespaced_pod_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_options_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_options_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_options_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_options_namespaced_pod_proxy_with_path`")
 
 
         collection_formats = {}
@@ -2848,7 +2848,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_options_namespaced_service_proxy(self, name, namespace, **kwargs):
+    def connect_options_namespaced_service_proxy(self, name, namespace, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Service
@@ -2859,7 +2859,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_service_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_service_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2872,12 +2872,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_options_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_options_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_options_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_options_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_options_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_options_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Service
@@ -2888,7 +2888,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2909,16 +2909,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_options_namespaced_service_proxy" % key
+                    " to method connect_options_namespaced_service_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_options_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_service_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_options_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_service_proxy`")
 
 
         collection_formats = {}
@@ -2967,7 +2967,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_options_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_options_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Service
@@ -2978,7 +2978,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2992,12 +2992,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_options_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_options_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_options_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_options_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_options_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_options_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Service
@@ -3008,7 +3008,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_options_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3030,19 +3030,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_options_namespaced_service_proxy_with_path" % key
+                    " to method connect_options_namespaced_service_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_options_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_service_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_options_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_service_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_options_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_options_namespaced_service_proxy_with_path`")
 
 
         collection_formats = {}
@@ -3093,7 +3093,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_options_node_proxy(self, name, **kwargs):
+    def connect_options_node_proxy(self, name, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Node
@@ -3104,7 +3104,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_node_proxy(name, callback=callback_function)
+        >>> thread = api.connect_options_node_proxy(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3116,12 +3116,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_options_node_proxy_with_http_info(name, **kwargs)
+            return self.connect_options_node_proxy_with_http_info(name, **kwargs)
         else:
-            (data) = self.connect_core_v1_options_node_proxy_with_http_info(name, **kwargs)
+            (data) = self.connect_options_node_proxy_with_http_info(name, **kwargs)
             return data
 
-    def connect_core_v1_options_node_proxy_with_http_info(self, name, **kwargs):
+    def connect_options_node_proxy_with_http_info(self, name, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Node
@@ -3132,7 +3132,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_node_proxy_with_http_info(name, callback=callback_function)
+        >>> thread = api.connect_options_node_proxy_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3152,13 +3152,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_options_node_proxy" % key
+                    " to method connect_options_node_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_options_node_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_options_node_proxy`")
 
 
         collection_formats = {}
@@ -3205,7 +3205,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_options_node_proxy_with_path(self, name, path, **kwargs):
+    def connect_options_node_proxy_with_path(self, name, path, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Node
@@ -3216,7 +3216,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_node_proxy_with_path(name, path, callback=callback_function)
+        >>> thread = api.connect_options_node_proxy_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3229,12 +3229,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_options_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            return self.connect_options_node_proxy_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_options_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.connect_options_node_proxy_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def connect_core_v1_options_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
+    def connect_options_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         connect OPTIONS requests to proxy of Node
@@ -3245,7 +3245,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_options_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.connect_options_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3266,16 +3266,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_options_node_proxy_with_path" % key
+                    " to method connect_options_node_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_options_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_options_node_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_options_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_options_node_proxy_with_path`")
 
 
         collection_formats = {}
@@ -3324,7 +3324,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_namespaced_pod_attach(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_attach(self, name, namespace, **kwargs):
         """
         
         connect POST requests to attach of Pod
@@ -3335,7 +3335,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_attach(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_attach(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3352,12 +3352,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
+            return self.connect_post_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_post_namespaced_pod_attach_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_post_namespaced_pod_attach_with_http_info(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_attach_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect POST requests to attach of Pod
@@ -3368,7 +3368,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_attach_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_attach_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3393,16 +3393,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_namespaced_pod_attach" % key
+                    " to method connect_post_namespaced_pod_attach" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_namespaced_pod_attach`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_attach`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_post_namespaced_pod_attach`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_attach`")
 
 
         collection_formats = {}
@@ -3459,7 +3459,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_namespaced_pod_exec(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_exec(self, name, namespace, **kwargs):
         """
         
         connect POST requests to exec of Pod
@@ -3470,7 +3470,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_exec(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_exec(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3488,12 +3488,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
+            return self.connect_post_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_post_namespaced_pod_exec_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_post_namespaced_pod_exec_with_http_info(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_exec_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect POST requests to exec of Pod
@@ -3504,7 +3504,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_exec_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_exec_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3530,16 +3530,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_namespaced_pod_exec" % key
+                    " to method connect_post_namespaced_pod_exec" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_namespaced_pod_exec`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_exec`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_post_namespaced_pod_exec`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_exec`")
 
 
         collection_formats = {}
@@ -3598,7 +3598,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_namespaced_pod_portforward(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_portforward(self, name, namespace, **kwargs):
         """
         
         connect POST requests to portforward of Pod
@@ -3609,7 +3609,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_portforward(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_portforward(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3621,12 +3621,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
+            return self.connect_post_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_post_namespaced_pod_portforward_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_post_namespaced_pod_portforward_with_http_info(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_portforward_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect POST requests to portforward of Pod
@@ -3637,7 +3637,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_portforward_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_portforward_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3657,16 +3657,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_namespaced_pod_portforward" % key
+                    " to method connect_post_namespaced_pod_portforward" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_namespaced_pod_portforward`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_portforward`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_post_namespaced_pod_portforward`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_portforward`")
 
 
         collection_formats = {}
@@ -3713,7 +3713,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_namespaced_pod_proxy(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_proxy(self, name, namespace, **kwargs):
         """
         
         connect POST requests to proxy of Pod
@@ -3724,7 +3724,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3737,12 +3737,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_post_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_post_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_post_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_post_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect POST requests to proxy of Pod
@@ -3753,7 +3753,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3774,16 +3774,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_namespaced_pod_proxy" % key
+                    " to method connect_post_namespaced_pod_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_post_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_proxy`")
 
 
         collection_formats = {}
@@ -3832,7 +3832,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_post_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect POST requests to proxy of Pod
@@ -3843,7 +3843,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3857,12 +3857,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_post_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_post_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_post_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_post_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect POST requests to proxy of Pod
@@ -3873,7 +3873,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3895,19 +3895,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_namespaced_pod_proxy_with_path" % key
+                    " to method connect_post_namespaced_pod_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_post_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_post_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_post_namespaced_pod_proxy_with_path`")
 
 
         collection_formats = {}
@@ -3958,7 +3958,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_namespaced_service_proxy(self, name, namespace, **kwargs):
+    def connect_post_namespaced_service_proxy(self, name, namespace, **kwargs):
         """
         
         connect POST requests to proxy of Service
@@ -3969,7 +3969,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_service_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_service_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3982,12 +3982,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_post_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_post_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_post_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_post_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect POST requests to proxy of Service
@@ -3998,7 +3998,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4019,16 +4019,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_namespaced_service_proxy" % key
+                    " to method connect_post_namespaced_service_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_service_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_post_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_service_proxy`")
 
 
         collection_formats = {}
@@ -4077,7 +4077,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_post_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect POST requests to proxy of Service
@@ -4088,7 +4088,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4102,12 +4102,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_post_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_post_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_post_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_post_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect POST requests to proxy of Service
@@ -4118,7 +4118,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_post_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4140,19 +4140,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_namespaced_service_proxy_with_path" % key
+                    " to method connect_post_namespaced_service_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_service_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_post_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_service_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_post_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_post_namespaced_service_proxy_with_path`")
 
 
         collection_formats = {}
@@ -4203,7 +4203,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_node_proxy(self, name, **kwargs):
+    def connect_post_node_proxy(self, name, **kwargs):
         """
         
         connect POST requests to proxy of Node
@@ -4214,7 +4214,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_node_proxy(name, callback=callback_function)
+        >>> thread = api.connect_post_node_proxy(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4226,12 +4226,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_node_proxy_with_http_info(name, **kwargs)
+            return self.connect_post_node_proxy_with_http_info(name, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_node_proxy_with_http_info(name, **kwargs)
+            (data) = self.connect_post_node_proxy_with_http_info(name, **kwargs)
             return data
 
-    def connect_core_v1_post_node_proxy_with_http_info(self, name, **kwargs):
+    def connect_post_node_proxy_with_http_info(self, name, **kwargs):
         """
         
         connect POST requests to proxy of Node
@@ -4242,7 +4242,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_node_proxy_with_http_info(name, callback=callback_function)
+        >>> thread = api.connect_post_node_proxy_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4262,13 +4262,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_node_proxy" % key
+                    " to method connect_post_node_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_node_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_node_proxy`")
 
 
         collection_formats = {}
@@ -4315,7 +4315,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_post_node_proxy_with_path(self, name, path, **kwargs):
+    def connect_post_node_proxy_with_path(self, name, path, **kwargs):
         """
         
         connect POST requests to proxy of Node
@@ -4326,7 +4326,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_node_proxy_with_path(name, path, callback=callback_function)
+        >>> thread = api.connect_post_node_proxy_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4339,12 +4339,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_post_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            return self.connect_post_node_proxy_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_post_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.connect_post_node_proxy_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def connect_core_v1_post_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
+    def connect_post_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         connect POST requests to proxy of Node
@@ -4355,7 +4355,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_post_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.connect_post_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4376,16 +4376,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_post_node_proxy_with_path" % key
+                    " to method connect_post_node_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_post_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_post_node_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_post_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_post_node_proxy_with_path`")
 
 
         collection_formats = {}
@@ -4434,7 +4434,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_put_namespaced_pod_proxy(self, name, namespace, **kwargs):
+    def connect_put_namespaced_pod_proxy(self, name, namespace, **kwargs):
         """
         
         connect PUT requests to proxy of Pod
@@ -4445,7 +4445,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_pod_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_pod_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4458,12 +4458,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_put_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_put_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_put_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_put_namespaced_pod_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_put_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_put_namespaced_pod_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect PUT requests to proxy of Pod
@@ -4474,7 +4474,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_pod_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4495,16 +4495,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_put_namespaced_pod_proxy" % key
+                    " to method connect_put_namespaced_pod_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_put_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_pod_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_put_namespaced_pod_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_pod_proxy`")
 
 
         collection_formats = {}
@@ -4553,7 +4553,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_put_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_put_namespaced_pod_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect PUT requests to proxy of Pod
@@ -4564,7 +4564,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_pod_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4578,12 +4578,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_put_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_put_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_put_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_put_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_put_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_put_namespaced_pod_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect PUT requests to proxy of Pod
@@ -4594,7 +4594,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_pod_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4616,19 +4616,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_put_namespaced_pod_proxy_with_path" % key
+                    " to method connect_put_namespaced_pod_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_put_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_put_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_pod_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_put_namespaced_pod_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_put_namespaced_pod_proxy_with_path`")
 
 
         collection_formats = {}
@@ -4679,7 +4679,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_put_namespaced_service_proxy(self, name, namespace, **kwargs):
+    def connect_put_namespaced_service_proxy(self, name, namespace, **kwargs):
         """
         
         connect PUT requests to proxy of Service
@@ -4690,7 +4690,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_service_proxy(name, namespace, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_service_proxy(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4703,12 +4703,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_put_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            return self.connect_put_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.connect_core_v1_put_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
+            (data) = self.connect_put_namespaced_service_proxy_with_http_info(name, namespace, **kwargs)
             return data
 
-    def connect_core_v1_put_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
+    def connect_put_namespaced_service_proxy_with_http_info(self, name, namespace, **kwargs):
         """
         
         connect PUT requests to proxy of Service
@@ -4719,7 +4719,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_service_proxy_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4740,16 +4740,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_put_namespaced_service_proxy" % key
+                    " to method connect_put_namespaced_service_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_put_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_service_proxy`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_put_namespaced_service_proxy`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_service_proxy`")
 
 
         collection_formats = {}
@@ -4798,7 +4798,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_put_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
+    def connect_put_namespaced_service_proxy_with_path(self, name, namespace, path, **kwargs):
         """
         
         connect PUT requests to proxy of Service
@@ -4809,7 +4809,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_service_proxy_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4823,12 +4823,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_put_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.connect_put_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_put_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.connect_put_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def connect_core_v1_put_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def connect_put_namespaced_service_proxy_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         connect PUT requests to proxy of Service
@@ -4839,7 +4839,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.connect_put_namespaced_service_proxy_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4861,19 +4861,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_put_namespaced_service_proxy_with_path" % key
+                    " to method connect_put_namespaced_service_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_put_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_service_proxy_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_core_v1_put_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_service_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_put_namespaced_service_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_put_namespaced_service_proxy_with_path`")
 
 
         collection_formats = {}
@@ -4924,7 +4924,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_put_node_proxy(self, name, **kwargs):
+    def connect_put_node_proxy(self, name, **kwargs):
         """
         
         connect PUT requests to proxy of Node
@@ -4935,7 +4935,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_node_proxy(name, callback=callback_function)
+        >>> thread = api.connect_put_node_proxy(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4947,12 +4947,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_put_node_proxy_with_http_info(name, **kwargs)
+            return self.connect_put_node_proxy_with_http_info(name, **kwargs)
         else:
-            (data) = self.connect_core_v1_put_node_proxy_with_http_info(name, **kwargs)
+            (data) = self.connect_put_node_proxy_with_http_info(name, **kwargs)
             return data
 
-    def connect_core_v1_put_node_proxy_with_http_info(self, name, **kwargs):
+    def connect_put_node_proxy_with_http_info(self, name, **kwargs):
         """
         
         connect PUT requests to proxy of Node
@@ -4963,7 +4963,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_node_proxy_with_http_info(name, callback=callback_function)
+        >>> thread = api.connect_put_node_proxy_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4983,13 +4983,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_put_node_proxy" % key
+                    " to method connect_put_node_proxy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_put_node_proxy`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_put_node_proxy`")
 
 
         collection_formats = {}
@@ -5036,7 +5036,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def connect_core_v1_put_node_proxy_with_path(self, name, path, **kwargs):
+    def connect_put_node_proxy_with_path(self, name, path, **kwargs):
         """
         
         connect PUT requests to proxy of Node
@@ -5047,7 +5047,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_node_proxy_with_path(name, path, callback=callback_function)
+        >>> thread = api.connect_put_node_proxy_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5060,12 +5060,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.connect_core_v1_put_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            return self.connect_put_node_proxy_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.connect_core_v1_put_node_proxy_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.connect_put_node_proxy_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def connect_core_v1_put_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
+    def connect_put_node_proxy_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         connect PUT requests to proxy of Node
@@ -5076,7 +5076,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.connect_core_v1_put_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.connect_put_node_proxy_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5097,16 +5097,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method connect_core_v1_put_node_proxy_with_path" % key
+                    " to method connect_put_node_proxy_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_core_v1_put_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `connect_put_node_proxy_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `connect_core_v1_put_node_proxy_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `connect_put_node_proxy_with_path`")
 
 
         collection_formats = {}
@@ -5155,7 +5155,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespace(self, body, **kwargs):
+    def create_namespace(self, body, **kwargs):
         """
         
         create a Namespace
@@ -5166,7 +5166,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespace(body, callback=callback_function)
+        >>> thread = api.create_namespace(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5178,12 +5178,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespace_with_http_info(body, **kwargs)
+            return self.create_namespace_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespace_with_http_info(body, **kwargs)
+            (data) = self.create_namespace_with_http_info(body, **kwargs)
             return data
 
-    def create_core_v1_namespace_with_http_info(self, body, **kwargs):
+    def create_namespace_with_http_info(self, body, **kwargs):
         """
         
         create a Namespace
@@ -5194,7 +5194,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespace_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_namespace_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5214,13 +5214,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespace" % key
+                    " to method create_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespace`")
 
 
         collection_formats = {}
@@ -5267,7 +5267,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_binding(self, body, namespace, **kwargs):
+    def create_namespaced_binding(self, body, namespace, **kwargs):
         """
         
         create a Binding
@@ -5278,7 +5278,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_binding(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_binding(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5291,12 +5291,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_binding_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_binding_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_binding_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_binding_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_core_v1_namespaced_binding_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_binding_with_http_info(self, body, namespace, **kwargs):
         """
         
         create a Binding
@@ -5307,7 +5307,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_binding_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_binding_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5328,16 +5328,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_binding" % key
+                    " to method create_namespaced_binding" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_binding`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_binding`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_binding`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_binding`")
 
 
         collection_formats = {}
@@ -5386,7 +5386,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_binding_binding(self, body, name, namespace, **kwargs):
+    def create_namespaced_binding_binding(self, body, name, namespace, **kwargs):
         """
         
         create binding of a Binding
@@ -5397,7 +5397,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_binding_binding(body, name, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_binding_binding(body, name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5411,12 +5411,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_binding_binding_with_http_info(body, name, namespace, **kwargs)
+            return self.create_namespaced_binding_binding_with_http_info(body, name, namespace, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_binding_binding_with_http_info(body, name, namespace, **kwargs)
+            (data) = self.create_namespaced_binding_binding_with_http_info(body, name, namespace, **kwargs)
             return data
 
-    def create_core_v1_namespaced_binding_binding_with_http_info(self, body, name, namespace, **kwargs):
+    def create_namespaced_binding_binding_with_http_info(self, body, name, namespace, **kwargs):
         """
         
         create binding of a Binding
@@ -5427,7 +5427,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_binding_binding_with_http_info(body, name, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_binding_binding_with_http_info(body, name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5449,19 +5449,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_binding_binding" % key
+                    " to method create_namespaced_binding_binding" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_binding_binding`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_binding_binding`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `create_core_v1_namespaced_binding_binding`")
+            raise ValueError("Missing the required parameter `name` when calling `create_namespaced_binding_binding`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_binding_binding`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_binding_binding`")
 
 
         collection_formats = {}
@@ -5512,7 +5512,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_config_map(self, namespace, body, **kwargs):
+    def create_namespaced_config_map(self, namespace, body, **kwargs):
         """
         
         create a ConfigMap
@@ -5523,7 +5523,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_config_map(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_config_map(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5536,12 +5536,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_config_map_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_config_map_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_config_map_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_config_map_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_config_map_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_config_map_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a ConfigMap
@@ -5552,7 +5552,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_config_map_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_config_map_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5573,16 +5573,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_config_map" % key
+                    " to method create_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_config_map`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -5631,7 +5631,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_endpoints(self, namespace, body, **kwargs):
+    def create_namespaced_endpoints(self, namespace, body, **kwargs):
         """
         
         create Endpoints
@@ -5642,7 +5642,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_endpoints(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_endpoints(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5655,12 +5655,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_endpoints_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_endpoints_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_endpoints_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_endpoints_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_endpoints_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_endpoints_with_http_info(self, namespace, body, **kwargs):
         """
         
         create Endpoints
@@ -5671,7 +5671,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_endpoints_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_endpoints_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5692,16 +5692,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_endpoints" % key
+                    " to method create_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_endpoints`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -5750,7 +5750,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_event(self, namespace, body, **kwargs):
+    def create_namespaced_event(self, namespace, body, **kwargs):
         """
         
         create an Event
@@ -5761,7 +5761,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_event(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_event(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5774,12 +5774,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_event_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_event_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_event_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_event_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_event_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_event_with_http_info(self, namespace, body, **kwargs):
         """
         
         create an Event
@@ -5790,7 +5790,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_event_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_event_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5811,16 +5811,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_event" % key
+                    " to method create_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_event`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_event`")
 
 
         collection_formats = {}
@@ -5869,7 +5869,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_eviction_eviction(self, body, name, namespace, **kwargs):
+    def create_namespaced_eviction_eviction(self, body, name, namespace, **kwargs):
         """
         
         create eviction of an Eviction
@@ -5880,26 +5880,26 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_eviction_eviction(body, name, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_eviction_eviction(body, name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1Eviction body:  (required)
+        :param V1beta1Eviction body:  (required)
         :param str name: name of the Eviction (required)
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1alpha1Eviction
+        :return: V1beta1Eviction
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_eviction_eviction_with_http_info(body, name, namespace, **kwargs)
+            return self.create_namespaced_eviction_eviction_with_http_info(body, name, namespace, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_eviction_eviction_with_http_info(body, name, namespace, **kwargs)
+            (data) = self.create_namespaced_eviction_eviction_with_http_info(body, name, namespace, **kwargs)
             return data
 
-    def create_core_v1_namespaced_eviction_eviction_with_http_info(self, body, name, namespace, **kwargs):
+    def create_namespaced_eviction_eviction_with_http_info(self, body, name, namespace, **kwargs):
         """
         
         create eviction of an Eviction
@@ -5910,15 +5910,15 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_eviction_eviction_with_http_info(body, name, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_eviction_eviction_with_http_info(body, name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1Eviction body:  (required)
+        :param V1beta1Eviction body:  (required)
         :param str name: name of the Eviction (required)
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1alpha1Eviction
+        :return: V1beta1Eviction
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5932,19 +5932,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_eviction_eviction" % key
+                    " to method create_namespaced_eviction_eviction" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_eviction_eviction`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_eviction_eviction`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `create_core_v1_namespaced_eviction_eviction`")
+            raise ValueError("Missing the required parameter `name` when calling `create_namespaced_eviction_eviction`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_eviction_eviction`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_eviction_eviction`")
 
 
         collection_formats = {}
@@ -5989,13 +5989,13 @@ class CoreV1Api(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1alpha1Eviction',
+                                            response_type='V1beta1Eviction',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_limit_range(self, namespace, body, **kwargs):
+    def create_namespaced_limit_range(self, namespace, body, **kwargs):
         """
         
         create a LimitRange
@@ -6006,7 +6006,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_limit_range(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_limit_range(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6019,12 +6019,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_limit_range_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_limit_range_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_limit_range_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_limit_range_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_limit_range_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_limit_range_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a LimitRange
@@ -6035,7 +6035,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_limit_range_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_limit_range_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6056,16 +6056,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_limit_range" % key
+                    " to method create_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_limit_range`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -6114,7 +6114,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_persistent_volume_claim(self, namespace, body, **kwargs):
+    def create_namespaced_persistent_volume_claim(self, namespace, body, **kwargs):
         """
         
         create a PersistentVolumeClaim
@@ -6125,7 +6125,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_persistent_volume_claim(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_persistent_volume_claim(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6138,12 +6138,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_persistent_volume_claim_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_persistent_volume_claim_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_persistent_volume_claim_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_persistent_volume_claim_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_persistent_volume_claim_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_persistent_volume_claim_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a PersistentVolumeClaim
@@ -6154,7 +6154,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_persistent_volume_claim_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_persistent_volume_claim_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6175,16 +6175,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_persistent_volume_claim" % key
+                    " to method create_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_persistent_volume_claim`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -6233,7 +6233,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_pod(self, namespace, body, **kwargs):
+    def create_namespaced_pod(self, namespace, body, **kwargs):
         """
         
         create a Pod
@@ -6244,7 +6244,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_pod(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_pod(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6257,12 +6257,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_pod_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_pod_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_pod_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_pod_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_pod_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_pod_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a Pod
@@ -6273,7 +6273,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_pod_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_pod_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6294,16 +6294,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_pod" % key
+                    " to method create_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_pod`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_pod`")
 
 
         collection_formats = {}
@@ -6352,7 +6352,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_pod_template(self, namespace, body, **kwargs):
+    def create_namespaced_pod_template(self, namespace, body, **kwargs):
         """
         
         create a PodTemplate
@@ -6363,7 +6363,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_pod_template(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_pod_template(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6376,12 +6376,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_pod_template_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_pod_template_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_pod_template_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_pod_template_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_pod_template_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_pod_template_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a PodTemplate
@@ -6392,7 +6392,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_pod_template_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_pod_template_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6413,16 +6413,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_pod_template" % key
+                    " to method create_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_pod_template`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -6471,7 +6471,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_replication_controller(self, namespace, body, **kwargs):
+    def create_namespaced_replication_controller(self, namespace, body, **kwargs):
         """
         
         create a ReplicationController
@@ -6482,7 +6482,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_replication_controller(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_replication_controller(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6495,12 +6495,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_replication_controller_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_replication_controller_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_replication_controller_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_replication_controller_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_replication_controller_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_replication_controller_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a ReplicationController
@@ -6511,7 +6511,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_replication_controller_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_replication_controller_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6532,16 +6532,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_replication_controller" % key
+                    " to method create_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_replication_controller`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -6590,7 +6590,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_resource_quota(self, namespace, body, **kwargs):
+    def create_namespaced_resource_quota(self, namespace, body, **kwargs):
         """
         
         create a ResourceQuota
@@ -6601,7 +6601,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_resource_quota(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_resource_quota(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6614,12 +6614,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_resource_quota_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_resource_quota_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_resource_quota_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_resource_quota_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_resource_quota_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_resource_quota_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a ResourceQuota
@@ -6630,7 +6630,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_resource_quota_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_resource_quota_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6651,16 +6651,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_resource_quota" % key
+                    " to method create_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_resource_quota`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -6709,7 +6709,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_secret(self, namespace, body, **kwargs):
+    def create_namespaced_secret(self, namespace, body, **kwargs):
         """
         
         create a Secret
@@ -6720,7 +6720,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_secret(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_secret(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6733,12 +6733,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_secret_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_secret_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_secret_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_secret_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_secret_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_secret_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a Secret
@@ -6749,7 +6749,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_secret_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_secret_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6770,16 +6770,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_secret" % key
+                    " to method create_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_secret`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_secret`")
 
 
         collection_formats = {}
@@ -6828,7 +6828,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_service(self, namespace, body, **kwargs):
+    def create_namespaced_service(self, namespace, body, **kwargs):
         """
         
         create a Service
@@ -6839,7 +6839,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_service(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_service(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6852,12 +6852,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_service_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_service_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_service_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_service_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_service_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_service_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a Service
@@ -6868,7 +6868,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_service_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_service_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6889,16 +6889,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_service" % key
+                    " to method create_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_service`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_service`")
 
 
         collection_formats = {}
@@ -6947,7 +6947,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_namespaced_service_account(self, namespace, body, **kwargs):
+    def create_namespaced_service_account(self, namespace, body, **kwargs):
         """
         
         create a ServiceAccount
@@ -6958,7 +6958,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_service_account(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_service_account(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6971,12 +6971,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_namespaced_service_account_with_http_info(namespace, body, **kwargs)
+            return self.create_namespaced_service_account_with_http_info(namespace, body, **kwargs)
         else:
-            (data) = self.create_core_v1_namespaced_service_account_with_http_info(namespace, body, **kwargs)
+            (data) = self.create_namespaced_service_account_with_http_info(namespace, body, **kwargs)
             return data
 
-    def create_core_v1_namespaced_service_account_with_http_info(self, namespace, body, **kwargs):
+    def create_namespaced_service_account_with_http_info(self, namespace, body, **kwargs):
         """
         
         create a ServiceAccount
@@ -6987,7 +6987,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_namespaced_service_account_with_http_info(namespace, body, callback=callback_function)
+        >>> thread = api.create_namespaced_service_account_with_http_info(namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7008,16 +7008,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_namespaced_service_account" % key
+                    " to method create_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_service_account`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -7066,7 +7066,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_node(self, body, **kwargs):
+    def create_node(self, body, **kwargs):
         """
         
         create a Node
@@ -7077,7 +7077,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_node(body, callback=callback_function)
+        >>> thread = api.create_node(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7089,12 +7089,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_node_with_http_info(body, **kwargs)
+            return self.create_node_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_core_v1_node_with_http_info(body, **kwargs)
+            (data) = self.create_node_with_http_info(body, **kwargs)
             return data
 
-    def create_core_v1_node_with_http_info(self, body, **kwargs):
+    def create_node_with_http_info(self, body, **kwargs):
         """
         
         create a Node
@@ -7105,7 +7105,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_node_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_node_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7125,13 +7125,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_node" % key
+                    " to method create_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_node`")
+            raise ValueError("Missing the required parameter `body` when calling `create_node`")
 
 
         collection_formats = {}
@@ -7178,7 +7178,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def create_core_v1_persistent_volume(self, body, **kwargs):
+    def create_persistent_volume(self, body, **kwargs):
         """
         
         create a PersistentVolume
@@ -7189,7 +7189,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_persistent_volume(body, callback=callback_function)
+        >>> thread = api.create_persistent_volume(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7201,12 +7201,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_core_v1_persistent_volume_with_http_info(body, **kwargs)
+            return self.create_persistent_volume_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_core_v1_persistent_volume_with_http_info(body, **kwargs)
+            (data) = self.create_persistent_volume_with_http_info(body, **kwargs)
             return data
 
-    def create_core_v1_persistent_volume_with_http_info(self, body, **kwargs):
+    def create_persistent_volume_with_http_info(self, body, **kwargs):
         """
         
         create a PersistentVolume
@@ -7217,7 +7217,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_core_v1_persistent_volume_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_persistent_volume_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7237,13 +7237,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_core_v1_persistent_volume" % key
+                    " to method create_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `body` when calling `create_persistent_volume`")
 
 
         collection_formats = {}
@@ -7290,7 +7290,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespace(self, **kwargs):
+    def delete_collection_namespace(self, **kwargs):
         """
         
         delete collection of Namespace
@@ -7301,7 +7301,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespace(callback=callback_function)
+        >>> thread = api.delete_collection_namespace(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7317,12 +7317,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespace_with_http_info(**kwargs)
+            return self.delete_collection_namespace_with_http_info(**kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespace_with_http_info(**kwargs)
+            (data) = self.delete_collection_namespace_with_http_info(**kwargs)
             return data
 
-    def delete_core_v1_collection_namespace_with_http_info(self, **kwargs):
+    def delete_collection_namespace_with_http_info(self, **kwargs):
         """
         
         delete collection of Namespace
@@ -7333,7 +7333,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespace_with_http_info(callback=callback_function)
+        >>> thread = api.delete_collection_namespace_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7357,7 +7357,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespace" % key
+                    " to method delete_collection_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -7415,7 +7415,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_config_map(self, namespace, **kwargs):
+    def delete_collection_namespaced_config_map(self, namespace, **kwargs):
         """
         
         delete collection of ConfigMap
@@ -7426,7 +7426,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_config_map(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_config_map(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7443,12 +7443,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_config_map_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_config_map_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_config_map_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_config_map_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_config_map_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_config_map_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of ConfigMap
@@ -7459,7 +7459,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_config_map_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_config_map_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7484,13 +7484,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_config_map" % key
+                    " to method delete_collection_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -7547,7 +7547,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_endpoints(self, namespace, **kwargs):
+    def delete_collection_namespaced_endpoints(self, namespace, **kwargs):
         """
         
         delete collection of Endpoints
@@ -7558,7 +7558,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_endpoints(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_endpoints(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7575,12 +7575,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_endpoints_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_endpoints_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_endpoints_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_endpoints_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_endpoints_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_endpoints_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of Endpoints
@@ -7591,7 +7591,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_endpoints_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_endpoints_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7616,13 +7616,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_endpoints" % key
+                    " to method delete_collection_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -7679,7 +7679,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_event(self, namespace, **kwargs):
+    def delete_collection_namespaced_event(self, namespace, **kwargs):
         """
         
         delete collection of Event
@@ -7690,7 +7690,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_event(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_event(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7707,12 +7707,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_event_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_event_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_event_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_event_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_event_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_event_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of Event
@@ -7723,7 +7723,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_event_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_event_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7748,13 +7748,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_event" % key
+                    " to method delete_collection_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_event`")
 
 
         collection_formats = {}
@@ -7811,7 +7811,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_limit_range(self, namespace, **kwargs):
+    def delete_collection_namespaced_limit_range(self, namespace, **kwargs):
         """
         
         delete collection of LimitRange
@@ -7822,7 +7822,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_limit_range(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_limit_range(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7839,12 +7839,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_limit_range_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_limit_range_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_limit_range_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_limit_range_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_limit_range_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_limit_range_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of LimitRange
@@ -7855,7 +7855,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_limit_range_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_limit_range_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7880,13 +7880,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_limit_range" % key
+                    " to method delete_collection_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -7943,7 +7943,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_persistent_volume_claim(self, namespace, **kwargs):
+    def delete_collection_namespaced_persistent_volume_claim(self, namespace, **kwargs):
         """
         
         delete collection of PersistentVolumeClaim
@@ -7954,7 +7954,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_persistent_volume_claim(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_persistent_volume_claim(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7971,12 +7971,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_persistent_volume_claim_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_persistent_volume_claim_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of PersistentVolumeClaim
@@ -7987,7 +7987,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_persistent_volume_claim_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_persistent_volume_claim_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8012,13 +8012,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_persistent_volume_claim" % key
+                    " to method delete_collection_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -8075,7 +8075,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_pod(self, namespace, **kwargs):
+    def delete_collection_namespaced_pod(self, namespace, **kwargs):
         """
         
         delete collection of Pod
@@ -8086,7 +8086,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_pod(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_pod(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8103,12 +8103,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_pod_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_pod_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_pod_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_pod_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_pod_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_pod_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of Pod
@@ -8119,7 +8119,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_pod_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_pod_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8144,13 +8144,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_pod" % key
+                    " to method delete_collection_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_pod`")
 
 
         collection_formats = {}
@@ -8207,7 +8207,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_pod_template(self, namespace, **kwargs):
+    def delete_collection_namespaced_pod_template(self, namespace, **kwargs):
         """
         
         delete collection of PodTemplate
@@ -8218,7 +8218,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_pod_template(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_pod_template(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8235,12 +8235,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_pod_template_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_pod_template_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_pod_template_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_pod_template_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_pod_template_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_pod_template_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of PodTemplate
@@ -8251,7 +8251,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_pod_template_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_pod_template_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8276,13 +8276,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_pod_template" % key
+                    " to method delete_collection_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -8339,7 +8339,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_replication_controller(self, namespace, **kwargs):
+    def delete_collection_namespaced_replication_controller(self, namespace, **kwargs):
         """
         
         delete collection of ReplicationController
@@ -8350,7 +8350,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_replication_controller(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_replication_controller(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8367,12 +8367,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_replication_controller_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_replication_controller_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_replication_controller_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_replication_controller_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_replication_controller_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_replication_controller_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of ReplicationController
@@ -8383,7 +8383,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_replication_controller_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_replication_controller_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8408,13 +8408,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_replication_controller" % key
+                    " to method delete_collection_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -8471,7 +8471,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_resource_quota(self, namespace, **kwargs):
+    def delete_collection_namespaced_resource_quota(self, namespace, **kwargs):
         """
         
         delete collection of ResourceQuota
@@ -8482,7 +8482,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_resource_quota(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_resource_quota(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8499,12 +8499,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_resource_quota_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_resource_quota_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_resource_quota_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_resource_quota_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_resource_quota_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_resource_quota_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of ResourceQuota
@@ -8515,7 +8515,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_resource_quota_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_resource_quota_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8540,13 +8540,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_resource_quota" % key
+                    " to method delete_collection_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -8603,7 +8603,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_secret(self, namespace, **kwargs):
+    def delete_collection_namespaced_secret(self, namespace, **kwargs):
         """
         
         delete collection of Secret
@@ -8614,7 +8614,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_secret(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_secret(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8631,12 +8631,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_secret_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_secret_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_secret_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_secret_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_secret_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_secret_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of Secret
@@ -8647,7 +8647,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_secret_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_secret_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8672,13 +8672,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_secret" % key
+                    " to method delete_collection_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_secret`")
 
 
         collection_formats = {}
@@ -8735,7 +8735,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_namespaced_service_account(self, namespace, **kwargs):
+    def delete_collection_namespaced_service_account(self, namespace, **kwargs):
         """
         
         delete collection of ServiceAccount
@@ -8746,7 +8746,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_service_account(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_service_account(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8763,12 +8763,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_namespaced_service_account_with_http_info(namespace, **kwargs)
+            return self.delete_collection_namespaced_service_account_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_collection_namespaced_service_account_with_http_info(namespace, **kwargs)
+            (data) = self.delete_collection_namespaced_service_account_with_http_info(namespace, **kwargs)
             return data
 
-    def delete_core_v1_collection_namespaced_service_account_with_http_info(self, namespace, **kwargs):
+    def delete_collection_namespaced_service_account_with_http_info(self, namespace, **kwargs):
         """
         
         delete collection of ServiceAccount
@@ -8779,7 +8779,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_namespaced_service_account_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_service_account_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8804,13 +8804,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_namespaced_service_account" % key
+                    " to method delete_collection_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_collection_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_collection_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -8867,7 +8867,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_node(self, **kwargs):
+    def delete_collection_node(self, **kwargs):
         """
         
         delete collection of Node
@@ -8878,7 +8878,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_node(callback=callback_function)
+        >>> thread = api.delete_collection_node(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8894,12 +8894,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_node_with_http_info(**kwargs)
+            return self.delete_collection_node_with_http_info(**kwargs)
         else:
-            (data) = self.delete_core_v1_collection_node_with_http_info(**kwargs)
+            (data) = self.delete_collection_node_with_http_info(**kwargs)
             return data
 
-    def delete_core_v1_collection_node_with_http_info(self, **kwargs):
+    def delete_collection_node_with_http_info(self, **kwargs):
         """
         
         delete collection of Node
@@ -8910,7 +8910,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_node_with_http_info(callback=callback_function)
+        >>> thread = api.delete_collection_node_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8934,7 +8934,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_node" % key
+                    " to method delete_collection_node" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -8992,7 +8992,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_collection_persistent_volume(self, **kwargs):
+    def delete_collection_persistent_volume(self, **kwargs):
         """
         
         delete collection of PersistentVolume
@@ -9003,7 +9003,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_persistent_volume(callback=callback_function)
+        >>> thread = api.delete_collection_persistent_volume(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9019,12 +9019,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_collection_persistent_volume_with_http_info(**kwargs)
+            return self.delete_collection_persistent_volume_with_http_info(**kwargs)
         else:
-            (data) = self.delete_core_v1_collection_persistent_volume_with_http_info(**kwargs)
+            (data) = self.delete_collection_persistent_volume_with_http_info(**kwargs)
             return data
 
-    def delete_core_v1_collection_persistent_volume_with_http_info(self, **kwargs):
+    def delete_collection_persistent_volume_with_http_info(self, **kwargs):
         """
         
         delete collection of PersistentVolume
@@ -9035,7 +9035,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_collection_persistent_volume_with_http_info(callback=callback_function)
+        >>> thread = api.delete_collection_persistent_volume_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9059,7 +9059,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_collection_persistent_volume" % key
+                    " to method delete_collection_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -9117,7 +9117,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespace(self, name, body, **kwargs):
+    def delete_namespace(self, name, body, **kwargs):
         """
         
         delete a Namespace
@@ -9128,25 +9128,27 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespace(name, body, callback=callback_function)
+        >>> thread = api.delete_namespace(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the Namespace (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespace_with_http_info(name, body, **kwargs)
+            return self.delete_namespace_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespace_with_http_info(name, body, **kwargs)
+            (data) = self.delete_namespace_with_http_info(name, body, **kwargs)
             return data
 
-    def delete_core_v1_namespace_with_http_info(self, name, body, **kwargs):
+    def delete_namespace_with_http_info(self, name, body, **kwargs):
         """
         
         delete a Namespace
@@ -9157,19 +9159,21 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespace_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.delete_namespace_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the Namespace (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'body', 'pretty']
+        all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -9178,16 +9182,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespace" % key
+                    " to method delete_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespace`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespace`")
 
 
         collection_formats = {}
@@ -9200,6 +9204,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -9236,7 +9244,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_config_map(self, name, namespace, body, **kwargs):
+    def delete_namespaced_config_map(self, name, namespace, body, **kwargs):
         """
         
         delete a ConfigMap
@@ -9247,7 +9255,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_config_map(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_config_map(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9255,18 +9263,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_config_map_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_config_map_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a ConfigMap
@@ -9277,7 +9287,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_config_map_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_config_map_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9285,12 +9295,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -9299,19 +9311,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_config_map" % key
+                    " to method delete_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_config_map`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_config_map`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -9326,6 +9338,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -9362,7 +9378,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_endpoints(self, name, namespace, body, **kwargs):
+    def delete_namespaced_endpoints(self, name, namespace, body, **kwargs):
         """
         
         delete Endpoints
@@ -9373,7 +9389,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_endpoints(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_endpoints(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9381,18 +9397,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_endpoints_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_endpoints_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete Endpoints
@@ -9403,7 +9421,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_endpoints_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9411,12 +9429,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -9425,19 +9445,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_endpoints" % key
+                    " to method delete_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_endpoints`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_endpoints`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -9452,6 +9472,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -9488,7 +9512,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_event(self, name, namespace, body, **kwargs):
+    def delete_namespaced_event(self, name, namespace, body, **kwargs):
         """
         
         delete an Event
@@ -9499,7 +9523,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_event(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_event(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9507,18 +9531,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_event_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_event_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_event_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_event_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_event_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_event_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete an Event
@@ -9529,7 +9555,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_event_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_event_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9537,12 +9563,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -9551,19 +9579,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_event" % key
+                    " to method delete_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_event`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_event`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_event`")
 
 
         collection_formats = {}
@@ -9578,6 +9606,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -9614,7 +9646,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_limit_range(self, name, namespace, body, **kwargs):
+    def delete_namespaced_limit_range(self, name, namespace, body, **kwargs):
         """
         
         delete a LimitRange
@@ -9625,7 +9657,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_limit_range(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_limit_range(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9633,18 +9665,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_limit_range_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_limit_range_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a LimitRange
@@ -9655,7 +9689,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_limit_range_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9663,12 +9697,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -9677,19 +9713,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_limit_range" % key
+                    " to method delete_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_limit_range`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_limit_range`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -9704,6 +9740,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -9740,7 +9780,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_persistent_volume_claim(self, name, namespace, body, **kwargs):
+    def delete_namespaced_persistent_volume_claim(self, name, namespace, body, **kwargs):
         """
         
         delete a PersistentVolumeClaim
@@ -9751,7 +9791,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_persistent_volume_claim(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_persistent_volume_claim(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9759,18 +9799,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a PersistentVolumeClaim
@@ -9781,7 +9823,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9789,12 +9831,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -9803,19 +9847,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_persistent_volume_claim" % key
+                    " to method delete_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_persistent_volume_claim`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_persistent_volume_claim`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -9830,6 +9874,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -9866,7 +9914,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_pod(self, name, namespace, body, **kwargs):
+    def delete_namespaced_pod(self, name, namespace, body, **kwargs):
         """
         
         delete a Pod
@@ -9877,7 +9925,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_pod(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_pod(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9885,18 +9933,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_pod_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_pod_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a Pod
@@ -9907,7 +9957,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_pod_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_pod_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9915,12 +9965,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -9929,19 +9981,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_pod" % key
+                    " to method delete_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_pod`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_pod`")
 
 
         collection_formats = {}
@@ -9956,6 +10008,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -9992,7 +10048,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_pod_template(self, name, namespace, body, **kwargs):
+    def delete_namespaced_pod_template(self, name, namespace, body, **kwargs):
         """
         
         delete a PodTemplate
@@ -10003,7 +10059,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_pod_template(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_pod_template(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10011,18 +10067,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_pod_template_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_pod_template_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a PodTemplate
@@ -10033,7 +10091,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_pod_template_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10041,12 +10099,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -10055,19 +10115,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_pod_template" % key
+                    " to method delete_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_pod_template`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_pod_template`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -10082,6 +10142,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -10118,7 +10182,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_replication_controller(self, name, namespace, body, **kwargs):
+    def delete_namespaced_replication_controller(self, name, namespace, body, **kwargs):
         """
         
         delete a ReplicationController
@@ -10129,7 +10193,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_replication_controller(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_replication_controller(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10137,18 +10201,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_replication_controller_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_replication_controller_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a ReplicationController
@@ -10159,7 +10225,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_replication_controller_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10167,12 +10233,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -10181,19 +10249,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_replication_controller" % key
+                    " to method delete_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_replication_controller`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_replication_controller`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -10208,6 +10276,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -10244,7 +10316,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_resource_quota(self, name, namespace, body, **kwargs):
+    def delete_namespaced_resource_quota(self, name, namespace, body, **kwargs):
         """
         
         delete a ResourceQuota
@@ -10255,7 +10327,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_resource_quota(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_resource_quota(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10263,18 +10335,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_resource_quota_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_resource_quota_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a ResourceQuota
@@ -10285,7 +10359,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_resource_quota_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10293,12 +10367,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -10307,19 +10383,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_resource_quota" % key
+                    " to method delete_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_resource_quota`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_resource_quota`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -10334,6 +10410,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -10370,7 +10450,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_secret(self, name, namespace, body, **kwargs):
+    def delete_namespaced_secret(self, name, namespace, body, **kwargs):
         """
         
         delete a Secret
@@ -10381,7 +10461,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_secret(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_secret(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10389,18 +10469,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_secret_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_secret_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a Secret
@@ -10411,7 +10493,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_secret_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_secret_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10419,12 +10501,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -10433,19 +10517,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_secret" % key
+                    " to method delete_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_secret`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_secret`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_secret`")
 
 
         collection_formats = {}
@@ -10460,6 +10544,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -10496,7 +10584,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_service(self, name, namespace, **kwargs):
+    def delete_namespaced_service(self, name, namespace, **kwargs):
         """
         
         delete a Service
@@ -10507,7 +10595,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10520,12 +10608,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.delete_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.delete_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def delete_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         delete a Service
@@ -10536,7 +10624,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10557,16 +10645,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_service" % key
+                    " to method delete_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_service`")
 
 
         collection_formats = {}
@@ -10615,7 +10703,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_namespaced_service_account(self, name, namespace, body, **kwargs):
+    def delete_namespaced_service_account(self, name, namespace, body, **kwargs):
         """
         
         delete a ServiceAccount
@@ -10626,7 +10714,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_service_account(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_service_account(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10634,18 +10722,20 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
+            return self.delete_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.delete_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_core_v1_namespaced_service_account_with_http_info(self, name, namespace, body, **kwargs):
+    def delete_namespaced_service_account_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         delete a ServiceAccount
@@ -10656,7 +10746,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_namespaced_service_account_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.delete_namespaced_service_account_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10664,12 +10754,14 @@ class CoreV1Api(object):
         :param str namespace: object name and auth scope, such as for teams and projects (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'body', 'pretty']
+        all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -10678,19 +10770,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_namespaced_service_account" % key
+                    " to method delete_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_service_account`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_service_account`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -10705,6 +10797,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -10741,7 +10837,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_node(self, name, body, **kwargs):
+    def delete_node(self, name, body, **kwargs):
         """
         
         delete a Node
@@ -10752,25 +10848,27 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_node(name, body, callback=callback_function)
+        >>> thread = api.delete_node(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the Node (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_node_with_http_info(name, body, **kwargs)
+            return self.delete_node_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_node_with_http_info(name, body, **kwargs)
+            (data) = self.delete_node_with_http_info(name, body, **kwargs)
             return data
 
-    def delete_core_v1_node_with_http_info(self, name, body, **kwargs):
+    def delete_node_with_http_info(self, name, body, **kwargs):
         """
         
         delete a Node
@@ -10781,19 +10879,21 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_node_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.delete_node_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the Node (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'body', 'pretty']
+        all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -10802,16 +10902,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_node" % key
+                    " to method delete_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_node`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_node`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_node`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_node`")
 
 
         collection_formats = {}
@@ -10824,6 +10924,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -10860,7 +10964,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_core_v1_persistent_volume(self, name, body, **kwargs):
+    def delete_persistent_volume(self, name, body, **kwargs):
         """
         
         delete a PersistentVolume
@@ -10871,25 +10975,27 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_persistent_volume(name, body, callback=callback_function)
+        >>> thread = api.delete_persistent_volume(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the PersistentVolume (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_core_v1_persistent_volume_with_http_info(name, body, **kwargs)
+            return self.delete_persistent_volume_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.delete_core_v1_persistent_volume_with_http_info(name, body, **kwargs)
+            (data) = self.delete_persistent_volume_with_http_info(name, body, **kwargs)
             return data
 
-    def delete_core_v1_persistent_volume_with_http_info(self, name, body, **kwargs):
+    def delete_persistent_volume_with_http_info(self, name, body, **kwargs):
         """
         
         delete a PersistentVolume
@@ -10900,19 +11006,21 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_core_v1_persistent_volume_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.delete_persistent_volume_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the PersistentVolume (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'body', 'pretty']
+        all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -10921,16 +11029,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_core_v1_persistent_volume" % key
+                    " to method delete_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_persistent_volume`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_persistent_volume`")
 
 
         collection_formats = {}
@@ -10943,6 +11051,10 @@ class CoreV1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -10979,7 +11091,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def get_core_v1_api_resources(self, **kwargs):
+    def get_api_resources(self, **kwargs):
         """
         
         get available resources
@@ -10990,7 +11102,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_core_v1_api_resources(callback=callback_function)
+        >>> thread = api.get_api_resources(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11000,12 +11112,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_core_v1_api_resources_with_http_info(**kwargs)
+            return self.get_api_resources_with_http_info(**kwargs)
         else:
-            (data) = self.get_core_v1_api_resources_with_http_info(**kwargs)
+            (data) = self.get_api_resources_with_http_info(**kwargs)
             return data
 
-    def get_core_v1_api_resources_with_http_info(self, **kwargs):
+    def get_api_resources_with_http_info(self, **kwargs):
         """
         
         get available resources
@@ -11016,7 +11128,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_core_v1_api_resources_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_resources_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11034,7 +11146,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_core_v1_api_resources" % key
+                    " to method get_api_resources" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -11080,7 +11192,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_component_status(self, **kwargs):
+    def list_component_status(self, **kwargs):
         """
         
         list objects of kind ComponentStatus
@@ -11091,7 +11203,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_component_status(callback=callback_function)
+        >>> thread = api.list_component_status(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11107,12 +11219,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_component_status_with_http_info(**kwargs)
+            return self.list_component_status_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_component_status_with_http_info(**kwargs)
+            (data) = self.list_component_status_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_component_status_with_http_info(self, **kwargs):
+    def list_component_status_with_http_info(self, **kwargs):
         """
         
         list objects of kind ComponentStatus
@@ -11123,7 +11235,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_component_status_with_http_info(callback=callback_function)
+        >>> thread = api.list_component_status_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11147,7 +11259,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_component_status" % key
+                    " to method list_component_status" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -11205,7 +11317,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_config_map_for_all_namespaces(self, **kwargs):
+    def list_config_map_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind ConfigMap
@@ -11216,7 +11328,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_config_map_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_config_map_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11232,12 +11344,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_config_map_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_config_map_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_config_map_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_config_map_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_config_map_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_config_map_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind ConfigMap
@@ -11248,7 +11360,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_config_map_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_config_map_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11272,7 +11384,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_config_map_for_all_namespaces" % key
+                    " to method list_config_map_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -11330,7 +11442,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_endpoints_for_all_namespaces(self, **kwargs):
+    def list_endpoints_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind Endpoints
@@ -11341,7 +11453,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_endpoints_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_endpoints_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11357,12 +11469,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_endpoints_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_endpoints_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_endpoints_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_endpoints_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_endpoints_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_endpoints_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind Endpoints
@@ -11373,7 +11485,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_endpoints_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_endpoints_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11397,7 +11509,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_endpoints_for_all_namespaces" % key
+                    " to method list_endpoints_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -11455,7 +11567,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_event_for_all_namespaces(self, **kwargs):
+    def list_event_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind Event
@@ -11466,7 +11578,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_event_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_event_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11482,12 +11594,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_event_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_event_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_event_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_event_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_event_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_event_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind Event
@@ -11498,7 +11610,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_event_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_event_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11522,7 +11634,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_event_for_all_namespaces" % key
+                    " to method list_event_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -11580,7 +11692,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_limit_range_for_all_namespaces(self, **kwargs):
+    def list_limit_range_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind LimitRange
@@ -11591,7 +11703,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_limit_range_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_limit_range_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11607,12 +11719,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_limit_range_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_limit_range_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_limit_range_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_limit_range_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_limit_range_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_limit_range_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind LimitRange
@@ -11623,7 +11735,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_limit_range_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_limit_range_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11647,7 +11759,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_limit_range_for_all_namespaces" % key
+                    " to method list_limit_range_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -11705,7 +11817,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespace(self, **kwargs):
+    def list_namespace(self, **kwargs):
         """
         
         list or watch objects of kind Namespace
@@ -11716,7 +11828,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespace(callback=callback_function)
+        >>> thread = api.list_namespace(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11732,12 +11844,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespace_with_http_info(**kwargs)
+            return self.list_namespace_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_namespace_with_http_info(**kwargs)
+            (data) = self.list_namespace_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_namespace_with_http_info(self, **kwargs):
+    def list_namespace_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind Namespace
@@ -11748,7 +11860,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespace_with_http_info(callback=callback_function)
+        >>> thread = api.list_namespace_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11772,7 +11884,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespace" % key
+                    " to method list_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -11830,7 +11942,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_config_map(self, namespace, **kwargs):
+    def list_namespaced_config_map(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ConfigMap
@@ -11841,7 +11953,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_config_map(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_config_map(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11858,12 +11970,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_config_map_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_config_map_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_config_map_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_config_map_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_config_map_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_config_map_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ConfigMap
@@ -11874,7 +11986,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_config_map_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_config_map_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11899,13 +12011,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_config_map" % key
+                    " to method list_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -11962,7 +12074,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_endpoints(self, namespace, **kwargs):
+    def list_namespaced_endpoints(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Endpoints
@@ -11973,7 +12085,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_endpoints(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_endpoints(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -11990,12 +12102,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_endpoints_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_endpoints_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_endpoints_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_endpoints_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_endpoints_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_endpoints_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Endpoints
@@ -12006,7 +12118,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_endpoints_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_endpoints_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12031,13 +12143,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_endpoints" % key
+                    " to method list_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -12094,7 +12206,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_event(self, namespace, **kwargs):
+    def list_namespaced_event(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Event
@@ -12105,7 +12217,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_event(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_event(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12122,12 +12234,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_event_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_event_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_event_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_event_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_event_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_event_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Event
@@ -12138,7 +12250,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_event_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_event_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12163,13 +12275,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_event" % key
+                    " to method list_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_event`")
 
 
         collection_formats = {}
@@ -12226,7 +12338,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_limit_range(self, namespace, **kwargs):
+    def list_namespaced_limit_range(self, namespace, **kwargs):
         """
         
         list or watch objects of kind LimitRange
@@ -12237,7 +12349,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_limit_range(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_limit_range(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12254,12 +12366,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_limit_range_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_limit_range_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_limit_range_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_limit_range_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_limit_range_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_limit_range_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind LimitRange
@@ -12270,7 +12382,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_limit_range_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_limit_range_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12295,13 +12407,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_limit_range" % key
+                    " to method list_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -12358,7 +12470,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_persistent_volume_claim(self, namespace, **kwargs):
+    def list_namespaced_persistent_volume_claim(self, namespace, **kwargs):
         """
         
         list or watch objects of kind PersistentVolumeClaim
@@ -12369,7 +12481,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_persistent_volume_claim(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_persistent_volume_claim(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12386,12 +12498,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_persistent_volume_claim_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_persistent_volume_claim_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_persistent_volume_claim_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind PersistentVolumeClaim
@@ -12402,7 +12514,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_persistent_volume_claim_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_persistent_volume_claim_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12427,13 +12539,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_persistent_volume_claim" % key
+                    " to method list_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -12490,7 +12602,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_pod(self, namespace, **kwargs):
+    def list_namespaced_pod(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Pod
@@ -12501,7 +12613,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_pod(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_pod(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12518,12 +12630,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_pod_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_pod_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_pod_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_pod_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_pod_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_pod_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Pod
@@ -12534,7 +12646,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_pod_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_pod_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12559,13 +12671,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_pod" % key
+                    " to method list_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_pod`")
 
 
         collection_formats = {}
@@ -12622,7 +12734,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_pod_template(self, namespace, **kwargs):
+    def list_namespaced_pod_template(self, namespace, **kwargs):
         """
         
         list or watch objects of kind PodTemplate
@@ -12633,7 +12745,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_pod_template(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_pod_template(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12650,12 +12762,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_pod_template_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_pod_template_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_pod_template_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_pod_template_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_pod_template_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_pod_template_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind PodTemplate
@@ -12666,7 +12778,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_pod_template_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_pod_template_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12691,13 +12803,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_pod_template" % key
+                    " to method list_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -12754,7 +12866,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_replication_controller(self, namespace, **kwargs):
+    def list_namespaced_replication_controller(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ReplicationController
@@ -12765,7 +12877,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_replication_controller(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_replication_controller(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12782,12 +12894,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_replication_controller_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_replication_controller_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_replication_controller_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_replication_controller_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_replication_controller_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_replication_controller_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ReplicationController
@@ -12798,7 +12910,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_replication_controller_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_replication_controller_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12823,13 +12935,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_replication_controller" % key
+                    " to method list_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -12886,7 +12998,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_resource_quota(self, namespace, **kwargs):
+    def list_namespaced_resource_quota(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ResourceQuota
@@ -12897,7 +13009,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_resource_quota(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_resource_quota(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12914,12 +13026,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_resource_quota_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_resource_quota_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_resource_quota_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_resource_quota_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_resource_quota_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_resource_quota_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ResourceQuota
@@ -12930,7 +13042,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_resource_quota_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_resource_quota_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -12955,13 +13067,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_resource_quota" % key
+                    " to method list_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -13018,7 +13130,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_secret(self, namespace, **kwargs):
+    def list_namespaced_secret(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Secret
@@ -13029,7 +13141,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_secret(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_secret(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13046,12 +13158,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_secret_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_secret_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_secret_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_secret_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_secret_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_secret_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Secret
@@ -13062,7 +13174,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_secret_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_secret_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13087,13 +13199,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_secret" % key
+                    " to method list_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_secret`")
 
 
         collection_formats = {}
@@ -13150,7 +13262,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_service(self, namespace, **kwargs):
+    def list_namespaced_service(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Service
@@ -13161,7 +13273,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_service(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_service(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13178,12 +13290,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_service_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_service_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_service_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_service_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_service_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_service_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind Service
@@ -13194,7 +13306,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_service_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_service_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13219,13 +13331,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_service" % key
+                    " to method list_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_service`")
 
 
         collection_formats = {}
@@ -13282,7 +13394,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_namespaced_service_account(self, namespace, **kwargs):
+    def list_namespaced_service_account(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ServiceAccount
@@ -13293,7 +13405,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_service_account(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_service_account(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13310,12 +13422,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_namespaced_service_account_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_service_account_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_core_v1_namespaced_service_account_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_service_account_with_http_info(namespace, **kwargs)
             return data
 
-    def list_core_v1_namespaced_service_account_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_service_account_with_http_info(self, namespace, **kwargs):
         """
         
         list or watch objects of kind ServiceAccount
@@ -13326,7 +13438,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_namespaced_service_account_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_service_account_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13351,13 +13463,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_namespaced_service_account" % key
+                    " to method list_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -13414,7 +13526,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_node(self, **kwargs):
+    def list_node(self, **kwargs):
         """
         
         list or watch objects of kind Node
@@ -13425,7 +13537,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_node(callback=callback_function)
+        >>> thread = api.list_node(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13441,12 +13553,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_node_with_http_info(**kwargs)
+            return self.list_node_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_node_with_http_info(**kwargs)
+            (data) = self.list_node_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_node_with_http_info(self, **kwargs):
+    def list_node_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind Node
@@ -13457,7 +13569,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_node_with_http_info(callback=callback_function)
+        >>> thread = api.list_node_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13481,7 +13593,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_node" % key
+                    " to method list_node" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -13539,7 +13651,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_persistent_volume(self, **kwargs):
+    def list_persistent_volume(self, **kwargs):
         """
         
         list or watch objects of kind PersistentVolume
@@ -13550,7 +13662,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_persistent_volume(callback=callback_function)
+        >>> thread = api.list_persistent_volume(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13566,12 +13678,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_persistent_volume_with_http_info(**kwargs)
+            return self.list_persistent_volume_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_persistent_volume_with_http_info(**kwargs)
+            (data) = self.list_persistent_volume_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_persistent_volume_with_http_info(self, **kwargs):
+    def list_persistent_volume_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind PersistentVolume
@@ -13582,7 +13694,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_persistent_volume_with_http_info(callback=callback_function)
+        >>> thread = api.list_persistent_volume_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13606,7 +13718,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_persistent_volume" % key
+                    " to method list_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -13664,7 +13776,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_persistent_volume_claim_for_all_namespaces(self, **kwargs):
+    def list_persistent_volume_claim_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind PersistentVolumeClaim
@@ -13675,7 +13787,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_persistent_volume_claim_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_persistent_volume_claim_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13691,12 +13803,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_persistent_volume_claim_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_persistent_volume_claim_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_persistent_volume_claim_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_persistent_volume_claim_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_persistent_volume_claim_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_persistent_volume_claim_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind PersistentVolumeClaim
@@ -13707,7 +13819,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_persistent_volume_claim_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_persistent_volume_claim_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13731,7 +13843,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_persistent_volume_claim_for_all_namespaces" % key
+                    " to method list_persistent_volume_claim_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -13789,7 +13901,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_pod_for_all_namespaces(self, **kwargs):
+    def list_pod_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind Pod
@@ -13800,7 +13912,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_pod_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_pod_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13816,12 +13928,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_pod_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_pod_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_pod_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_pod_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_pod_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_pod_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind Pod
@@ -13832,7 +13944,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_pod_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_pod_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13856,7 +13968,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_pod_for_all_namespaces" % key
+                    " to method list_pod_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -13914,7 +14026,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_pod_template_for_all_namespaces(self, **kwargs):
+    def list_pod_template_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind PodTemplate
@@ -13925,7 +14037,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_pod_template_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_pod_template_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13941,12 +14053,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_pod_template_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_pod_template_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_pod_template_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_pod_template_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_pod_template_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_pod_template_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind PodTemplate
@@ -13957,7 +14069,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_pod_template_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_pod_template_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -13981,7 +14093,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_pod_template_for_all_namespaces" % key
+                    " to method list_pod_template_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -14039,7 +14151,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_replication_controller_for_all_namespaces(self, **kwargs):
+    def list_replication_controller_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind ReplicationController
@@ -14050,7 +14162,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_replication_controller_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_replication_controller_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14066,12 +14178,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_replication_controller_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_replication_controller_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_replication_controller_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_replication_controller_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_replication_controller_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_replication_controller_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind ReplicationController
@@ -14082,7 +14194,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_replication_controller_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_replication_controller_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14106,7 +14218,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_replication_controller_for_all_namespaces" % key
+                    " to method list_replication_controller_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -14164,7 +14276,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_resource_quota_for_all_namespaces(self, **kwargs):
+    def list_resource_quota_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind ResourceQuota
@@ -14175,7 +14287,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_resource_quota_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_resource_quota_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14191,12 +14303,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_resource_quota_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_resource_quota_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_resource_quota_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_resource_quota_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_resource_quota_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_resource_quota_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind ResourceQuota
@@ -14207,7 +14319,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_resource_quota_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_resource_quota_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14231,7 +14343,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_resource_quota_for_all_namespaces" % key
+                    " to method list_resource_quota_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -14289,7 +14401,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_secret_for_all_namespaces(self, **kwargs):
+    def list_secret_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind Secret
@@ -14300,7 +14412,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_secret_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_secret_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14316,12 +14428,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_secret_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_secret_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_secret_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_secret_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_secret_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_secret_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind Secret
@@ -14332,7 +14444,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_secret_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_secret_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14356,7 +14468,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_secret_for_all_namespaces" % key
+                    " to method list_secret_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -14414,7 +14526,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_service_account_for_all_namespaces(self, **kwargs):
+    def list_service_account_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind ServiceAccount
@@ -14425,7 +14537,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_service_account_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_service_account_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14441,12 +14553,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_service_account_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_service_account_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_service_account_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_service_account_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_service_account_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_service_account_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind ServiceAccount
@@ -14457,7 +14569,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_service_account_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_service_account_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14481,7 +14593,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_service_account_for_all_namespaces" % key
+                    " to method list_service_account_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -14539,7 +14651,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_core_v1_service_for_all_namespaces(self, **kwargs):
+    def list_service_for_all_namespaces(self, **kwargs):
         """
         
         list or watch objects of kind Service
@@ -14550,7 +14662,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_service_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_service_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14566,12 +14678,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_core_v1_service_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_service_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_core_v1_service_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_service_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_core_v1_service_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_service_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind Service
@@ -14582,7 +14694,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_core_v1_service_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_service_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14606,7 +14718,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_core_v1_service_for_all_namespaces" % key
+                    " to method list_service_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -14664,7 +14776,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespace(self, name, body, **kwargs):
+    def patch_namespace(self, name, body, **kwargs):
         """
         
         partially update the specified Namespace
@@ -14675,7 +14787,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespace(name, body, callback=callback_function)
+        >>> thread = api.patch_namespace(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14688,12 +14800,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespace_with_http_info(name, body, **kwargs)
+            return self.patch_namespace_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespace_with_http_info(name, body, **kwargs)
+            (data) = self.patch_namespace_with_http_info(name, body, **kwargs)
             return data
 
-    def patch_core_v1_namespace_with_http_info(self, name, body, **kwargs):
+    def patch_namespace_with_http_info(self, name, body, **kwargs):
         """
         
         partially update the specified Namespace
@@ -14704,7 +14816,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespace_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.patch_namespace_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14725,16 +14837,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespace" % key
+                    " to method patch_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespace`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespace`")
 
 
         collection_formats = {}
@@ -14783,7 +14895,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespace_status(self, name, body, **kwargs):
+    def patch_namespace_status(self, name, body, **kwargs):
         """
         
         partially update status of the specified Namespace
@@ -14794,7 +14906,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespace_status(name, body, callback=callback_function)
+        >>> thread = api.patch_namespace_status(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14807,12 +14919,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespace_status_with_http_info(name, body, **kwargs)
+            return self.patch_namespace_status_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespace_status_with_http_info(name, body, **kwargs)
+            (data) = self.patch_namespace_status_with_http_info(name, body, **kwargs)
             return data
 
-    def patch_core_v1_namespace_status_with_http_info(self, name, body, **kwargs):
+    def patch_namespace_status_with_http_info(self, name, body, **kwargs):
         """
         
         partially update status of the specified Namespace
@@ -14823,7 +14935,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespace_status_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.patch_namespace_status_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14844,16 +14956,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespace_status" % key
+                    " to method patch_namespace_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespace_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespace_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespace_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespace_status`")
 
 
         collection_formats = {}
@@ -14902,7 +15014,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_config_map(self, name, namespace, body, **kwargs):
+    def patch_namespaced_config_map(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ConfigMap
@@ -14913,7 +15025,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_config_map(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_config_map(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14927,12 +15039,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_config_map_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_config_map_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ConfigMap
@@ -14943,7 +15055,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_config_map_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_config_map_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -14965,19 +15077,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_config_map" % key
+                    " to method patch_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_config_map`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_config_map`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -15028,7 +15140,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_endpoints(self, name, namespace, body, **kwargs):
+    def patch_namespaced_endpoints(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Endpoints
@@ -15039,7 +15151,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_endpoints(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_endpoints(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15053,12 +15165,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_endpoints_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_endpoints_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Endpoints
@@ -15069,7 +15181,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_endpoints_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15091,19 +15203,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_endpoints" % key
+                    " to method patch_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_endpoints`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_endpoints`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -15154,7 +15266,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_event(self, name, namespace, body, **kwargs):
+    def patch_namespaced_event(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Event
@@ -15165,7 +15277,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_event(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_event(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15179,12 +15291,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_event_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_event_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_event_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_event_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_event_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_event_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Event
@@ -15195,7 +15307,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_event_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_event_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15217,19 +15329,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_event" % key
+                    " to method patch_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_event`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_event`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_event`")
 
 
         collection_formats = {}
@@ -15280,7 +15392,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_limit_range(self, name, namespace, body, **kwargs):
+    def patch_namespaced_limit_range(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified LimitRange
@@ -15291,7 +15403,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_limit_range(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_limit_range(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15305,12 +15417,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_limit_range_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_limit_range_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified LimitRange
@@ -15321,7 +15433,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_limit_range_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15343,19 +15455,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_limit_range" % key
+                    " to method patch_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_limit_range`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_limit_range`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -15406,7 +15518,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_persistent_volume_claim(self, name, namespace, body, **kwargs):
+    def patch_namespaced_persistent_volume_claim(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified PersistentVolumeClaim
@@ -15417,7 +15529,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_persistent_volume_claim(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_persistent_volume_claim(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15431,12 +15543,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified PersistentVolumeClaim
@@ -15447,7 +15559,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15469,19 +15581,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_persistent_volume_claim" % key
+                    " to method patch_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_persistent_volume_claim`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_persistent_volume_claim`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -15532,7 +15644,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_persistent_volume_claim_status(self, name, namespace, body, **kwargs):
+    def patch_namespaced_persistent_volume_claim_status(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified PersistentVolumeClaim
@@ -15543,7 +15655,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_persistent_volume_claim_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_persistent_volume_claim_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15557,12 +15669,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_persistent_volume_claim_status_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_persistent_volume_claim_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified PersistentVolumeClaim
@@ -15573,7 +15685,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15595,19 +15707,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_persistent_volume_claim_status" % key
+                    " to method patch_namespaced_persistent_volume_claim_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_persistent_volume_claim_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_persistent_volume_claim_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_persistent_volume_claim_status`")
 
 
         collection_formats = {}
@@ -15658,7 +15770,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_pod(self, name, namespace, body, **kwargs):
+    def patch_namespaced_pod(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Pod
@@ -15669,7 +15781,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_pod(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_pod(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15683,12 +15795,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_pod_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_pod_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Pod
@@ -15699,7 +15811,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_pod_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_pod_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15721,19 +15833,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_pod" % key
+                    " to method patch_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_pod`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_pod`")
 
 
         collection_formats = {}
@@ -15784,7 +15896,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_pod_status(self, name, namespace, body, **kwargs):
+    def patch_namespaced_pod_status(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified Pod
@@ -15795,7 +15907,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_pod_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_pod_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15809,12 +15921,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_pod_status_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_pod_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified Pod
@@ -15825,7 +15937,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_pod_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_pod_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15847,19 +15959,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_pod_status" % key
+                    " to method patch_namespaced_pod_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_pod_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_pod_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_pod_status`")
 
 
         collection_formats = {}
@@ -15910,7 +16022,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_pod_template(self, name, namespace, body, **kwargs):
+    def patch_namespaced_pod_template(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified PodTemplate
@@ -15921,7 +16033,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_pod_template(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_pod_template(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15935,12 +16047,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_pod_template_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_pod_template_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified PodTemplate
@@ -15951,7 +16063,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_pod_template_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -15973,19 +16085,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_pod_template" % key
+                    " to method patch_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_pod_template`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_pod_template`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -16036,7 +16148,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_replication_controller(self, name, namespace, body, **kwargs):
+    def patch_namespaced_replication_controller(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ReplicationController
@@ -16047,7 +16159,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_replication_controller(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_replication_controller(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16061,12 +16173,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_replication_controller_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_replication_controller_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ReplicationController
@@ -16077,7 +16189,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_replication_controller_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16099,19 +16211,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_replication_controller" % key
+                    " to method patch_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_replication_controller`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_replication_controller`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -16162,7 +16274,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_replication_controller_status(self, name, namespace, body, **kwargs):
+    def patch_namespaced_replication_controller_status(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified ReplicationController
@@ -16173,7 +16285,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_replication_controller_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_replication_controller_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16187,12 +16299,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_replication_controller_status_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_replication_controller_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified ReplicationController
@@ -16203,7 +16315,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_replication_controller_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16225,19 +16337,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_replication_controller_status" % key
+                    " to method patch_namespaced_replication_controller_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_replication_controller_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_replication_controller_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_replication_controller_status`")
 
 
         collection_formats = {}
@@ -16288,7 +16400,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_resource_quota(self, name, namespace, body, **kwargs):
+    def patch_namespaced_resource_quota(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ResourceQuota
@@ -16299,7 +16411,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_resource_quota(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_resource_quota(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16313,12 +16425,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_resource_quota_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_resource_quota_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ResourceQuota
@@ -16329,7 +16441,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_resource_quota_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16351,19 +16463,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_resource_quota" % key
+                    " to method patch_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_resource_quota`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_resource_quota`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -16414,7 +16526,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_resource_quota_status(self, name, namespace, body, **kwargs):
+    def patch_namespaced_resource_quota_status(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified ResourceQuota
@@ -16425,7 +16537,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_resource_quota_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_resource_quota_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16439,12 +16551,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_resource_quota_status_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_resource_quota_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified ResourceQuota
@@ -16455,7 +16567,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_resource_quota_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16477,19 +16589,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_resource_quota_status" % key
+                    " to method patch_namespaced_resource_quota_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_resource_quota_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_resource_quota_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_resource_quota_status`")
 
 
         collection_formats = {}
@@ -16540,7 +16652,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_scale_scale(self, name, namespace, body, **kwargs):
+    def patch_namespaced_scale_scale(self, name, namespace, body, **kwargs):
         """
         
         partially update scale of the specified Scale
@@ -16551,7 +16663,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_scale_scale(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_scale_scale(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16565,12 +16677,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_scale_scale_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_scale_scale_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update scale of the specified Scale
@@ -16581,7 +16693,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_scale_scale_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_scale_scale_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16603,19 +16715,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_scale_scale" % key
+                    " to method patch_namespaced_scale_scale" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_scale_scale`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_scale_scale`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_scale_scale`")
 
 
         collection_formats = {}
@@ -16666,7 +16778,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_secret(self, name, namespace, body, **kwargs):
+    def patch_namespaced_secret(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Secret
@@ -16677,7 +16789,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_secret(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_secret(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16691,12 +16803,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_secret_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_secret_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Secret
@@ -16707,7 +16819,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_secret_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_secret_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16729,19 +16841,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_secret" % key
+                    " to method patch_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_secret`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_secret`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_secret`")
 
 
         collection_formats = {}
@@ -16792,7 +16904,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_service(self, name, namespace, body, **kwargs):
+    def patch_namespaced_service(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Service
@@ -16803,7 +16915,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_service(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_service(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16817,12 +16929,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_service_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_service_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_service_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_service_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_service_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_service_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified Service
@@ -16833,7 +16945,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_service_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_service_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16855,19 +16967,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_service" % key
+                    " to method patch_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_service`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_service`")
 
 
         collection_formats = {}
@@ -16918,7 +17030,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_service_account(self, name, namespace, body, **kwargs):
+    def patch_namespaced_service_account(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ServiceAccount
@@ -16929,7 +17041,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_service_account(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_service_account(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16943,12 +17055,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_service_account_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_service_account_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update the specified ServiceAccount
@@ -16959,7 +17071,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_service_account_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_service_account_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -16981,19 +17093,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_service_account" % key
+                    " to method patch_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_service_account`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_service_account`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -17044,7 +17156,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_namespaced_service_status(self, name, namespace, body, **kwargs):
+    def patch_namespaced_service_status(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified Service
@@ -17055,7 +17167,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_service_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_service_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17069,12 +17181,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
+            return self.patch_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.patch_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_core_v1_namespaced_service_status_with_http_info(self, name, namespace, body, **kwargs):
+    def patch_namespaced_service_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         partially update status of the specified Service
@@ -17085,7 +17197,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_namespaced_service_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.patch_namespaced_service_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17107,19 +17219,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_namespaced_service_status" % key
+                    " to method patch_namespaced_service_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_service_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_service_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_service_status`")
 
 
         collection_formats = {}
@@ -17170,7 +17282,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_node(self, name, body, **kwargs):
+    def patch_node(self, name, body, **kwargs):
         """
         
         partially update the specified Node
@@ -17181,7 +17293,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_node(name, body, callback=callback_function)
+        >>> thread = api.patch_node(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17194,12 +17306,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_node_with_http_info(name, body, **kwargs)
+            return self.patch_node_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_node_with_http_info(name, body, **kwargs)
+            (data) = self.patch_node_with_http_info(name, body, **kwargs)
             return data
 
-    def patch_core_v1_node_with_http_info(self, name, body, **kwargs):
+    def patch_node_with_http_info(self, name, body, **kwargs):
         """
         
         partially update the specified Node
@@ -17210,7 +17322,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_node_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.patch_node_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17231,16 +17343,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_node" % key
+                    " to method patch_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_node`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_node`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_node`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_node`")
 
 
         collection_formats = {}
@@ -17289,7 +17401,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_node_status(self, name, body, **kwargs):
+    def patch_node_status(self, name, body, **kwargs):
         """
         
         partially update status of the specified Node
@@ -17300,7 +17412,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_node_status(name, body, callback=callback_function)
+        >>> thread = api.patch_node_status(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17313,12 +17425,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_node_status_with_http_info(name, body, **kwargs)
+            return self.patch_node_status_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_node_status_with_http_info(name, body, **kwargs)
+            (data) = self.patch_node_status_with_http_info(name, body, **kwargs)
             return data
 
-    def patch_core_v1_node_status_with_http_info(self, name, body, **kwargs):
+    def patch_node_status_with_http_info(self, name, body, **kwargs):
         """
         
         partially update status of the specified Node
@@ -17329,7 +17441,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_node_status_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.patch_node_status_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17350,16 +17462,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_node_status" % key
+                    " to method patch_node_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_node_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_node_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_node_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_node_status`")
 
 
         collection_formats = {}
@@ -17408,7 +17520,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_persistent_volume(self, name, body, **kwargs):
+    def patch_persistent_volume(self, name, body, **kwargs):
         """
         
         partially update the specified PersistentVolume
@@ -17419,7 +17531,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_persistent_volume(name, body, callback=callback_function)
+        >>> thread = api.patch_persistent_volume(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17432,12 +17544,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_persistent_volume_with_http_info(name, body, **kwargs)
+            return self.patch_persistent_volume_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_persistent_volume_with_http_info(name, body, **kwargs)
+            (data) = self.patch_persistent_volume_with_http_info(name, body, **kwargs)
             return data
 
-    def patch_core_v1_persistent_volume_with_http_info(self, name, body, **kwargs):
+    def patch_persistent_volume_with_http_info(self, name, body, **kwargs):
         """
         
         partially update the specified PersistentVolume
@@ -17448,7 +17560,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_persistent_volume_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.patch_persistent_volume_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17469,16 +17581,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_persistent_volume" % key
+                    " to method patch_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_persistent_volume`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_persistent_volume`")
 
 
         collection_formats = {}
@@ -17527,7 +17639,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_core_v1_persistent_volume_status(self, name, body, **kwargs):
+    def patch_persistent_volume_status(self, name, body, **kwargs):
         """
         
         partially update status of the specified PersistentVolume
@@ -17538,7 +17650,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_persistent_volume_status(name, body, callback=callback_function)
+        >>> thread = api.patch_persistent_volume_status(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17551,12 +17663,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_core_v1_persistent_volume_status_with_http_info(name, body, **kwargs)
+            return self.patch_persistent_volume_status_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.patch_core_v1_persistent_volume_status_with_http_info(name, body, **kwargs)
+            (data) = self.patch_persistent_volume_status_with_http_info(name, body, **kwargs)
             return data
 
-    def patch_core_v1_persistent_volume_status_with_http_info(self, name, body, **kwargs):
+    def patch_persistent_volume_status_with_http_info(self, name, body, **kwargs):
         """
         
         partially update status of the specified PersistentVolume
@@ -17567,7 +17679,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_core_v1_persistent_volume_status_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.patch_persistent_volume_status_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17588,16 +17700,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_core_v1_persistent_volume_status" % key
+                    " to method patch_persistent_volume_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_core_v1_persistent_volume_status`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_persistent_volume_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_core_v1_persistent_volume_status`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_persistent_volume_status`")
 
 
         collection_formats = {}
@@ -17646,7 +17758,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_delete_namespaced_pod(self, name, namespace, **kwargs):
+    def proxy_delete_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         proxy DELETE requests to Pod
@@ -17657,7 +17769,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17669,12 +17781,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_delete_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.proxy_delete_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_delete_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_delete_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_delete_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def proxy_delete_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy DELETE requests to Pod
@@ -17685,7 +17797,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17705,16 +17817,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_delete_namespaced_pod" % key
+                    " to method proxy_delete_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_delete_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_delete_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_delete_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_delete_namespaced_pod`")
 
 
         collection_formats = {}
@@ -17761,7 +17873,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_delete_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
+    def proxy_delete_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy DELETE requests to Pod
@@ -17772,7 +17884,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17785,12 +17897,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_delete_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_delete_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_delete_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_delete_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_delete_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_delete_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy DELETE requests to Pod
@@ -17801,7 +17913,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17822,19 +17934,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_delete_namespaced_pod_with_path" % key
+                    " to method proxy_delete_namespaced_pod_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_delete_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_delete_namespaced_pod_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_delete_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_delete_namespaced_pod_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_delete_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_delete_namespaced_pod_with_path`")
 
 
         collection_formats = {}
@@ -17883,7 +17995,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_delete_namespaced_service(self, name, namespace, **kwargs):
+    def proxy_delete_namespaced_service(self, name, namespace, **kwargs):
         """
         
         proxy DELETE requests to Service
@@ -17894,7 +18006,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17906,12 +18018,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_delete_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.proxy_delete_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_delete_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_delete_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_delete_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def proxy_delete_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy DELETE requests to Service
@@ -17922,7 +18034,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17942,16 +18054,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_delete_namespaced_service" % key
+                    " to method proxy_delete_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_delete_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_delete_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_delete_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_delete_namespaced_service`")
 
 
         collection_formats = {}
@@ -17998,7 +18110,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_delete_namespaced_service_with_path(self, name, namespace, path, **kwargs):
+    def proxy_delete_namespaced_service_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy DELETE requests to Service
@@ -18009,7 +18121,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_service_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_service_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18022,12 +18134,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_delete_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_delete_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_delete_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_delete_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_delete_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_delete_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy DELETE requests to Service
@@ -18038,7 +18150,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_delete_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18059,19 +18171,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_delete_namespaced_service_with_path" % key
+                    " to method proxy_delete_namespaced_service_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_delete_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_delete_namespaced_service_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_delete_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_delete_namespaced_service_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_delete_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_delete_namespaced_service_with_path`")
 
 
         collection_formats = {}
@@ -18120,7 +18232,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_delete_node(self, name, **kwargs):
+    def proxy_delete_node(self, name, **kwargs):
         """
         
         proxy DELETE requests to Node
@@ -18131,7 +18243,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_node(name, callback=callback_function)
+        >>> thread = api.proxy_delete_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18142,12 +18254,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_delete_node_with_http_info(name, **kwargs)
+            return self.proxy_delete_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.proxy_core_v1_delete_node_with_http_info(name, **kwargs)
+            (data) = self.proxy_delete_node_with_http_info(name, **kwargs)
             return data
 
-    def proxy_core_v1_delete_node_with_http_info(self, name, **kwargs):
+    def proxy_delete_node_with_http_info(self, name, **kwargs):
         """
         
         proxy DELETE requests to Node
@@ -18158,7 +18270,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.proxy_delete_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18177,13 +18289,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_delete_node" % key
+                    " to method proxy_delete_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_delete_node`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_delete_node`")
 
 
         collection_formats = {}
@@ -18228,7 +18340,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_delete_node_with_path(self, name, path, **kwargs):
+    def proxy_delete_node_with_path(self, name, path, **kwargs):
         """
         
         proxy DELETE requests to Node
@@ -18239,7 +18351,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_node_with_path(name, path, callback=callback_function)
+        >>> thread = api.proxy_delete_node_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18251,12 +18363,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_delete_node_with_path_with_http_info(name, path, **kwargs)
+            return self.proxy_delete_node_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_delete_node_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.proxy_delete_node_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def proxy_core_v1_delete_node_with_path_with_http_info(self, name, path, **kwargs):
+    def proxy_delete_node_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         proxy DELETE requests to Node
@@ -18267,7 +18379,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_delete_node_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.proxy_delete_node_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18287,16 +18399,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_delete_node_with_path" % key
+                    " to method proxy_delete_node_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_delete_node_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_delete_node_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_delete_node_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_delete_node_with_path`")
 
 
         collection_formats = {}
@@ -18343,7 +18455,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_get_namespaced_pod(self, name, namespace, **kwargs):
+    def proxy_get_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         proxy GET requests to Pod
@@ -18354,7 +18466,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18366,12 +18478,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_get_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.proxy_get_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_get_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_get_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_get_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def proxy_get_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy GET requests to Pod
@@ -18382,7 +18494,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18402,16 +18514,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_get_namespaced_pod" % key
+                    " to method proxy_get_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_get_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_get_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_get_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_get_namespaced_pod`")
 
 
         collection_formats = {}
@@ -18458,7 +18570,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_get_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
+    def proxy_get_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy GET requests to Pod
@@ -18469,7 +18581,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18482,12 +18594,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_get_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_get_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_get_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_get_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_get_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_get_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy GET requests to Pod
@@ -18498,7 +18610,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18519,19 +18631,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_get_namespaced_pod_with_path" % key
+                    " to method proxy_get_namespaced_pod_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_get_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_get_namespaced_pod_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_get_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_get_namespaced_pod_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_get_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_get_namespaced_pod_with_path`")
 
 
         collection_formats = {}
@@ -18580,7 +18692,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_get_namespaced_service(self, name, namespace, **kwargs):
+    def proxy_get_namespaced_service(self, name, namespace, **kwargs):
         """
         
         proxy GET requests to Service
@@ -18591,7 +18703,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18603,12 +18715,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_get_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.proxy_get_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_get_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_get_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_get_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def proxy_get_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy GET requests to Service
@@ -18619,7 +18731,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18639,16 +18751,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_get_namespaced_service" % key
+                    " to method proxy_get_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_get_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_get_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_get_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_get_namespaced_service`")
 
 
         collection_formats = {}
@@ -18695,7 +18807,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_get_namespaced_service_with_path(self, name, namespace, path, **kwargs):
+    def proxy_get_namespaced_service_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy GET requests to Service
@@ -18706,7 +18818,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_service_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_service_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18719,12 +18831,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_get_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_get_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_get_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_get_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_get_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_get_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy GET requests to Service
@@ -18735,7 +18847,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_get_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18756,19 +18868,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_get_namespaced_service_with_path" % key
+                    " to method proxy_get_namespaced_service_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_get_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_get_namespaced_service_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_get_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_get_namespaced_service_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_get_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_get_namespaced_service_with_path`")
 
 
         collection_formats = {}
@@ -18817,7 +18929,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_get_node(self, name, **kwargs):
+    def proxy_get_node(self, name, **kwargs):
         """
         
         proxy GET requests to Node
@@ -18828,7 +18940,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_node(name, callback=callback_function)
+        >>> thread = api.proxy_get_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18839,12 +18951,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_get_node_with_http_info(name, **kwargs)
+            return self.proxy_get_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.proxy_core_v1_get_node_with_http_info(name, **kwargs)
+            (data) = self.proxy_get_node_with_http_info(name, **kwargs)
             return data
 
-    def proxy_core_v1_get_node_with_http_info(self, name, **kwargs):
+    def proxy_get_node_with_http_info(self, name, **kwargs):
         """
         
         proxy GET requests to Node
@@ -18855,7 +18967,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.proxy_get_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18874,13 +18986,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_get_node" % key
+                    " to method proxy_get_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_get_node`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_get_node`")
 
 
         collection_formats = {}
@@ -18925,7 +19037,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_get_node_with_path(self, name, path, **kwargs):
+    def proxy_get_node_with_path(self, name, path, **kwargs):
         """
         
         proxy GET requests to Node
@@ -18936,7 +19048,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_node_with_path(name, path, callback=callback_function)
+        >>> thread = api.proxy_get_node_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18948,12 +19060,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_get_node_with_path_with_http_info(name, path, **kwargs)
+            return self.proxy_get_node_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_get_node_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.proxy_get_node_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def proxy_core_v1_get_node_with_path_with_http_info(self, name, path, **kwargs):
+    def proxy_get_node_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         proxy GET requests to Node
@@ -18964,7 +19076,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_get_node_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.proxy_get_node_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -18984,16 +19096,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_get_node_with_path" % key
+                    " to method proxy_get_node_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_get_node_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_get_node_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_get_node_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_get_node_with_path`")
 
 
         collection_formats = {}
@@ -19040,7 +19152,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_head_namespaced_pod(self, name, namespace, **kwargs):
+    def proxy_head_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         proxy HEAD requests to Pod
@@ -19051,7 +19163,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19063,12 +19175,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_head_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.proxy_head_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_head_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_head_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_head_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def proxy_head_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy HEAD requests to Pod
@@ -19079,7 +19191,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19099,16 +19211,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_head_namespaced_pod" % key
+                    " to method proxy_head_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_head_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_head_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_head_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_head_namespaced_pod`")
 
 
         collection_formats = {}
@@ -19155,7 +19267,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_head_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
+    def proxy_head_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy HEAD requests to Pod
@@ -19166,7 +19278,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19179,12 +19291,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_head_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_head_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_head_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_head_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_head_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_head_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy HEAD requests to Pod
@@ -19195,7 +19307,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19216,19 +19328,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_head_namespaced_pod_with_path" % key
+                    " to method proxy_head_namespaced_pod_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_head_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_head_namespaced_pod_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_head_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_head_namespaced_pod_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_head_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_head_namespaced_pod_with_path`")
 
 
         collection_formats = {}
@@ -19277,7 +19389,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_head_namespaced_service(self, name, namespace, **kwargs):
+    def proxy_head_namespaced_service(self, name, namespace, **kwargs):
         """
         
         proxy HEAD requests to Service
@@ -19288,7 +19400,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19300,12 +19412,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_head_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.proxy_head_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_head_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_head_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_head_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def proxy_head_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy HEAD requests to Service
@@ -19316,7 +19428,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19336,16 +19448,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_head_namespaced_service" % key
+                    " to method proxy_head_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_head_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_head_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_head_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_head_namespaced_service`")
 
 
         collection_formats = {}
@@ -19392,7 +19504,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_head_namespaced_service_with_path(self, name, namespace, path, **kwargs):
+    def proxy_head_namespaced_service_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy HEAD requests to Service
@@ -19403,7 +19515,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_service_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_service_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19416,12 +19528,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_head_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_head_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_head_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_head_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_head_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_head_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy HEAD requests to Service
@@ -19432,7 +19544,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_head_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19453,19 +19565,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_head_namespaced_service_with_path" % key
+                    " to method proxy_head_namespaced_service_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_head_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_head_namespaced_service_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_head_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_head_namespaced_service_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_head_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_head_namespaced_service_with_path`")
 
 
         collection_formats = {}
@@ -19514,7 +19626,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_head_node(self, name, **kwargs):
+    def proxy_head_node(self, name, **kwargs):
         """
         
         proxy HEAD requests to Node
@@ -19525,7 +19637,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_node(name, callback=callback_function)
+        >>> thread = api.proxy_head_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19536,12 +19648,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_head_node_with_http_info(name, **kwargs)
+            return self.proxy_head_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.proxy_core_v1_head_node_with_http_info(name, **kwargs)
+            (data) = self.proxy_head_node_with_http_info(name, **kwargs)
             return data
 
-    def proxy_core_v1_head_node_with_http_info(self, name, **kwargs):
+    def proxy_head_node_with_http_info(self, name, **kwargs):
         """
         
         proxy HEAD requests to Node
@@ -19552,7 +19664,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.proxy_head_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19571,13 +19683,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_head_node" % key
+                    " to method proxy_head_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_head_node`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_head_node`")
 
 
         collection_formats = {}
@@ -19622,7 +19734,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_head_node_with_path(self, name, path, **kwargs):
+    def proxy_head_node_with_path(self, name, path, **kwargs):
         """
         
         proxy HEAD requests to Node
@@ -19633,7 +19745,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_node_with_path(name, path, callback=callback_function)
+        >>> thread = api.proxy_head_node_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19645,12 +19757,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_head_node_with_path_with_http_info(name, path, **kwargs)
+            return self.proxy_head_node_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_head_node_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.proxy_head_node_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def proxy_core_v1_head_node_with_path_with_http_info(self, name, path, **kwargs):
+    def proxy_head_node_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         proxy HEAD requests to Node
@@ -19661,7 +19773,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_head_node_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.proxy_head_node_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19681,16 +19793,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_head_node_with_path" % key
+                    " to method proxy_head_node_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_head_node_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_head_node_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_head_node_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_head_node_with_path`")
 
 
         collection_formats = {}
@@ -19737,7 +19849,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_options_namespaced_pod(self, name, namespace, **kwargs):
+    def proxy_options_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         proxy OPTIONS requests to Pod
@@ -19748,7 +19860,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19760,12 +19872,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_options_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.proxy_options_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_options_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_options_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_options_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def proxy_options_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy OPTIONS requests to Pod
@@ -19776,7 +19888,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19796,16 +19908,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_options_namespaced_pod" % key
+                    " to method proxy_options_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_options_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_options_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_options_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_options_namespaced_pod`")
 
 
         collection_formats = {}
@@ -19852,7 +19964,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_options_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
+    def proxy_options_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy OPTIONS requests to Pod
@@ -19863,7 +19975,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19876,12 +19988,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_options_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_options_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_options_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_options_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_options_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_options_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy OPTIONS requests to Pod
@@ -19892,7 +20004,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19913,19 +20025,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_options_namespaced_pod_with_path" % key
+                    " to method proxy_options_namespaced_pod_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_options_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_options_namespaced_pod_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_options_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_options_namespaced_pod_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_options_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_options_namespaced_pod_with_path`")
 
 
         collection_formats = {}
@@ -19974,7 +20086,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_options_namespaced_service(self, name, namespace, **kwargs):
+    def proxy_options_namespaced_service(self, name, namespace, **kwargs):
         """
         
         proxy OPTIONS requests to Service
@@ -19985,7 +20097,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -19997,12 +20109,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_options_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.proxy_options_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_options_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_options_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_options_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def proxy_options_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy OPTIONS requests to Service
@@ -20013,7 +20125,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20033,16 +20145,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_options_namespaced_service" % key
+                    " to method proxy_options_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_options_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_options_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_options_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_options_namespaced_service`")
 
 
         collection_formats = {}
@@ -20089,7 +20201,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_options_namespaced_service_with_path(self, name, namespace, path, **kwargs):
+    def proxy_options_namespaced_service_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy OPTIONS requests to Service
@@ -20100,7 +20212,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_service_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_service_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20113,12 +20225,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_options_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_options_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_options_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_options_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_options_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_options_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy OPTIONS requests to Service
@@ -20129,7 +20241,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_options_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20150,19 +20262,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_options_namespaced_service_with_path" % key
+                    " to method proxy_options_namespaced_service_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_options_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_options_namespaced_service_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_options_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_options_namespaced_service_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_options_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_options_namespaced_service_with_path`")
 
 
         collection_formats = {}
@@ -20211,7 +20323,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_options_node(self, name, **kwargs):
+    def proxy_options_node(self, name, **kwargs):
         """
         
         proxy OPTIONS requests to Node
@@ -20222,7 +20334,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_node(name, callback=callback_function)
+        >>> thread = api.proxy_options_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20233,12 +20345,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_options_node_with_http_info(name, **kwargs)
+            return self.proxy_options_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.proxy_core_v1_options_node_with_http_info(name, **kwargs)
+            (data) = self.proxy_options_node_with_http_info(name, **kwargs)
             return data
 
-    def proxy_core_v1_options_node_with_http_info(self, name, **kwargs):
+    def proxy_options_node_with_http_info(self, name, **kwargs):
         """
         
         proxy OPTIONS requests to Node
@@ -20249,7 +20361,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.proxy_options_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20268,13 +20380,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_options_node" % key
+                    " to method proxy_options_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_options_node`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_options_node`")
 
 
         collection_formats = {}
@@ -20319,7 +20431,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_options_node_with_path(self, name, path, **kwargs):
+    def proxy_options_node_with_path(self, name, path, **kwargs):
         """
         
         proxy OPTIONS requests to Node
@@ -20330,7 +20442,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_node_with_path(name, path, callback=callback_function)
+        >>> thread = api.proxy_options_node_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20342,12 +20454,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_options_node_with_path_with_http_info(name, path, **kwargs)
+            return self.proxy_options_node_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_options_node_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.proxy_options_node_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def proxy_core_v1_options_node_with_path_with_http_info(self, name, path, **kwargs):
+    def proxy_options_node_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         proxy OPTIONS requests to Node
@@ -20358,7 +20470,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_options_node_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.proxy_options_node_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20378,16 +20490,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_options_node_with_path" % key
+                    " to method proxy_options_node_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_options_node_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_options_node_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_options_node_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_options_node_with_path`")
 
 
         collection_formats = {}
@@ -20434,7 +20546,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_post_namespaced_pod(self, name, namespace, **kwargs):
+    def proxy_post_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         proxy POST requests to Pod
@@ -20445,7 +20557,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20457,12 +20569,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_post_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.proxy_post_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_post_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_post_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_post_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def proxy_post_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy POST requests to Pod
@@ -20473,7 +20585,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20493,16 +20605,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_post_namespaced_pod" % key
+                    " to method proxy_post_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_post_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_post_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_post_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_post_namespaced_pod`")
 
 
         collection_formats = {}
@@ -20549,7 +20661,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_post_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
+    def proxy_post_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy POST requests to Pod
@@ -20560,7 +20672,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20573,12 +20685,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_post_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_post_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_post_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_post_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_post_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_post_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy POST requests to Pod
@@ -20589,7 +20701,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20610,19 +20722,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_post_namespaced_pod_with_path" % key
+                    " to method proxy_post_namespaced_pod_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_post_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_post_namespaced_pod_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_post_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_post_namespaced_pod_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_post_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_post_namespaced_pod_with_path`")
 
 
         collection_formats = {}
@@ -20671,7 +20783,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_post_namespaced_service(self, name, namespace, **kwargs):
+    def proxy_post_namespaced_service(self, name, namespace, **kwargs):
         """
         
         proxy POST requests to Service
@@ -20682,7 +20794,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20694,12 +20806,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_post_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.proxy_post_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_post_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_post_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_post_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def proxy_post_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy POST requests to Service
@@ -20710,7 +20822,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20730,16 +20842,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_post_namespaced_service" % key
+                    " to method proxy_post_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_post_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_post_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_post_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_post_namespaced_service`")
 
 
         collection_formats = {}
@@ -20786,7 +20898,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_post_namespaced_service_with_path(self, name, namespace, path, **kwargs):
+    def proxy_post_namespaced_service_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy POST requests to Service
@@ -20797,7 +20909,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_service_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_service_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20810,12 +20922,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_post_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_post_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_post_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_post_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_post_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_post_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy POST requests to Service
@@ -20826,7 +20938,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_post_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20847,19 +20959,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_post_namespaced_service_with_path" % key
+                    " to method proxy_post_namespaced_service_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_post_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_post_namespaced_service_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_post_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_post_namespaced_service_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_post_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_post_namespaced_service_with_path`")
 
 
         collection_formats = {}
@@ -20908,7 +21020,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_post_node(self, name, **kwargs):
+    def proxy_post_node(self, name, **kwargs):
         """
         
         proxy POST requests to Node
@@ -20919,7 +21031,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_node(name, callback=callback_function)
+        >>> thread = api.proxy_post_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20930,12 +21042,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_post_node_with_http_info(name, **kwargs)
+            return self.proxy_post_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.proxy_core_v1_post_node_with_http_info(name, **kwargs)
+            (data) = self.proxy_post_node_with_http_info(name, **kwargs)
             return data
 
-    def proxy_core_v1_post_node_with_http_info(self, name, **kwargs):
+    def proxy_post_node_with_http_info(self, name, **kwargs):
         """
         
         proxy POST requests to Node
@@ -20946,7 +21058,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.proxy_post_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -20965,13 +21077,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_post_node" % key
+                    " to method proxy_post_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_post_node`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_post_node`")
 
 
         collection_formats = {}
@@ -21016,7 +21128,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_post_node_with_path(self, name, path, **kwargs):
+    def proxy_post_node_with_path(self, name, path, **kwargs):
         """
         
         proxy POST requests to Node
@@ -21027,7 +21139,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_node_with_path(name, path, callback=callback_function)
+        >>> thread = api.proxy_post_node_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21039,12 +21151,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_post_node_with_path_with_http_info(name, path, **kwargs)
+            return self.proxy_post_node_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_post_node_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.proxy_post_node_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def proxy_core_v1_post_node_with_path_with_http_info(self, name, path, **kwargs):
+    def proxy_post_node_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         proxy POST requests to Node
@@ -21055,7 +21167,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_post_node_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.proxy_post_node_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21075,16 +21187,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_post_node_with_path" % key
+                    " to method proxy_post_node_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_post_node_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_post_node_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_post_node_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_post_node_with_path`")
 
 
         collection_formats = {}
@@ -21131,7 +21243,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_put_namespaced_pod(self, name, namespace, **kwargs):
+    def proxy_put_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         proxy PUT requests to Pod
@@ -21142,7 +21254,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21154,12 +21266,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_put_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.proxy_put_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_put_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_put_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_put_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def proxy_put_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy PUT requests to Pod
@@ -21170,7 +21282,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21190,16 +21302,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_put_namespaced_pod" % key
+                    " to method proxy_put_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_put_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_put_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_put_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_put_namespaced_pod`")
 
 
         collection_formats = {}
@@ -21246,7 +21358,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_put_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
+    def proxy_put_namespaced_pod_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy PUT requests to Pod
@@ -21257,7 +21369,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_pod_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21270,12 +21382,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_put_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_put_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_put_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_put_namespaced_pod_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_put_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_put_namespaced_pod_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy PUT requests to Pod
@@ -21286,7 +21398,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_pod_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21307,19 +21419,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_put_namespaced_pod_with_path" % key
+                    " to method proxy_put_namespaced_pod_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_put_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_put_namespaced_pod_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_put_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_put_namespaced_pod_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_put_namespaced_pod_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_put_namespaced_pod_with_path`")
 
 
         collection_formats = {}
@@ -21368,7 +21480,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_put_namespaced_service(self, name, namespace, **kwargs):
+    def proxy_put_namespaced_service(self, name, namespace, **kwargs):
         """
         
         proxy PUT requests to Service
@@ -21379,7 +21491,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21391,12 +21503,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_put_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.proxy_put_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.proxy_core_v1_put_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.proxy_put_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def proxy_core_v1_put_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def proxy_put_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         proxy PUT requests to Service
@@ -21407,7 +21519,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21427,16 +21539,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_put_namespaced_service" % key
+                    " to method proxy_put_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_put_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_put_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_put_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_put_namespaced_service`")
 
 
         collection_formats = {}
@@ -21483,7 +21595,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_put_namespaced_service_with_path(self, name, namespace, path, **kwargs):
+    def proxy_put_namespaced_service_with_path(self, name, namespace, path, **kwargs):
         """
         
         proxy PUT requests to Service
@@ -21494,7 +21606,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_service_with_path(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_service_with_path(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21507,12 +21619,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_put_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            return self.proxy_put_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_put_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
+            (data) = self.proxy_put_namespaced_service_with_path_with_http_info(name, namespace, path, **kwargs)
             return data
 
-    def proxy_core_v1_put_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
+    def proxy_put_namespaced_service_with_path_with_http_info(self, name, namespace, path, **kwargs):
         """
         
         proxy PUT requests to Service
@@ -21523,7 +21635,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
+        >>> thread = api.proxy_put_namespaced_service_with_path_with_http_info(name, namespace, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21544,19 +21656,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_put_namespaced_service_with_path" % key
+                    " to method proxy_put_namespaced_service_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_put_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_put_namespaced_service_with_path`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `proxy_core_v1_put_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `namespace` when calling `proxy_put_namespaced_service_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_put_namespaced_service_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_put_namespaced_service_with_path`")
 
 
         collection_formats = {}
@@ -21605,7 +21717,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_put_node(self, name, **kwargs):
+    def proxy_put_node(self, name, **kwargs):
         """
         
         proxy PUT requests to Node
@@ -21616,7 +21728,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_node(name, callback=callback_function)
+        >>> thread = api.proxy_put_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21627,12 +21739,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_put_node_with_http_info(name, **kwargs)
+            return self.proxy_put_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.proxy_core_v1_put_node_with_http_info(name, **kwargs)
+            (data) = self.proxy_put_node_with_http_info(name, **kwargs)
             return data
 
-    def proxy_core_v1_put_node_with_http_info(self, name, **kwargs):
+    def proxy_put_node_with_http_info(self, name, **kwargs):
         """
         
         proxy PUT requests to Node
@@ -21643,7 +21755,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.proxy_put_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21662,13 +21774,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_put_node" % key
+                    " to method proxy_put_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_put_node`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_put_node`")
 
 
         collection_formats = {}
@@ -21713,7 +21825,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def proxy_core_v1_put_node_with_path(self, name, path, **kwargs):
+    def proxy_put_node_with_path(self, name, path, **kwargs):
         """
         
         proxy PUT requests to Node
@@ -21724,7 +21836,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_node_with_path(name, path, callback=callback_function)
+        >>> thread = api.proxy_put_node_with_path(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21736,12 +21848,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.proxy_core_v1_put_node_with_path_with_http_info(name, path, **kwargs)
+            return self.proxy_put_node_with_path_with_http_info(name, path, **kwargs)
         else:
-            (data) = self.proxy_core_v1_put_node_with_path_with_http_info(name, path, **kwargs)
+            (data) = self.proxy_put_node_with_path_with_http_info(name, path, **kwargs)
             return data
 
-    def proxy_core_v1_put_node_with_path_with_http_info(self, name, path, **kwargs):
+    def proxy_put_node_with_path_with_http_info(self, name, path, **kwargs):
         """
         
         proxy PUT requests to Node
@@ -21752,7 +21864,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.proxy_core_v1_put_node_with_path_with_http_info(name, path, callback=callback_function)
+        >>> thread = api.proxy_put_node_with_path_with_http_info(name, path, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21772,16 +21884,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method proxy_core_v1_put_node_with_path" % key
+                    " to method proxy_put_node_with_path" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `proxy_core_v1_put_node_with_path`")
+            raise ValueError("Missing the required parameter `name` when calling `proxy_put_node_with_path`")
         # verify the required parameter 'path' is set
         if ('path' not in params) or (params['path'] is None):
-            raise ValueError("Missing the required parameter `path` when calling `proxy_core_v1_put_node_with_path`")
+            raise ValueError("Missing the required parameter `path` when calling `proxy_put_node_with_path`")
 
 
         collection_formats = {}
@@ -21828,7 +21940,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_component_status(self, name, **kwargs):
+    def read_component_status(self, name, **kwargs):
         """
         
         read the specified ComponentStatus
@@ -21839,7 +21951,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_component_status(name, callback=callback_function)
+        >>> thread = api.read_component_status(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21851,12 +21963,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_component_status_with_http_info(name, **kwargs)
+            return self.read_component_status_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_core_v1_component_status_with_http_info(name, **kwargs)
+            (data) = self.read_component_status_with_http_info(name, **kwargs)
             return data
 
-    def read_core_v1_component_status_with_http_info(self, name, **kwargs):
+    def read_component_status_with_http_info(self, name, **kwargs):
         """
         
         read the specified ComponentStatus
@@ -21867,7 +21979,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_component_status_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_component_status_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21887,13 +21999,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_component_status" % key
+                    " to method read_component_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_component_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_component_status`")
 
 
         collection_formats = {}
@@ -21940,7 +22052,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespace(self, name, **kwargs):
+    def read_namespace(self, name, **kwargs):
         """
         
         read the specified Namespace
@@ -21951,7 +22063,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespace(name, callback=callback_function)
+        >>> thread = api.read_namespace(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -21965,12 +22077,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespace_with_http_info(name, **kwargs)
+            return self.read_namespace_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_core_v1_namespace_with_http_info(name, **kwargs)
+            (data) = self.read_namespace_with_http_info(name, **kwargs)
             return data
 
-    def read_core_v1_namespace_with_http_info(self, name, **kwargs):
+    def read_namespace_with_http_info(self, name, **kwargs):
         """
         
         read the specified Namespace
@@ -21981,7 +22093,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespace_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_namespace_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22003,13 +22115,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespace" % key
+                    " to method read_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespace`")
 
 
         collection_formats = {}
@@ -22060,7 +22172,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespace_status(self, name, **kwargs):
+    def read_namespace_status(self, name, **kwargs):
         """
         
         read status of the specified Namespace
@@ -22071,7 +22183,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespace_status(name, callback=callback_function)
+        >>> thread = api.read_namespace_status(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22083,12 +22195,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespace_status_with_http_info(name, **kwargs)
+            return self.read_namespace_status_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_core_v1_namespace_status_with_http_info(name, **kwargs)
+            (data) = self.read_namespace_status_with_http_info(name, **kwargs)
             return data
 
-    def read_core_v1_namespace_status_with_http_info(self, name, **kwargs):
+    def read_namespace_status_with_http_info(self, name, **kwargs):
         """
         
         read status of the specified Namespace
@@ -22099,7 +22211,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespace_status_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_namespace_status_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22119,13 +22231,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespace_status" % key
+                    " to method read_namespace_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespace_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespace_status`")
 
 
         collection_formats = {}
@@ -22172,7 +22284,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_config_map(self, name, namespace, **kwargs):
+    def read_namespaced_config_map(self, name, namespace, **kwargs):
         """
         
         read the specified ConfigMap
@@ -22183,7 +22295,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_config_map(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_config_map(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22198,12 +22310,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_config_map_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_config_map_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_config_map_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_config_map_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_config_map_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_config_map_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified ConfigMap
@@ -22214,7 +22326,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_config_map_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_config_map_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22237,16 +22349,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_config_map" % key
+                    " to method read_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_config_map`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -22299,7 +22411,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_endpoints(self, name, namespace, **kwargs):
+    def read_namespaced_endpoints(self, name, namespace, **kwargs):
         """
         
         read the specified Endpoints
@@ -22310,7 +22422,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_endpoints(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_endpoints(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22325,12 +22437,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_endpoints_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_endpoints_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified Endpoints
@@ -22341,7 +22453,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_endpoints_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_endpoints_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22364,16 +22476,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_endpoints" % key
+                    " to method read_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_endpoints`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -22426,7 +22538,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_event(self, name, namespace, **kwargs):
+    def read_namespaced_event(self, name, namespace, **kwargs):
         """
         
         read the specified Event
@@ -22437,7 +22549,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_event(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_event(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22452,12 +22564,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_event_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_event_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_event_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_event_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_event_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_event_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified Event
@@ -22468,7 +22580,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_event_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_event_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22491,16 +22603,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_event" % key
+                    " to method read_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_event`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_event`")
 
 
         collection_formats = {}
@@ -22553,7 +22665,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_limit_range(self, name, namespace, **kwargs):
+    def read_namespaced_limit_range(self, name, namespace, **kwargs):
         """
         
         read the specified LimitRange
@@ -22564,7 +22676,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_limit_range(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_limit_range(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22579,12 +22691,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_limit_range_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_limit_range_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified LimitRange
@@ -22595,7 +22707,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_limit_range_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_limit_range_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22618,16 +22730,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_limit_range" % key
+                    " to method read_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_limit_range`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -22680,7 +22792,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_persistent_volume_claim(self, name, namespace, **kwargs):
+    def read_namespaced_persistent_volume_claim(self, name, namespace, **kwargs):
         """
         
         read the specified PersistentVolumeClaim
@@ -22691,7 +22803,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_persistent_volume_claim(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_persistent_volume_claim(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22706,12 +22818,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified PersistentVolumeClaim
@@ -22722,7 +22834,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_persistent_volume_claim_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22745,16 +22857,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_persistent_volume_claim" % key
+                    " to method read_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_persistent_volume_claim`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -22807,7 +22919,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_persistent_volume_claim_status(self, name, namespace, **kwargs):
+    def read_namespaced_persistent_volume_claim_status(self, name, namespace, **kwargs):
         """
         
         read status of the specified PersistentVolumeClaim
@@ -22818,7 +22930,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_persistent_volume_claim_status(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_persistent_volume_claim_status(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22831,12 +22943,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_persistent_volume_claim_status_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_persistent_volume_claim_status_with_http_info(self, name, namespace, **kwargs):
         """
         
         read status of the specified PersistentVolumeClaim
@@ -22847,7 +22959,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22868,16 +22980,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_persistent_volume_claim_status" % key
+                    " to method read_namespaced_persistent_volume_claim_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_persistent_volume_claim_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_persistent_volume_claim_status`")
 
 
         collection_formats = {}
@@ -22926,7 +23038,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_pod(self, name, namespace, **kwargs):
+    def read_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         read the specified Pod
@@ -22937,7 +23049,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22952,12 +23064,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified Pod
@@ -22968,7 +23080,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -22991,16 +23103,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_pod" % key
+                    " to method read_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_pod`")
 
 
         collection_formats = {}
@@ -23053,7 +23165,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_pod_log(self, name, namespace, **kwargs):
+    def read_namespaced_pod_log(self, name, namespace, **kwargs):
         """
         
         read log of the specified Pod
@@ -23064,7 +23176,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod_log(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod_log(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23085,12 +23197,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_pod_log_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_pod_log_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_pod_log_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_pod_log_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_pod_log_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_pod_log_with_http_info(self, name, namespace, **kwargs):
         """
         
         read log of the specified Pod
@@ -23101,7 +23213,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod_log_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod_log_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23130,16 +23242,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_pod_log" % key
+                    " to method read_namespaced_pod_log" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_pod_log`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_pod_log`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_pod_log`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_pod_log`")
 
 
         collection_formats = {}
@@ -23204,7 +23316,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_pod_status(self, name, namespace, **kwargs):
+    def read_namespaced_pod_status(self, name, namespace, **kwargs):
         """
         
         read status of the specified Pod
@@ -23215,7 +23327,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod_status(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod_status(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23228,12 +23340,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_pod_status_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_pod_status_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_pod_status_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_pod_status_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_pod_status_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_pod_status_with_http_info(self, name, namespace, **kwargs):
         """
         
         read status of the specified Pod
@@ -23244,7 +23356,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod_status_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod_status_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23265,16 +23377,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_pod_status" % key
+                    " to method read_namespaced_pod_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_pod_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_pod_status`")
 
 
         collection_formats = {}
@@ -23323,7 +23435,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_pod_template(self, name, namespace, **kwargs):
+    def read_namespaced_pod_template(self, name, namespace, **kwargs):
         """
         
         read the specified PodTemplate
@@ -23334,7 +23446,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod_template(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod_template(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23349,12 +23461,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_pod_template_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_pod_template_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified PodTemplate
@@ -23365,7 +23477,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_pod_template_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_pod_template_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23388,16 +23500,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_pod_template" % key
+                    " to method read_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_pod_template`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -23450,7 +23562,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_replication_controller(self, name, namespace, **kwargs):
+    def read_namespaced_replication_controller(self, name, namespace, **kwargs):
         """
         
         read the specified ReplicationController
@@ -23461,7 +23573,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_replication_controller(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_replication_controller(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23476,12 +23588,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_replication_controller_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_replication_controller_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified ReplicationController
@@ -23492,7 +23604,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_replication_controller_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_replication_controller_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23515,16 +23627,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_replication_controller" % key
+                    " to method read_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_replication_controller`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -23577,7 +23689,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_replication_controller_status(self, name, namespace, **kwargs):
+    def read_namespaced_replication_controller_status(self, name, namespace, **kwargs):
         """
         
         read status of the specified ReplicationController
@@ -23588,7 +23700,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_replication_controller_status(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_replication_controller_status(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23601,12 +23713,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_replication_controller_status_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_replication_controller_status_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_replication_controller_status_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_replication_controller_status_with_http_info(self, name, namespace, **kwargs):
         """
         
         read status of the specified ReplicationController
@@ -23617,7 +23729,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_replication_controller_status_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23638,16 +23750,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_replication_controller_status" % key
+                    " to method read_namespaced_replication_controller_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_replication_controller_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_replication_controller_status`")
 
 
         collection_formats = {}
@@ -23696,7 +23808,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_resource_quota(self, name, namespace, **kwargs):
+    def read_namespaced_resource_quota(self, name, namespace, **kwargs):
         """
         
         read the specified ResourceQuota
@@ -23707,7 +23819,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_resource_quota(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_resource_quota(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23722,12 +23834,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_resource_quota_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_resource_quota_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified ResourceQuota
@@ -23738,7 +23850,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_resource_quota_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_resource_quota_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23761,16 +23873,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_resource_quota" % key
+                    " to method read_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_resource_quota`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -23823,7 +23935,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_resource_quota_status(self, name, namespace, **kwargs):
+    def read_namespaced_resource_quota_status(self, name, namespace, **kwargs):
         """
         
         read status of the specified ResourceQuota
@@ -23834,7 +23946,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_resource_quota_status(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_resource_quota_status(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23847,12 +23959,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_resource_quota_status_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_resource_quota_status_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_resource_quota_status_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_resource_quota_status_with_http_info(self, name, namespace, **kwargs):
         """
         
         read status of the specified ResourceQuota
@@ -23863,7 +23975,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_resource_quota_status_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23884,16 +23996,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_resource_quota_status" % key
+                    " to method read_namespaced_resource_quota_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_resource_quota_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_resource_quota_status`")
 
 
         collection_formats = {}
@@ -23942,7 +24054,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_scale_scale(self, name, namespace, **kwargs):
+    def read_namespaced_scale_scale(self, name, namespace, **kwargs):
         """
         
         read scale of the specified Scale
@@ -23953,7 +24065,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_scale_scale(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_scale_scale(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -23966,12 +24078,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_scale_scale_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_scale_scale_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_scale_scale_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_scale_scale_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_scale_scale_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_scale_scale_with_http_info(self, name, namespace, **kwargs):
         """
         
         read scale of the specified Scale
@@ -23982,7 +24094,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_scale_scale_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_scale_scale_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24003,16 +24115,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_scale_scale" % key
+                    " to method read_namespaced_scale_scale" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_scale_scale`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_scale_scale`")
 
 
         collection_formats = {}
@@ -24061,7 +24173,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_secret(self, name, namespace, **kwargs):
+    def read_namespaced_secret(self, name, namespace, **kwargs):
         """
         
         read the specified Secret
@@ -24072,7 +24184,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_secret(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_secret(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24087,12 +24199,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_secret_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_secret_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_secret_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_secret_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_secret_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_secret_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified Secret
@@ -24103,7 +24215,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_secret_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_secret_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24126,16 +24238,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_secret" % key
+                    " to method read_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_secret`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_secret`")
 
 
         collection_formats = {}
@@ -24188,7 +24300,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_service(self, name, namespace, **kwargs):
+    def read_namespaced_service(self, name, namespace, **kwargs):
         """
         
         read the specified Service
@@ -24199,7 +24311,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24214,12 +24326,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified Service
@@ -24230,7 +24342,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24253,16 +24365,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_service" % key
+                    " to method read_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_service`")
 
 
         collection_formats = {}
@@ -24315,7 +24427,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_service_account(self, name, namespace, **kwargs):
+    def read_namespaced_service_account(self, name, namespace, **kwargs):
         """
         
         read the specified ServiceAccount
@@ -24326,7 +24438,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_service_account(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_service_account(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24341,12 +24453,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_service_account_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_service_account_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_service_account_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_service_account_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_service_account_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_service_account_with_http_info(self, name, namespace, **kwargs):
         """
         
         read the specified ServiceAccount
@@ -24357,7 +24469,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_service_account_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_service_account_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24380,16 +24492,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_service_account" % key
+                    " to method read_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_service_account`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -24442,7 +24554,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_namespaced_service_status(self, name, namespace, **kwargs):
+    def read_namespaced_service_status(self, name, namespace, **kwargs):
         """
         
         read status of the specified Service
@@ -24453,7 +24565,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_service_status(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_service_status(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24466,12 +24578,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_namespaced_service_status_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_service_status_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_core_v1_namespaced_service_status_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_service_status_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_core_v1_namespaced_service_status_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_service_status_with_http_info(self, name, namespace, **kwargs):
         """
         
         read status of the specified Service
@@ -24482,7 +24594,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_namespaced_service_status_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_service_status_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24503,16 +24615,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_namespaced_service_status" % key
+                    " to method read_namespaced_service_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_service_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_service_status`")
 
 
         collection_formats = {}
@@ -24561,7 +24673,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_node(self, name, **kwargs):
+    def read_node(self, name, **kwargs):
         """
         
         read the specified Node
@@ -24572,7 +24684,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_node(name, callback=callback_function)
+        >>> thread = api.read_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24586,12 +24698,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_node_with_http_info(name, **kwargs)
+            return self.read_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_core_v1_node_with_http_info(name, **kwargs)
+            (data) = self.read_node_with_http_info(name, **kwargs)
             return data
 
-    def read_core_v1_node_with_http_info(self, name, **kwargs):
+    def read_node_with_http_info(self, name, **kwargs):
         """
         
         read the specified Node
@@ -24602,7 +24714,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24624,13 +24736,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_node" % key
+                    " to method read_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_node`")
+            raise ValueError("Missing the required parameter `name` when calling `read_node`")
 
 
         collection_formats = {}
@@ -24681,7 +24793,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_node_status(self, name, **kwargs):
+    def read_node_status(self, name, **kwargs):
         """
         
         read status of the specified Node
@@ -24692,7 +24804,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_node_status(name, callback=callback_function)
+        >>> thread = api.read_node_status(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24704,12 +24816,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_node_status_with_http_info(name, **kwargs)
+            return self.read_node_status_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_core_v1_node_status_with_http_info(name, **kwargs)
+            (data) = self.read_node_status_with_http_info(name, **kwargs)
             return data
 
-    def read_core_v1_node_status_with_http_info(self, name, **kwargs):
+    def read_node_status_with_http_info(self, name, **kwargs):
         """
         
         read status of the specified Node
@@ -24720,7 +24832,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_node_status_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_node_status_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24740,13 +24852,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_node_status" % key
+                    " to method read_node_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_node_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_node_status`")
 
 
         collection_formats = {}
@@ -24793,7 +24905,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_persistent_volume(self, name, **kwargs):
+    def read_persistent_volume(self, name, **kwargs):
         """
         
         read the specified PersistentVolume
@@ -24804,7 +24916,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_persistent_volume(name, callback=callback_function)
+        >>> thread = api.read_persistent_volume(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24818,12 +24930,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_persistent_volume_with_http_info(name, **kwargs)
+            return self.read_persistent_volume_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_core_v1_persistent_volume_with_http_info(name, **kwargs)
+            (data) = self.read_persistent_volume_with_http_info(name, **kwargs)
             return data
 
-    def read_core_v1_persistent_volume_with_http_info(self, name, **kwargs):
+    def read_persistent_volume_with_http_info(self, name, **kwargs):
         """
         
         read the specified PersistentVolume
@@ -24834,7 +24946,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_persistent_volume_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_persistent_volume_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24856,13 +24968,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_persistent_volume" % key
+                    " to method read_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `name` when calling `read_persistent_volume`")
 
 
         collection_formats = {}
@@ -24913,7 +25025,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_core_v1_persistent_volume_status(self, name, **kwargs):
+    def read_persistent_volume_status(self, name, **kwargs):
         """
         
         read status of the specified PersistentVolume
@@ -24924,7 +25036,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_persistent_volume_status(name, callback=callback_function)
+        >>> thread = api.read_persistent_volume_status(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24936,12 +25048,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_core_v1_persistent_volume_status_with_http_info(name, **kwargs)
+            return self.read_persistent_volume_status_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_core_v1_persistent_volume_status_with_http_info(name, **kwargs)
+            (data) = self.read_persistent_volume_status_with_http_info(name, **kwargs)
             return data
 
-    def read_core_v1_persistent_volume_status_with_http_info(self, name, **kwargs):
+    def read_persistent_volume_status_with_http_info(self, name, **kwargs):
         """
         
         read status of the specified PersistentVolume
@@ -24952,7 +25064,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_core_v1_persistent_volume_status_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_persistent_volume_status_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -24972,13 +25084,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_core_v1_persistent_volume_status" % key
+                    " to method read_persistent_volume_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_core_v1_persistent_volume_status`")
+            raise ValueError("Missing the required parameter `name` when calling `read_persistent_volume_status`")
 
 
         collection_formats = {}
@@ -25025,7 +25137,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespace(self, name, body, **kwargs):
+    def replace_namespace(self, name, body, **kwargs):
         """
         
         replace the specified Namespace
@@ -25036,7 +25148,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespace(name, body, callback=callback_function)
+        >>> thread = api.replace_namespace(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25049,12 +25161,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespace_with_http_info(name, body, **kwargs)
+            return self.replace_namespace_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespace_with_http_info(name, body, **kwargs)
+            (data) = self.replace_namespace_with_http_info(name, body, **kwargs)
             return data
 
-    def replace_core_v1_namespace_with_http_info(self, name, body, **kwargs):
+    def replace_namespace_with_http_info(self, name, body, **kwargs):
         """
         
         replace the specified Namespace
@@ -25065,7 +25177,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespace_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.replace_namespace_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25086,16 +25198,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespace" % key
+                    " to method replace_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespace`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespace`")
 
 
         collection_formats = {}
@@ -25144,7 +25256,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespace_finalize(self, body, name, **kwargs):
+    def replace_namespace_finalize(self, body, name, **kwargs):
         """
         
         replace finalize of the specified Namespace
@@ -25155,7 +25267,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespace_finalize(body, name, callback=callback_function)
+        >>> thread = api.replace_namespace_finalize(body, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25168,12 +25280,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespace_finalize_with_http_info(body, name, **kwargs)
+            return self.replace_namespace_finalize_with_http_info(body, name, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespace_finalize_with_http_info(body, name, **kwargs)
+            (data) = self.replace_namespace_finalize_with_http_info(body, name, **kwargs)
             return data
 
-    def replace_core_v1_namespace_finalize_with_http_info(self, body, name, **kwargs):
+    def replace_namespace_finalize_with_http_info(self, body, name, **kwargs):
         """
         
         replace finalize of the specified Namespace
@@ -25184,7 +25296,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespace_finalize_with_http_info(body, name, callback=callback_function)
+        >>> thread = api.replace_namespace_finalize_with_http_info(body, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25205,16 +25317,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespace_finalize" % key
+                    " to method replace_namespace_finalize" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespace_finalize`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespace_finalize`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespace_finalize`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespace_finalize`")
 
 
         collection_formats = {}
@@ -25263,7 +25375,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespace_status(self, name, body, **kwargs):
+    def replace_namespace_status(self, name, body, **kwargs):
         """
         
         replace status of the specified Namespace
@@ -25274,7 +25386,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespace_status(name, body, callback=callback_function)
+        >>> thread = api.replace_namespace_status(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25287,12 +25399,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespace_status_with_http_info(name, body, **kwargs)
+            return self.replace_namespace_status_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespace_status_with_http_info(name, body, **kwargs)
+            (data) = self.replace_namespace_status_with_http_info(name, body, **kwargs)
             return data
 
-    def replace_core_v1_namespace_status_with_http_info(self, name, body, **kwargs):
+    def replace_namespace_status_with_http_info(self, name, body, **kwargs):
         """
         
         replace status of the specified Namespace
@@ -25303,7 +25415,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespace_status_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.replace_namespace_status_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25324,16 +25436,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespace_status" % key
+                    " to method replace_namespace_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespace_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespace_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespace_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespace_status`")
 
 
         collection_formats = {}
@@ -25382,7 +25494,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_config_map(self, name, namespace, body, **kwargs):
+    def replace_namespaced_config_map(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ConfigMap
@@ -25393,7 +25505,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_config_map(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_config_map(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25407,12 +25519,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_config_map_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_config_map_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_config_map_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ConfigMap
@@ -25423,7 +25535,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_config_map_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_config_map_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25445,19 +25557,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_config_map" % key
+                    " to method replace_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_config_map`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_config_map`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -25508,7 +25620,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_endpoints(self, name, namespace, body, **kwargs):
+    def replace_namespaced_endpoints(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Endpoints
@@ -25519,7 +25631,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_endpoints(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_endpoints(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25533,12 +25645,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_endpoints_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_endpoints_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_endpoints_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Endpoints
@@ -25549,7 +25661,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_endpoints_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_endpoints_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25571,19 +25683,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_endpoints" % key
+                    " to method replace_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_endpoints`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_endpoints`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -25634,7 +25746,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_event(self, name, namespace, body, **kwargs):
+    def replace_namespaced_event(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Event
@@ -25645,7 +25757,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_event(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_event(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25659,12 +25771,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_event_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_event_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_event_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_event_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_event_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_event_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Event
@@ -25675,7 +25787,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_event_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_event_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25697,19 +25809,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_event" % key
+                    " to method replace_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_event`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_event`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_event`")
 
 
         collection_formats = {}
@@ -25760,7 +25872,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_limit_range(self, name, namespace, body, **kwargs):
+    def replace_namespaced_limit_range(self, name, namespace, body, **kwargs):
         """
         
         replace the specified LimitRange
@@ -25771,7 +25883,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_limit_range(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_limit_range(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25785,12 +25897,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_limit_range_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_limit_range_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_limit_range_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified LimitRange
@@ -25801,7 +25913,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_limit_range_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_limit_range_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25823,19 +25935,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_limit_range" % key
+                    " to method replace_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_limit_range`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_limit_range`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -25886,7 +25998,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_persistent_volume_claim(self, name, namespace, body, **kwargs):
+    def replace_namespaced_persistent_volume_claim(self, name, namespace, body, **kwargs):
         """
         
         replace the specified PersistentVolumeClaim
@@ -25897,7 +26009,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_persistent_volume_claim(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_persistent_volume_claim(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25911,12 +26023,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified PersistentVolumeClaim
@@ -25927,7 +26039,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_persistent_volume_claim_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -25949,19 +26061,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_persistent_volume_claim" % key
+                    " to method replace_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_persistent_volume_claim`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_persistent_volume_claim`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -26012,7 +26124,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_persistent_volume_claim_status(self, name, namespace, body, **kwargs):
+    def replace_namespaced_persistent_volume_claim_status(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified PersistentVolumeClaim
@@ -26023,7 +26135,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_persistent_volume_claim_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_persistent_volume_claim_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26037,12 +26149,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_persistent_volume_claim_status_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_persistent_volume_claim_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified PersistentVolumeClaim
@@ -26053,7 +26165,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_persistent_volume_claim_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26075,19 +26187,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_persistent_volume_claim_status" % key
+                    " to method replace_namespaced_persistent_volume_claim_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_persistent_volume_claim_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_persistent_volume_claim_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_persistent_volume_claim_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_persistent_volume_claim_status`")
 
 
         collection_formats = {}
@@ -26138,7 +26250,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_pod(self, name, namespace, body, **kwargs):
+    def replace_namespaced_pod(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Pod
@@ -26149,7 +26261,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_pod(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_pod(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26163,12 +26275,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_pod_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_pod_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_pod_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Pod
@@ -26179,7 +26291,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_pod_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_pod_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26201,19 +26313,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_pod" % key
+                    " to method replace_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_pod`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_pod`")
 
 
         collection_formats = {}
@@ -26264,7 +26376,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_pod_status(self, name, namespace, body, **kwargs):
+    def replace_namespaced_pod_status(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified Pod
@@ -26275,7 +26387,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_pod_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_pod_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26289,12 +26401,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_pod_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_pod_status_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_pod_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified Pod
@@ -26305,7 +26417,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_pod_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_pod_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26327,19 +26439,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_pod_status" % key
+                    " to method replace_namespaced_pod_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_pod_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_pod_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_pod_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_pod_status`")
 
 
         collection_formats = {}
@@ -26390,7 +26502,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_pod_template(self, name, namespace, body, **kwargs):
+    def replace_namespaced_pod_template(self, name, namespace, body, **kwargs):
         """
         
         replace the specified PodTemplate
@@ -26401,7 +26513,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_pod_template(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_pod_template(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26415,12 +26527,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_pod_template_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_pod_template_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_pod_template_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified PodTemplate
@@ -26431,7 +26543,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_pod_template_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_pod_template_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26453,19 +26565,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_pod_template" % key
+                    " to method replace_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_pod_template`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_pod_template`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -26516,7 +26628,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_replication_controller(self, name, namespace, body, **kwargs):
+    def replace_namespaced_replication_controller(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ReplicationController
@@ -26527,7 +26639,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_replication_controller(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_replication_controller(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26541,12 +26653,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_replication_controller_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_replication_controller_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_replication_controller_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ReplicationController
@@ -26557,7 +26669,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_replication_controller_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_replication_controller_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26579,19 +26691,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_replication_controller" % key
+                    " to method replace_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replication_controller`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replication_controller`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -26642,7 +26754,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_replication_controller_status(self, name, namespace, body, **kwargs):
+    def replace_namespaced_replication_controller_status(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified ReplicationController
@@ -26653,7 +26765,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_replication_controller_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_replication_controller_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26667,12 +26779,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_replication_controller_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_replication_controller_status_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_replication_controller_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified ReplicationController
@@ -26683,7 +26795,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_replication_controller_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_replication_controller_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26705,19 +26817,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_replication_controller_status" % key
+                    " to method replace_namespaced_replication_controller_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replication_controller_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replication_controller_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_replication_controller_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replication_controller_status`")
 
 
         collection_formats = {}
@@ -26768,7 +26880,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_resource_quota(self, name, namespace, body, **kwargs):
+    def replace_namespaced_resource_quota(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ResourceQuota
@@ -26779,7 +26891,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_resource_quota(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_resource_quota(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26793,12 +26905,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_resource_quota_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_resource_quota_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_resource_quota_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ResourceQuota
@@ -26809,7 +26921,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_resource_quota_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_resource_quota_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26831,19 +26943,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_resource_quota" % key
+                    " to method replace_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_resource_quota`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_resource_quota`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -26894,7 +27006,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_resource_quota_status(self, name, namespace, body, **kwargs):
+    def replace_namespaced_resource_quota_status(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified ResourceQuota
@@ -26905,7 +27017,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_resource_quota_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_resource_quota_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26919,12 +27031,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_resource_quota_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_resource_quota_status_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_resource_quota_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified ResourceQuota
@@ -26935,7 +27047,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_resource_quota_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_resource_quota_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -26957,19 +27069,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_resource_quota_status" % key
+                    " to method replace_namespaced_resource_quota_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_resource_quota_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_resource_quota_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_resource_quota_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_resource_quota_status`")
 
 
         collection_formats = {}
@@ -27020,7 +27132,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_scale_scale(self, name, namespace, body, **kwargs):
+    def replace_namespaced_scale_scale(self, name, namespace, body, **kwargs):
         """
         
         replace scale of the specified Scale
@@ -27031,7 +27143,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_scale_scale(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_scale_scale(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27045,12 +27157,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_scale_scale_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_scale_scale_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_scale_scale_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace scale of the specified Scale
@@ -27061,7 +27173,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_scale_scale_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_scale_scale_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27083,19 +27195,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_scale_scale" % key
+                    " to method replace_namespaced_scale_scale" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_scale_scale`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_scale_scale`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_scale_scale`")
 
 
         collection_formats = {}
@@ -27146,7 +27258,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_secret(self, name, namespace, body, **kwargs):
+    def replace_namespaced_secret(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Secret
@@ -27157,7 +27269,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_secret(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_secret(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27171,12 +27283,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_secret_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_secret_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_secret_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Secret
@@ -27187,7 +27299,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_secret_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_secret_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27209,19 +27321,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_secret" % key
+                    " to method replace_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_secret`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_secret`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_secret`")
 
 
         collection_formats = {}
@@ -27272,7 +27384,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_service(self, name, namespace, body, **kwargs):
+    def replace_namespaced_service(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Service
@@ -27283,7 +27395,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_service(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_service(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27297,12 +27409,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_service_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_service_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_service_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_service_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_service_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_service_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified Service
@@ -27313,7 +27425,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_service_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_service_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27335,19 +27447,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_service" % key
+                    " to method replace_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_service`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_service`")
 
 
         collection_formats = {}
@@ -27398,7 +27510,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_service_account(self, name, namespace, body, **kwargs):
+    def replace_namespaced_service_account(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ServiceAccount
@@ -27409,7 +27521,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_service_account(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_service_account(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27423,12 +27535,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_service_account_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_service_account_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_service_account_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace the specified ServiceAccount
@@ -27439,7 +27551,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_service_account_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_service_account_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27461,19 +27573,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_service_account" % key
+                    " to method replace_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_service_account`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_service_account`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -27524,7 +27636,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_namespaced_service_status(self, name, namespace, body, **kwargs):
+    def replace_namespaced_service_status(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified Service
@@ -27535,7 +27647,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_service_status(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_service_status(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27549,12 +27661,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
+            return self.replace_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
+            (data) = self.replace_namespaced_service_status_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_core_v1_namespaced_service_status_with_http_info(self, name, namespace, body, **kwargs):
+    def replace_namespaced_service_status_with_http_info(self, name, namespace, body, **kwargs):
         """
         
         replace status of the specified Service
@@ -27565,7 +27677,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_namespaced_service_status_with_http_info(name, namespace, body, callback=callback_function)
+        >>> thread = api.replace_namespaced_service_status_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27587,19 +27699,19 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_namespaced_service_status" % key
+                    " to method replace_namespaced_service_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_service_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_service_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_namespaced_service_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_service_status`")
 
 
         collection_formats = {}
@@ -27650,7 +27762,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_node(self, name, body, **kwargs):
+    def replace_node(self, name, body, **kwargs):
         """
         
         replace the specified Node
@@ -27661,7 +27773,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_node(name, body, callback=callback_function)
+        >>> thread = api.replace_node(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27674,12 +27786,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_node_with_http_info(name, body, **kwargs)
+            return self.replace_node_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_node_with_http_info(name, body, **kwargs)
+            (data) = self.replace_node_with_http_info(name, body, **kwargs)
             return data
 
-    def replace_core_v1_node_with_http_info(self, name, body, **kwargs):
+    def replace_node_with_http_info(self, name, body, **kwargs):
         """
         
         replace the specified Node
@@ -27690,7 +27802,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_node_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.replace_node_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27711,16 +27823,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_node" % key
+                    " to method replace_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_node`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_node`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_node`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_node`")
 
 
         collection_formats = {}
@@ -27769,7 +27881,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_node_status(self, name, body, **kwargs):
+    def replace_node_status(self, name, body, **kwargs):
         """
         
         replace status of the specified Node
@@ -27780,7 +27892,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_node_status(name, body, callback=callback_function)
+        >>> thread = api.replace_node_status(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27793,12 +27905,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_node_status_with_http_info(name, body, **kwargs)
+            return self.replace_node_status_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_node_status_with_http_info(name, body, **kwargs)
+            (data) = self.replace_node_status_with_http_info(name, body, **kwargs)
             return data
 
-    def replace_core_v1_node_status_with_http_info(self, name, body, **kwargs):
+    def replace_node_status_with_http_info(self, name, body, **kwargs):
         """
         
         replace status of the specified Node
@@ -27809,7 +27921,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_node_status_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.replace_node_status_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27830,16 +27942,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_node_status" % key
+                    " to method replace_node_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_node_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_node_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_node_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_node_status`")
 
 
         collection_formats = {}
@@ -27888,7 +28000,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_persistent_volume(self, name, body, **kwargs):
+    def replace_persistent_volume(self, name, body, **kwargs):
         """
         
         replace the specified PersistentVolume
@@ -27899,7 +28011,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_persistent_volume(name, body, callback=callback_function)
+        >>> thread = api.replace_persistent_volume(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27912,12 +28024,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_persistent_volume_with_http_info(name, body, **kwargs)
+            return self.replace_persistent_volume_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_persistent_volume_with_http_info(name, body, **kwargs)
+            (data) = self.replace_persistent_volume_with_http_info(name, body, **kwargs)
             return data
 
-    def replace_core_v1_persistent_volume_with_http_info(self, name, body, **kwargs):
+    def replace_persistent_volume_with_http_info(self, name, body, **kwargs):
         """
         
         replace the specified PersistentVolume
@@ -27928,7 +28040,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_persistent_volume_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.replace_persistent_volume_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -27949,16 +28061,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_persistent_volume" % key
+                    " to method replace_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_persistent_volume`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_persistent_volume`")
 
 
         collection_formats = {}
@@ -28007,7 +28119,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_core_v1_persistent_volume_status(self, name, body, **kwargs):
+    def replace_persistent_volume_status(self, name, body, **kwargs):
         """
         
         replace status of the specified PersistentVolume
@@ -28018,7 +28130,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_persistent_volume_status(name, body, callback=callback_function)
+        >>> thread = api.replace_persistent_volume_status(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28031,12 +28143,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_core_v1_persistent_volume_status_with_http_info(name, body, **kwargs)
+            return self.replace_persistent_volume_status_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.replace_core_v1_persistent_volume_status_with_http_info(name, body, **kwargs)
+            (data) = self.replace_persistent_volume_status_with_http_info(name, body, **kwargs)
             return data
 
-    def replace_core_v1_persistent_volume_status_with_http_info(self, name, body, **kwargs):
+    def replace_persistent_volume_status_with_http_info(self, name, body, **kwargs):
         """
         
         replace status of the specified PersistentVolume
@@ -28047,7 +28159,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_core_v1_persistent_volume_status_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.replace_persistent_volume_status_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28068,16 +28180,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_core_v1_persistent_volume_status" % key
+                    " to method replace_persistent_volume_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_core_v1_persistent_volume_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_persistent_volume_status`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_core_v1_persistent_volume_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_persistent_volume_status`")
 
 
         collection_formats = {}
@@ -28126,7 +28238,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_config_map_list_for_all_namespaces(self, **kwargs):
+    def watch_config_map_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of ConfigMap
@@ -28137,7 +28249,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_config_map_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_config_map_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28153,12 +28265,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_config_map_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_config_map_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_config_map_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_config_map_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_config_map_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_config_map_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of ConfigMap
@@ -28169,7 +28281,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_config_map_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_config_map_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28193,7 +28305,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_config_map_list_for_all_namespaces" % key
+                    " to method watch_config_map_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -28251,7 +28363,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_endpoints_list_for_all_namespaces(self, **kwargs):
+    def watch_endpoints_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of Endpoints
@@ -28262,7 +28374,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_endpoints_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_endpoints_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28278,12 +28390,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_endpoints_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_endpoints_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_endpoints_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_endpoints_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_endpoints_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_endpoints_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of Endpoints
@@ -28294,7 +28406,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_endpoints_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_endpoints_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28318,7 +28430,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_endpoints_list_for_all_namespaces" % key
+                    " to method watch_endpoints_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -28376,7 +28488,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_event_list_for_all_namespaces(self, **kwargs):
+    def watch_event_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of Event
@@ -28387,7 +28499,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_event_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_event_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28403,12 +28515,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_event_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_event_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_event_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_event_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_event_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_event_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of Event
@@ -28419,7 +28531,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_event_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_event_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28443,7 +28555,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_event_list_for_all_namespaces" % key
+                    " to method watch_event_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -28501,7 +28613,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_limit_range_list_for_all_namespaces(self, **kwargs):
+    def watch_limit_range_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of LimitRange
@@ -28512,7 +28624,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_limit_range_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_limit_range_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28528,12 +28640,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_limit_range_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_limit_range_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_limit_range_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_limit_range_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_limit_range_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_limit_range_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of LimitRange
@@ -28544,7 +28656,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_limit_range_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_limit_range_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28568,7 +28680,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_limit_range_list_for_all_namespaces" % key
+                    " to method watch_limit_range_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -28626,7 +28738,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespace(self, name, **kwargs):
+    def watch_namespace(self, name, **kwargs):
         """
         
         watch changes to an object of kind Namespace
@@ -28637,7 +28749,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespace(name, callback=callback_function)
+        >>> thread = api.watch_namespace(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28654,12 +28766,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespace_with_http_info(name, **kwargs)
+            return self.watch_namespace_with_http_info(name, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespace_with_http_info(name, **kwargs)
+            (data) = self.watch_namespace_with_http_info(name, **kwargs)
             return data
 
-    def watch_core_v1_namespace_with_http_info(self, name, **kwargs):
+    def watch_namespace_with_http_info(self, name, **kwargs):
         """
         
         watch changes to an object of kind Namespace
@@ -28670,7 +28782,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespace_with_http_info(name, callback=callback_function)
+        >>> thread = api.watch_namespace_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28695,13 +28807,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespace" % key
+                    " to method watch_namespace" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespace`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespace`")
 
 
         collection_formats = {}
@@ -28758,7 +28870,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespace_list(self, **kwargs):
+    def watch_namespace_list(self, **kwargs):
         """
         
         watch individual changes to a list of Namespace
@@ -28769,7 +28881,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespace_list(callback=callback_function)
+        >>> thread = api.watch_namespace_list(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28785,12 +28897,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespace_list_with_http_info(**kwargs)
+            return self.watch_namespace_list_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_namespace_list_with_http_info(**kwargs)
+            (data) = self.watch_namespace_list_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_namespace_list_with_http_info(self, **kwargs):
+    def watch_namespace_list_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of Namespace
@@ -28801,7 +28913,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespace_list_with_http_info(callback=callback_function)
+        >>> thread = api.watch_namespace_list_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28825,7 +28937,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespace_list" % key
+                    " to method watch_namespace_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -28883,7 +28995,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_config_map(self, name, namespace, **kwargs):
+    def watch_namespaced_config_map(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ConfigMap
@@ -28894,7 +29006,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_config_map(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_config_map(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28912,12 +29024,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_config_map_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_config_map_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_config_map_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_config_map_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_config_map_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_config_map_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ConfigMap
@@ -28928,7 +29040,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_config_map_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_config_map_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -28954,16 +29066,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_config_map" % key
+                    " to method watch_namespaced_config_map" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_config_map`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_config_map`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_config_map`")
 
 
         collection_formats = {}
@@ -29022,7 +29134,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_config_map_list(self, namespace, **kwargs):
+    def watch_namespaced_config_map_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ConfigMap
@@ -29033,7 +29145,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_config_map_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_config_map_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29050,12 +29162,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_config_map_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_config_map_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_config_map_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_config_map_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_config_map_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_config_map_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ConfigMap
@@ -29066,7 +29178,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_config_map_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_config_map_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29091,13 +29203,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_config_map_list" % key
+                    " to method watch_namespaced_config_map_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_config_map_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_config_map_list`")
 
 
         collection_formats = {}
@@ -29154,7 +29266,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_endpoints(self, name, namespace, **kwargs):
+    def watch_namespaced_endpoints(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Endpoints
@@ -29165,7 +29277,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_endpoints(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_endpoints(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29183,12 +29295,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_endpoints_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_endpoints_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_endpoints_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Endpoints
@@ -29199,7 +29311,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_endpoints_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_endpoints_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29225,16 +29337,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_endpoints" % key
+                    " to method watch_namespaced_endpoints" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_endpoints`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_endpoints`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_endpoints`")
 
 
         collection_formats = {}
@@ -29293,7 +29405,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_endpoints_list(self, namespace, **kwargs):
+    def watch_namespaced_endpoints_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Endpoints
@@ -29304,7 +29416,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_endpoints_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_endpoints_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29321,12 +29433,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_endpoints_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_endpoints_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_endpoints_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_endpoints_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_endpoints_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_endpoints_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Endpoints
@@ -29337,7 +29449,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_endpoints_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_endpoints_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29362,13 +29474,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_endpoints_list" % key
+                    " to method watch_namespaced_endpoints_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_endpoints_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_endpoints_list`")
 
 
         collection_formats = {}
@@ -29425,7 +29537,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_event(self, name, namespace, **kwargs):
+    def watch_namespaced_event(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Event
@@ -29436,7 +29548,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_event(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_event(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29454,12 +29566,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_event_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_event_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_event_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_event_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_event_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_event_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Event
@@ -29470,7 +29582,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_event_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_event_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29496,16 +29608,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_event" % key
+                    " to method watch_namespaced_event" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_event`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_event`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_event`")
 
 
         collection_formats = {}
@@ -29564,7 +29676,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_event_list(self, namespace, **kwargs):
+    def watch_namespaced_event_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Event
@@ -29575,7 +29687,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_event_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_event_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29592,12 +29704,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_event_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_event_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_event_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_event_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_event_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_event_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Event
@@ -29608,7 +29720,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_event_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_event_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29633,13 +29745,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_event_list" % key
+                    " to method watch_namespaced_event_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_event_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_event_list`")
 
 
         collection_formats = {}
@@ -29696,7 +29808,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_limit_range(self, name, namespace, **kwargs):
+    def watch_namespaced_limit_range(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind LimitRange
@@ -29707,7 +29819,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_limit_range(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_limit_range(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29725,12 +29837,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_limit_range_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_limit_range_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_limit_range_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind LimitRange
@@ -29741,7 +29853,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_limit_range_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_limit_range_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29767,16 +29879,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_limit_range" % key
+                    " to method watch_namespaced_limit_range" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_limit_range`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_limit_range`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_limit_range`")
 
 
         collection_formats = {}
@@ -29835,7 +29947,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_limit_range_list(self, namespace, **kwargs):
+    def watch_namespaced_limit_range_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of LimitRange
@@ -29846,7 +29958,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_limit_range_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_limit_range_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29863,12 +29975,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_limit_range_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_limit_range_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_limit_range_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_limit_range_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_limit_range_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_limit_range_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of LimitRange
@@ -29879,7 +29991,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_limit_range_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_limit_range_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29904,13 +30016,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_limit_range_list" % key
+                    " to method watch_namespaced_limit_range_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_limit_range_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_limit_range_list`")
 
 
         collection_formats = {}
@@ -29967,7 +30079,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_persistent_volume_claim(self, name, namespace, **kwargs):
+    def watch_namespaced_persistent_volume_claim(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind PersistentVolumeClaim
@@ -29978,7 +30090,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_persistent_volume_claim(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_persistent_volume_claim(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -29996,12 +30108,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_persistent_volume_claim_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_persistent_volume_claim_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind PersistentVolumeClaim
@@ -30012,7 +30124,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_persistent_volume_claim_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_persistent_volume_claim_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30038,16 +30150,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_persistent_volume_claim" % key
+                    " to method watch_namespaced_persistent_volume_claim" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_persistent_volume_claim`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_persistent_volume_claim`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_persistent_volume_claim`")
 
 
         collection_formats = {}
@@ -30106,7 +30218,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_persistent_volume_claim_list(self, namespace, **kwargs):
+    def watch_namespaced_persistent_volume_claim_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of PersistentVolumeClaim
@@ -30117,7 +30229,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_persistent_volume_claim_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_persistent_volume_claim_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30134,12 +30246,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_persistent_volume_claim_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_persistent_volume_claim_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_persistent_volume_claim_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_persistent_volume_claim_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_persistent_volume_claim_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_persistent_volume_claim_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of PersistentVolumeClaim
@@ -30150,7 +30262,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_persistent_volume_claim_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_persistent_volume_claim_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30175,13 +30287,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_persistent_volume_claim_list" % key
+                    " to method watch_namespaced_persistent_volume_claim_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_persistent_volume_claim_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_persistent_volume_claim_list`")
 
 
         collection_formats = {}
@@ -30238,7 +30350,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_pod(self, name, namespace, **kwargs):
+    def watch_namespaced_pod(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Pod
@@ -30249,7 +30361,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30267,12 +30379,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_pod_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_pod_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_pod_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_pod_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Pod
@@ -30283,7 +30395,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30309,16 +30421,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_pod" % key
+                    " to method watch_namespaced_pod" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_pod`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_pod`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_pod`")
 
 
         collection_formats = {}
@@ -30377,7 +30489,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_pod_list(self, namespace, **kwargs):
+    def watch_namespaced_pod_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Pod
@@ -30388,7 +30500,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30405,12 +30517,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_pod_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_pod_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_pod_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_pod_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_pod_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_pod_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Pod
@@ -30421,7 +30533,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30446,13 +30558,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_pod_list" % key
+                    " to method watch_namespaced_pod_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_pod_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_pod_list`")
 
 
         collection_formats = {}
@@ -30509,7 +30621,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_pod_template(self, name, namespace, **kwargs):
+    def watch_namespaced_pod_template(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind PodTemplate
@@ -30520,7 +30632,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod_template(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod_template(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30538,12 +30650,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_pod_template_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_pod_template_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_pod_template_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind PodTemplate
@@ -30554,7 +30666,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod_template_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod_template_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30580,16 +30692,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_pod_template" % key
+                    " to method watch_namespaced_pod_template" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_pod_template`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_pod_template`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_pod_template`")
 
 
         collection_formats = {}
@@ -30648,7 +30760,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_pod_template_list(self, namespace, **kwargs):
+    def watch_namespaced_pod_template_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of PodTemplate
@@ -30659,7 +30771,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod_template_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod_template_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30676,12 +30788,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_pod_template_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_pod_template_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_pod_template_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_pod_template_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_pod_template_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_pod_template_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of PodTemplate
@@ -30692,7 +30804,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_pod_template_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_pod_template_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30717,13 +30829,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_pod_template_list" % key
+                    " to method watch_namespaced_pod_template_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_pod_template_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_pod_template_list`")
 
 
         collection_formats = {}
@@ -30780,7 +30892,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_replication_controller(self, name, namespace, **kwargs):
+    def watch_namespaced_replication_controller(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ReplicationController
@@ -30791,7 +30903,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_replication_controller(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_replication_controller(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30809,12 +30921,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_replication_controller_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_replication_controller_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_replication_controller_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ReplicationController
@@ -30825,7 +30937,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_replication_controller_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_replication_controller_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30851,16 +30963,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_replication_controller" % key
+                    " to method watch_namespaced_replication_controller" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_replication_controller`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_replication_controller`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_replication_controller`")
 
 
         collection_formats = {}
@@ -30919,7 +31031,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_replication_controller_list(self, namespace, **kwargs):
+    def watch_namespaced_replication_controller_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ReplicationController
@@ -30930,7 +31042,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_replication_controller_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_replication_controller_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30947,12 +31059,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_replication_controller_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_replication_controller_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_replication_controller_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_replication_controller_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_replication_controller_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_replication_controller_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ReplicationController
@@ -30963,7 +31075,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_replication_controller_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_replication_controller_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -30988,13 +31100,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_replication_controller_list" % key
+                    " to method watch_namespaced_replication_controller_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_replication_controller_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_replication_controller_list`")
 
 
         collection_formats = {}
@@ -31051,7 +31163,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_resource_quota(self, name, namespace, **kwargs):
+    def watch_namespaced_resource_quota(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ResourceQuota
@@ -31062,7 +31174,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_resource_quota(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_resource_quota(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31080,12 +31192,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_resource_quota_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_resource_quota_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_resource_quota_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ResourceQuota
@@ -31096,7 +31208,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_resource_quota_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_resource_quota_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31122,16 +31234,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_resource_quota" % key
+                    " to method watch_namespaced_resource_quota" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_resource_quota`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_resource_quota`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_resource_quota`")
 
 
         collection_formats = {}
@@ -31190,7 +31302,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_resource_quota_list(self, namespace, **kwargs):
+    def watch_namespaced_resource_quota_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ResourceQuota
@@ -31201,7 +31313,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_resource_quota_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_resource_quota_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31218,12 +31330,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_resource_quota_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_resource_quota_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_resource_quota_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_resource_quota_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_resource_quota_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_resource_quota_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ResourceQuota
@@ -31234,7 +31346,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_resource_quota_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_resource_quota_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31259,13 +31371,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_resource_quota_list" % key
+                    " to method watch_namespaced_resource_quota_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_resource_quota_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_resource_quota_list`")
 
 
         collection_formats = {}
@@ -31322,7 +31434,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_secret(self, name, namespace, **kwargs):
+    def watch_namespaced_secret(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Secret
@@ -31333,7 +31445,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_secret(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_secret(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31351,12 +31463,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_secret_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_secret_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_secret_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_secret_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_secret_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_secret_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Secret
@@ -31367,7 +31479,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_secret_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_secret_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31393,16 +31505,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_secret" % key
+                    " to method watch_namespaced_secret" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_secret`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_secret`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_secret`")
 
 
         collection_formats = {}
@@ -31461,7 +31573,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_secret_list(self, namespace, **kwargs):
+    def watch_namespaced_secret_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Secret
@@ -31472,7 +31584,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_secret_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_secret_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31489,12 +31601,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_secret_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_secret_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_secret_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_secret_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_secret_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_secret_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Secret
@@ -31505,7 +31617,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_secret_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_secret_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31530,13 +31642,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_secret_list" % key
+                    " to method watch_namespaced_secret_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_secret_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_secret_list`")
 
 
         collection_formats = {}
@@ -31593,7 +31705,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_service(self, name, namespace, **kwargs):
+    def watch_namespaced_service(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Service
@@ -31604,7 +31716,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31622,12 +31734,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_service_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_service_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_service_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_service_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_service_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_service_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind Service
@@ -31638,7 +31750,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31664,16 +31776,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_service" % key
+                    " to method watch_namespaced_service" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_service`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_service`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_service`")
 
 
         collection_formats = {}
@@ -31732,7 +31844,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_service_account(self, name, namespace, **kwargs):
+    def watch_namespaced_service_account(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ServiceAccount
@@ -31743,7 +31855,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service_account(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service_account(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31761,12 +31873,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_service_account_with_http_info(name, namespace, **kwargs)
+            return self.watch_namespaced_service_account_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_service_account_with_http_info(name, namespace, **kwargs)
+            (data) = self.watch_namespaced_service_account_with_http_info(name, namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_service_account_with_http_info(self, name, namespace, **kwargs):
+    def watch_namespaced_service_account_with_http_info(self, name, namespace, **kwargs):
         """
         
         watch changes to an object of kind ServiceAccount
@@ -31777,7 +31889,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service_account_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service_account_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31803,16 +31915,16 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_service_account" % key
+                    " to method watch_namespaced_service_account" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_service_account`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_service_account`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_service_account`")
 
 
         collection_formats = {}
@@ -31871,7 +31983,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_service_account_list(self, namespace, **kwargs):
+    def watch_namespaced_service_account_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ServiceAccount
@@ -31882,7 +31994,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service_account_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service_account_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31899,12 +32011,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_service_account_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_service_account_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_service_account_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_service_account_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_service_account_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_service_account_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of ServiceAccount
@@ -31915,7 +32027,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service_account_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service_account_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -31940,13 +32052,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_service_account_list" % key
+                    " to method watch_namespaced_service_account_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_service_account_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_service_account_list`")
 
 
         collection_formats = {}
@@ -32003,7 +32115,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_namespaced_service_list(self, namespace, **kwargs):
+    def watch_namespaced_service_list(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Service
@@ -32014,7 +32126,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service_list(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32031,12 +32143,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_namespaced_service_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_service_list_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_core_v1_namespaced_service_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_service_list_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_core_v1_namespaced_service_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_service_list_with_http_info(self, namespace, **kwargs):
         """
         
         watch individual changes to a list of Service
@@ -32047,7 +32159,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_namespaced_service_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_service_list_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32072,13 +32184,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_namespaced_service_list" % key
+                    " to method watch_namespaced_service_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_core_v1_namespaced_service_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_service_list`")
 
 
         collection_formats = {}
@@ -32135,7 +32247,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_node(self, name, **kwargs):
+    def watch_node(self, name, **kwargs):
         """
         
         watch changes to an object of kind Node
@@ -32146,7 +32258,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_node(name, callback=callback_function)
+        >>> thread = api.watch_node(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32163,12 +32275,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_node_with_http_info(name, **kwargs)
+            return self.watch_node_with_http_info(name, **kwargs)
         else:
-            (data) = self.watch_core_v1_node_with_http_info(name, **kwargs)
+            (data) = self.watch_node_with_http_info(name, **kwargs)
             return data
 
-    def watch_core_v1_node_with_http_info(self, name, **kwargs):
+    def watch_node_with_http_info(self, name, **kwargs):
         """
         
         watch changes to an object of kind Node
@@ -32179,7 +32291,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_node_with_http_info(name, callback=callback_function)
+        >>> thread = api.watch_node_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32204,13 +32316,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_node" % key
+                    " to method watch_node" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_node`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_node`")
 
 
         collection_formats = {}
@@ -32267,7 +32379,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_node_list(self, **kwargs):
+    def watch_node_list(self, **kwargs):
         """
         
         watch individual changes to a list of Node
@@ -32278,7 +32390,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_node_list(callback=callback_function)
+        >>> thread = api.watch_node_list(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32294,12 +32406,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_node_list_with_http_info(**kwargs)
+            return self.watch_node_list_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_node_list_with_http_info(**kwargs)
+            (data) = self.watch_node_list_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_node_list_with_http_info(self, **kwargs):
+    def watch_node_list_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of Node
@@ -32310,7 +32422,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_node_list_with_http_info(callback=callback_function)
+        >>> thread = api.watch_node_list_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32334,7 +32446,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_node_list" % key
+                    " to method watch_node_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -32392,7 +32504,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_persistent_volume(self, name, **kwargs):
+    def watch_persistent_volume(self, name, **kwargs):
         """
         
         watch changes to an object of kind PersistentVolume
@@ -32403,7 +32515,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_persistent_volume(name, callback=callback_function)
+        >>> thread = api.watch_persistent_volume(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32420,12 +32532,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_persistent_volume_with_http_info(name, **kwargs)
+            return self.watch_persistent_volume_with_http_info(name, **kwargs)
         else:
-            (data) = self.watch_core_v1_persistent_volume_with_http_info(name, **kwargs)
+            (data) = self.watch_persistent_volume_with_http_info(name, **kwargs)
             return data
 
-    def watch_core_v1_persistent_volume_with_http_info(self, name, **kwargs):
+    def watch_persistent_volume_with_http_info(self, name, **kwargs):
         """
         
         watch changes to an object of kind PersistentVolume
@@ -32436,7 +32548,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_persistent_volume_with_http_info(name, callback=callback_function)
+        >>> thread = api.watch_persistent_volume_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32461,13 +32573,13 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_persistent_volume" % key
+                    " to method watch_persistent_volume" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_core_v1_persistent_volume`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_persistent_volume`")
 
 
         collection_formats = {}
@@ -32524,7 +32636,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_persistent_volume_claim_list_for_all_namespaces(self, **kwargs):
+    def watch_persistent_volume_claim_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of PersistentVolumeClaim
@@ -32535,7 +32647,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_persistent_volume_claim_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_persistent_volume_claim_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32551,12 +32663,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_persistent_volume_claim_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_persistent_volume_claim_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_persistent_volume_claim_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_persistent_volume_claim_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_persistent_volume_claim_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_persistent_volume_claim_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of PersistentVolumeClaim
@@ -32567,7 +32679,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_persistent_volume_claim_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_persistent_volume_claim_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32591,7 +32703,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_persistent_volume_claim_list_for_all_namespaces" % key
+                    " to method watch_persistent_volume_claim_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -32649,7 +32761,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_persistent_volume_list(self, **kwargs):
+    def watch_persistent_volume_list(self, **kwargs):
         """
         
         watch individual changes to a list of PersistentVolume
@@ -32660,7 +32772,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_persistent_volume_list(callback=callback_function)
+        >>> thread = api.watch_persistent_volume_list(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32676,12 +32788,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_persistent_volume_list_with_http_info(**kwargs)
+            return self.watch_persistent_volume_list_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_persistent_volume_list_with_http_info(**kwargs)
+            (data) = self.watch_persistent_volume_list_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_persistent_volume_list_with_http_info(self, **kwargs):
+    def watch_persistent_volume_list_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of PersistentVolume
@@ -32692,7 +32804,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_persistent_volume_list_with_http_info(callback=callback_function)
+        >>> thread = api.watch_persistent_volume_list_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32716,7 +32828,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_persistent_volume_list" % key
+                    " to method watch_persistent_volume_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -32774,7 +32886,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_pod_list_for_all_namespaces(self, **kwargs):
+    def watch_pod_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of Pod
@@ -32785,7 +32897,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_pod_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_pod_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32801,12 +32913,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_pod_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_pod_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_pod_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_pod_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_pod_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_pod_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of Pod
@@ -32817,7 +32929,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_pod_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_pod_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32841,7 +32953,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_pod_list_for_all_namespaces" % key
+                    " to method watch_pod_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -32899,7 +33011,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_pod_template_list_for_all_namespaces(self, **kwargs):
+    def watch_pod_template_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of PodTemplate
@@ -32910,7 +33022,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_pod_template_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_pod_template_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32926,12 +33038,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_pod_template_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_pod_template_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_pod_template_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_pod_template_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_pod_template_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_pod_template_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of PodTemplate
@@ -32942,7 +33054,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_pod_template_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_pod_template_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -32966,7 +33078,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_pod_template_list_for_all_namespaces" % key
+                    " to method watch_pod_template_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -33024,7 +33136,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_replication_controller_list_for_all_namespaces(self, **kwargs):
+    def watch_replication_controller_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of ReplicationController
@@ -33035,7 +33147,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_replication_controller_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_replication_controller_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33051,12 +33163,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_replication_controller_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_replication_controller_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_replication_controller_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_replication_controller_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_replication_controller_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_replication_controller_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of ReplicationController
@@ -33067,7 +33179,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_replication_controller_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_replication_controller_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33091,7 +33203,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_replication_controller_list_for_all_namespaces" % key
+                    " to method watch_replication_controller_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -33149,7 +33261,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_resource_quota_list_for_all_namespaces(self, **kwargs):
+    def watch_resource_quota_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of ResourceQuota
@@ -33160,7 +33272,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_resource_quota_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_resource_quota_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33176,12 +33288,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_resource_quota_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_resource_quota_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_resource_quota_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_resource_quota_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_resource_quota_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_resource_quota_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of ResourceQuota
@@ -33192,7 +33304,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_resource_quota_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_resource_quota_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33216,7 +33328,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_resource_quota_list_for_all_namespaces" % key
+                    " to method watch_resource_quota_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -33274,7 +33386,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_secret_list_for_all_namespaces(self, **kwargs):
+    def watch_secret_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of Secret
@@ -33285,7 +33397,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_secret_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_secret_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33301,12 +33413,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_secret_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_secret_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_secret_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_secret_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_secret_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_secret_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of Secret
@@ -33317,7 +33429,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_secret_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_secret_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33341,7 +33453,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_secret_list_for_all_namespaces" % key
+                    " to method watch_secret_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -33399,7 +33511,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_service_account_list_for_all_namespaces(self, **kwargs):
+    def watch_service_account_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of ServiceAccount
@@ -33410,7 +33522,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_service_account_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_service_account_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33426,12 +33538,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_service_account_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_service_account_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_service_account_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_service_account_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_service_account_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_service_account_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of ServiceAccount
@@ -33442,7 +33554,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_service_account_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_service_account_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33466,7 +33578,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_service_account_list_for_all_namespaces" % key
+                    " to method watch_service_account_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -33524,7 +33636,7 @@ class CoreV1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_core_v1_service_list_for_all_namespaces(self, **kwargs):
+    def watch_service_list_for_all_namespaces(self, **kwargs):
         """
         
         watch individual changes to a list of Service
@@ -33535,7 +33647,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_service_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_service_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33551,12 +33663,12 @@ class CoreV1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_core_v1_service_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_service_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_core_v1_service_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_service_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_core_v1_service_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_service_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of Service
@@ -33567,7 +33679,7 @@ class CoreV1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_core_v1_service_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_service_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -33591,7 +33703,7 @@ class CoreV1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_core_v1_service_list_for_all_namespaces" % key
+                    " to method watch_service_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']

@@ -51,7 +51,7 @@ class CertificatesV1alpha1Api(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_certificates_v1alpha1_certificate_signing_request(self, body, **kwargs):
+    def create_certificate_signing_request(self, body, **kwargs):
         """
         
         create a CertificateSigningRequest
@@ -62,7 +62,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_certificates_v1alpha1_certificate_signing_request(body, callback=callback_function)
+        >>> thread = api.create_certificate_signing_request(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -74,12 +74,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_certificates_v1alpha1_certificate_signing_request_with_http_info(body, **kwargs)
+            return self.create_certificate_signing_request_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_certificates_v1alpha1_certificate_signing_request_with_http_info(body, **kwargs)
+            (data) = self.create_certificate_signing_request_with_http_info(body, **kwargs)
             return data
 
-    def create_certificates_v1alpha1_certificate_signing_request_with_http_info(self, body, **kwargs):
+    def create_certificate_signing_request_with_http_info(self, body, **kwargs):
         """
         
         create a CertificateSigningRequest
@@ -90,7 +90,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_certificates_v1alpha1_certificate_signing_request_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_certificate_signing_request_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -110,13 +110,13 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_certificates_v1alpha1_certificate_signing_request" % key
+                    " to method create_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `body` when calling `create_certificate_signing_request`")
 
 
         collection_formats = {}
@@ -163,7 +163,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_certificates_v1alpha1_certificate_signing_request(self, name, body, **kwargs):
+    def delete_certificate_signing_request(self, name, body, **kwargs):
         """
         
         delete a CertificateSigningRequest
@@ -174,25 +174,27 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_certificates_v1alpha1_certificate_signing_request(name, body, callback=callback_function)
+        >>> thread = api.delete_certificate_signing_request(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the CertificateSigningRequest (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, **kwargs)
+            return self.delete_certificate_signing_request_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.delete_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, **kwargs)
+            (data) = self.delete_certificate_signing_request_with_http_info(name, body, **kwargs)
             return data
 
-    def delete_certificates_v1alpha1_certificate_signing_request_with_http_info(self, name, body, **kwargs):
+    def delete_certificate_signing_request_with_http_info(self, name, body, **kwargs):
         """
         
         delete a CertificateSigningRequest
@@ -203,19 +205,21 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.delete_certificate_signing_request_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: name of the CertificateSigningRequest (required)
         :param V1DeleteOptions body:  (required)
         :param str pretty: If 'true', then the output is pretty printed.
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
         :return: UnversionedStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'body', 'pretty']
+        all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -224,16 +228,16 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_certificates_v1alpha1_certificate_signing_request" % key
+                    " to method delete_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_certificate_signing_request`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_certificate_signing_request`")
 
 
         collection_formats = {}
@@ -246,6 +250,10 @@ class CertificatesV1alpha1Api(object):
         query_params = {}
         if 'pretty' in params:
             query_params['pretty'] = params['pretty']
+        if 'grace_period_seconds' in params:
+            query_params['gracePeriodSeconds'] = params['grace_period_seconds']
+        if 'orphan_dependents' in params:
+            query_params['orphanDependents'] = params['orphan_dependents']
 
         header_params = {}
 
@@ -282,7 +290,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def delete_certificates_v1alpha1_collection_certificate_signing_request(self, **kwargs):
+    def delete_collection_certificate_signing_request(self, **kwargs):
         """
         
         delete collection of CertificateSigningRequest
@@ -293,7 +301,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_certificates_v1alpha1_collection_certificate_signing_request(callback=callback_function)
+        >>> thread = api.delete_collection_certificate_signing_request(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -309,12 +317,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_certificates_v1alpha1_collection_certificate_signing_request_with_http_info(**kwargs)
+            return self.delete_collection_certificate_signing_request_with_http_info(**kwargs)
         else:
-            (data) = self.delete_certificates_v1alpha1_collection_certificate_signing_request_with_http_info(**kwargs)
+            (data) = self.delete_collection_certificate_signing_request_with_http_info(**kwargs)
             return data
 
-    def delete_certificates_v1alpha1_collection_certificate_signing_request_with_http_info(self, **kwargs):
+    def delete_collection_certificate_signing_request_with_http_info(self, **kwargs):
         """
         
         delete collection of CertificateSigningRequest
@@ -325,7 +333,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_certificates_v1alpha1_collection_certificate_signing_request_with_http_info(callback=callback_function)
+        >>> thread = api.delete_collection_certificate_signing_request_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -349,7 +357,7 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_certificates_v1alpha1_collection_certificate_signing_request" % key
+                    " to method delete_collection_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -407,7 +415,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def get_certificates_v1alpha1_api_resources(self, **kwargs):
+    def get_api_resources(self, **kwargs):
         """
         
         get available resources
@@ -418,7 +426,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_certificates_v1alpha1_api_resources(callback=callback_function)
+        >>> thread = api.get_api_resources(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -428,12 +436,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_certificates_v1alpha1_api_resources_with_http_info(**kwargs)
+            return self.get_api_resources_with_http_info(**kwargs)
         else:
-            (data) = self.get_certificates_v1alpha1_api_resources_with_http_info(**kwargs)
+            (data) = self.get_api_resources_with_http_info(**kwargs)
             return data
 
-    def get_certificates_v1alpha1_api_resources_with_http_info(self, **kwargs):
+    def get_api_resources_with_http_info(self, **kwargs):
         """
         
         get available resources
@@ -444,7 +452,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_certificates_v1alpha1_api_resources_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_resources_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -462,7 +470,7 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_certificates_v1alpha1_api_resources" % key
+                    " to method get_api_resources" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -508,7 +516,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def list_certificates_v1alpha1_certificate_signing_request(self, **kwargs):
+    def list_certificate_signing_request(self, **kwargs):
         """
         
         list or watch objects of kind CertificateSigningRequest
@@ -519,7 +527,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_certificates_v1alpha1_certificate_signing_request(callback=callback_function)
+        >>> thread = api.list_certificate_signing_request(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -535,12 +543,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_certificates_v1alpha1_certificate_signing_request_with_http_info(**kwargs)
+            return self.list_certificate_signing_request_with_http_info(**kwargs)
         else:
-            (data) = self.list_certificates_v1alpha1_certificate_signing_request_with_http_info(**kwargs)
+            (data) = self.list_certificate_signing_request_with_http_info(**kwargs)
             return data
 
-    def list_certificates_v1alpha1_certificate_signing_request_with_http_info(self, **kwargs):
+    def list_certificate_signing_request_with_http_info(self, **kwargs):
         """
         
         list or watch objects of kind CertificateSigningRequest
@@ -551,7 +559,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_certificates_v1alpha1_certificate_signing_request_with_http_info(callback=callback_function)
+        >>> thread = api.list_certificate_signing_request_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -575,7 +583,7 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_certificates_v1alpha1_certificate_signing_request" % key
+                    " to method list_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -633,7 +641,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def patch_certificates_v1alpha1_certificate_signing_request(self, name, body, **kwargs):
+    def patch_certificate_signing_request(self, name, body, **kwargs):
         """
         
         partially update the specified CertificateSigningRequest
@@ -644,7 +652,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_certificates_v1alpha1_certificate_signing_request(name, body, callback=callback_function)
+        >>> thread = api.patch_certificate_signing_request(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -657,12 +665,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, **kwargs)
+            return self.patch_certificate_signing_request_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.patch_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, **kwargs)
+            (data) = self.patch_certificate_signing_request_with_http_info(name, body, **kwargs)
             return data
 
-    def patch_certificates_v1alpha1_certificate_signing_request_with_http_info(self, name, body, **kwargs):
+    def patch_certificate_signing_request_with_http_info(self, name, body, **kwargs):
         """
         
         partially update the specified CertificateSigningRequest
@@ -673,7 +681,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.patch_certificate_signing_request_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -694,16 +702,16 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_certificates_v1alpha1_certificate_signing_request" % key
+                    " to method patch_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_certificate_signing_request`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_certificate_signing_request`")
 
 
         collection_formats = {}
@@ -752,7 +760,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def read_certificates_v1alpha1_certificate_signing_request(self, name, **kwargs):
+    def read_certificate_signing_request(self, name, **kwargs):
         """
         
         read the specified CertificateSigningRequest
@@ -763,7 +771,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_certificates_v1alpha1_certificate_signing_request(name, callback=callback_function)
+        >>> thread = api.read_certificate_signing_request(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -777,12 +785,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_certificates_v1alpha1_certificate_signing_request_with_http_info(name, **kwargs)
+            return self.read_certificate_signing_request_with_http_info(name, **kwargs)
         else:
-            (data) = self.read_certificates_v1alpha1_certificate_signing_request_with_http_info(name, **kwargs)
+            (data) = self.read_certificate_signing_request_with_http_info(name, **kwargs)
             return data
 
-    def read_certificates_v1alpha1_certificate_signing_request_with_http_info(self, name, **kwargs):
+    def read_certificate_signing_request_with_http_info(self, name, **kwargs):
         """
         
         read the specified CertificateSigningRequest
@@ -793,7 +801,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_certificates_v1alpha1_certificate_signing_request_with_http_info(name, callback=callback_function)
+        >>> thread = api.read_certificate_signing_request_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -815,13 +823,13 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_certificates_v1alpha1_certificate_signing_request" % key
+                    " to method read_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `name` when calling `read_certificate_signing_request`")
 
 
         collection_formats = {}
@@ -872,7 +880,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_certificates_v1alpha1_certificate_signing_request(self, name, body, **kwargs):
+    def replace_certificate_signing_request(self, name, body, **kwargs):
         """
         
         replace the specified CertificateSigningRequest
@@ -883,7 +891,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_certificates_v1alpha1_certificate_signing_request(name, body, callback=callback_function)
+        >>> thread = api.replace_certificate_signing_request(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -896,12 +904,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, **kwargs)
+            return self.replace_certificate_signing_request_with_http_info(name, body, **kwargs)
         else:
-            (data) = self.replace_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, **kwargs)
+            (data) = self.replace_certificate_signing_request_with_http_info(name, body, **kwargs)
             return data
 
-    def replace_certificates_v1alpha1_certificate_signing_request_with_http_info(self, name, body, **kwargs):
+    def replace_certificate_signing_request_with_http_info(self, name, body, **kwargs):
         """
         
         replace the specified CertificateSigningRequest
@@ -912,7 +920,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_certificates_v1alpha1_certificate_signing_request_with_http_info(name, body, callback=callback_function)
+        >>> thread = api.replace_certificate_signing_request_with_http_info(name, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -933,16 +941,16 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_certificates_v1alpha1_certificate_signing_request" % key
+                    " to method replace_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_certificate_signing_request`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_certificate_signing_request`")
 
 
         collection_formats = {}
@@ -991,7 +999,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_certificates_v1alpha1_certificate_signing_request_approval(self, body, name, **kwargs):
+    def replace_certificate_signing_request_approval(self, body, name, **kwargs):
         """
         
         replace approval of the specified CertificateSigningRequest
@@ -1002,7 +1010,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_certificates_v1alpha1_certificate_signing_request_approval(body, name, callback=callback_function)
+        >>> thread = api.replace_certificate_signing_request_approval(body, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1015,12 +1023,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_certificates_v1alpha1_certificate_signing_request_approval_with_http_info(body, name, **kwargs)
+            return self.replace_certificate_signing_request_approval_with_http_info(body, name, **kwargs)
         else:
-            (data) = self.replace_certificates_v1alpha1_certificate_signing_request_approval_with_http_info(body, name, **kwargs)
+            (data) = self.replace_certificate_signing_request_approval_with_http_info(body, name, **kwargs)
             return data
 
-    def replace_certificates_v1alpha1_certificate_signing_request_approval_with_http_info(self, body, name, **kwargs):
+    def replace_certificate_signing_request_approval_with_http_info(self, body, name, **kwargs):
         """
         
         replace approval of the specified CertificateSigningRequest
@@ -1031,7 +1039,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_certificates_v1alpha1_certificate_signing_request_approval_with_http_info(body, name, callback=callback_function)
+        >>> thread = api.replace_certificate_signing_request_approval_with_http_info(body, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1052,16 +1060,16 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_certificates_v1alpha1_certificate_signing_request_approval" % key
+                    " to method replace_certificate_signing_request_approval" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_certificates_v1alpha1_certificate_signing_request_approval`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_certificate_signing_request_approval`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_certificates_v1alpha1_certificate_signing_request_approval`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_certificate_signing_request_approval`")
 
 
         collection_formats = {}
@@ -1110,7 +1118,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def replace_certificates_v1alpha1_certificate_signing_request_status(self, body, name, **kwargs):
+    def replace_certificate_signing_request_status(self, body, name, **kwargs):
         """
         
         replace status of the specified CertificateSigningRequest
@@ -1121,7 +1129,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_certificates_v1alpha1_certificate_signing_request_status(body, name, callback=callback_function)
+        >>> thread = api.replace_certificate_signing_request_status(body, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1134,12 +1142,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_certificates_v1alpha1_certificate_signing_request_status_with_http_info(body, name, **kwargs)
+            return self.replace_certificate_signing_request_status_with_http_info(body, name, **kwargs)
         else:
-            (data) = self.replace_certificates_v1alpha1_certificate_signing_request_status_with_http_info(body, name, **kwargs)
+            (data) = self.replace_certificate_signing_request_status_with_http_info(body, name, **kwargs)
             return data
 
-    def replace_certificates_v1alpha1_certificate_signing_request_status_with_http_info(self, body, name, **kwargs):
+    def replace_certificate_signing_request_status_with_http_info(self, body, name, **kwargs):
         """
         
         replace status of the specified CertificateSigningRequest
@@ -1150,7 +1158,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_certificates_v1alpha1_certificate_signing_request_status_with_http_info(body, name, callback=callback_function)
+        >>> thread = api.replace_certificate_signing_request_status_with_http_info(body, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1171,16 +1179,16 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_certificates_v1alpha1_certificate_signing_request_status" % key
+                    " to method replace_certificate_signing_request_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_certificates_v1alpha1_certificate_signing_request_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_certificate_signing_request_status`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_certificates_v1alpha1_certificate_signing_request_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_certificate_signing_request_status`")
 
 
         collection_formats = {}
@@ -1229,7 +1237,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_certificates_v1alpha1_certificate_signing_request(self, name, **kwargs):
+    def watch_certificate_signing_request(self, name, **kwargs):
         """
         
         watch changes to an object of kind CertificateSigningRequest
@@ -1240,7 +1248,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_certificates_v1alpha1_certificate_signing_request(name, callback=callback_function)
+        >>> thread = api.watch_certificate_signing_request(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1257,12 +1265,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_certificates_v1alpha1_certificate_signing_request_with_http_info(name, **kwargs)
+            return self.watch_certificate_signing_request_with_http_info(name, **kwargs)
         else:
-            (data) = self.watch_certificates_v1alpha1_certificate_signing_request_with_http_info(name, **kwargs)
+            (data) = self.watch_certificate_signing_request_with_http_info(name, **kwargs)
             return data
 
-    def watch_certificates_v1alpha1_certificate_signing_request_with_http_info(self, name, **kwargs):
+    def watch_certificate_signing_request_with_http_info(self, name, **kwargs):
         """
         
         watch changes to an object of kind CertificateSigningRequest
@@ -1273,7 +1281,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_certificates_v1alpha1_certificate_signing_request_with_http_info(name, callback=callback_function)
+        >>> thread = api.watch_certificate_signing_request_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1298,13 +1306,13 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_certificates_v1alpha1_certificate_signing_request" % key
+                    " to method watch_certificate_signing_request" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_certificates_v1alpha1_certificate_signing_request`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_certificate_signing_request`")
 
 
         collection_formats = {}
@@ -1361,7 +1369,7 @@ class CertificatesV1alpha1Api(object):
                                             _return_http_data_only=params.get('_return_http_data_only'),
                                             collection_formats=collection_formats)
 
-    def watch_certificates_v1alpha1_certificate_signing_request_list(self, **kwargs):
+    def watch_certificate_signing_request_list(self, **kwargs):
         """
         
         watch individual changes to a list of CertificateSigningRequest
@@ -1372,7 +1380,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_certificates_v1alpha1_certificate_signing_request_list(callback=callback_function)
+        >>> thread = api.watch_certificate_signing_request_list(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1388,12 +1396,12 @@ class CertificatesV1alpha1Api(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_certificates_v1alpha1_certificate_signing_request_list_with_http_info(**kwargs)
+            return self.watch_certificate_signing_request_list_with_http_info(**kwargs)
         else:
-            (data) = self.watch_certificates_v1alpha1_certificate_signing_request_list_with_http_info(**kwargs)
+            (data) = self.watch_certificate_signing_request_list_with_http_info(**kwargs)
             return data
 
-    def watch_certificates_v1alpha1_certificate_signing_request_list_with_http_info(self, **kwargs):
+    def watch_certificate_signing_request_list_with_http_info(self, **kwargs):
         """
         
         watch individual changes to a list of CertificateSigningRequest
@@ -1404,7 +1412,7 @@ class CertificatesV1alpha1Api(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_certificates_v1alpha1_certificate_signing_request_list_with_http_info(callback=callback_function)
+        >>> thread = api.watch_certificate_signing_request_list_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1428,7 +1436,7 @@ class CertificatesV1alpha1Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_certificates_v1alpha1_certificate_signing_request_list" % key
+                    " to method watch_certificate_signing_request_list" % key
                 )
             params[key] = val
         del params['kwargs']
