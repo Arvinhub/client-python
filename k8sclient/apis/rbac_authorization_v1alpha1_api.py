@@ -104,6 +104,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -161,6 +162,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_cluster_role_binding(self, body, **kwargs):
@@ -216,6 +218,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -273,6 +276,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_role(self, namespace, body, **kwargs):
@@ -330,6 +334,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -392,6 +397,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_role_binding(self, namespace, body, **kwargs):
@@ -449,6 +455,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -511,6 +518,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_cluster_role(self, name, body, **kwargs):
@@ -572,6 +580,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -638,6 +647,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_cluster_role_binding(self, name, body, **kwargs):
@@ -699,6 +709,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -765,6 +776,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_cluster_role(self, **kwargs):
@@ -828,6 +840,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -890,6 +903,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_cluster_role_binding(self, **kwargs):
@@ -953,6 +967,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1015,6 +1030,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_role(self, namespace, **kwargs):
@@ -1080,6 +1096,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1147,6 +1164,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_role_binding(self, namespace, **kwargs):
@@ -1212,6 +1230,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1279,6 +1298,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_role(self, name, namespace, body, **kwargs):
@@ -1342,6 +1362,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1413,6 +1434,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_role_binding(self, name, namespace, body, **kwargs):
@@ -1476,6 +1498,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1547,6 +1570,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def get_api_resources(self, **kwargs):
@@ -1598,6 +1622,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1648,6 +1673,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_cluster_role(self, **kwargs):
@@ -1711,6 +1737,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1773,6 +1800,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_cluster_role_binding(self, **kwargs):
@@ -1836,6 +1864,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1898,6 +1927,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_role(self, namespace, **kwargs):
@@ -1963,6 +1993,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2030,6 +2061,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_role_binding(self, namespace, **kwargs):
@@ -2095,6 +2127,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2162,6 +2195,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_role_binding_for_all_namespaces(self, **kwargs):
@@ -2225,6 +2259,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2287,6 +2322,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_role_for_all_namespaces(self, **kwargs):
@@ -2350,6 +2386,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2412,6 +2449,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_cluster_role(self, name, body, **kwargs):
@@ -2469,6 +2507,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2531,6 +2570,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_cluster_role_binding(self, name, body, **kwargs):
@@ -2588,6 +2628,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2650,6 +2691,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_role(self, name, namespace, body, **kwargs):
@@ -2709,6 +2751,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2776,6 +2819,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_role_binding(self, name, namespace, body, **kwargs):
@@ -2835,6 +2879,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2902,6 +2947,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_cluster_role(self, name, **kwargs):
@@ -2957,6 +3003,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3014,6 +3061,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_cluster_role_binding(self, name, **kwargs):
@@ -3069,6 +3117,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3126,6 +3175,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_role(self, name, namespace, **kwargs):
@@ -3183,6 +3233,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3245,6 +3296,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_role_binding(self, name, namespace, **kwargs):
@@ -3302,6 +3354,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3364,6 +3417,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_cluster_role(self, name, body, **kwargs):
@@ -3421,6 +3475,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3483,6 +3538,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_cluster_role_binding(self, name, body, **kwargs):
@@ -3540,6 +3596,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3602,6 +3659,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_role(self, name, namespace, body, **kwargs):
@@ -3661,6 +3719,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3728,6 +3787,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_role_binding(self, name, namespace, body, **kwargs):
@@ -3787,6 +3847,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3854,6 +3915,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_cluster_role(self, name, **kwargs):
@@ -3919,6 +3981,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3986,6 +4049,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_cluster_role_binding(self, name, **kwargs):
@@ -4051,6 +4115,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4118,6 +4183,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_cluster_role_binding_list(self, **kwargs):
@@ -4181,6 +4247,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4243,6 +4310,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_cluster_role_list(self, **kwargs):
@@ -4306,6 +4374,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4368,6 +4437,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_role(self, name, namespace, **kwargs):
@@ -4435,6 +4505,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4507,6 +4578,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_role_binding(self, name, namespace, **kwargs):
@@ -4574,6 +4646,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4646,6 +4719,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_role_binding_list(self, namespace, **kwargs):
@@ -4711,6 +4785,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4778,6 +4853,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_role_list(self, namespace, **kwargs):
@@ -4843,6 +4919,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4910,6 +4987,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_role_binding_list_for_all_namespaces(self, **kwargs):
@@ -4973,6 +5051,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5035,6 +5114,7 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_role_list_for_all_namespaces(self, **kwargs):
@@ -5098,6 +5178,7 @@ class RbacAuthorizationV1alpha1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5160,4 +5241,5 @@ class RbacAuthorizationV1alpha1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)

@@ -106,6 +106,7 @@ class BatchV1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -168,6 +169,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_job(self, namespace, **kwargs):
@@ -233,6 +235,7 @@ class BatchV1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -300,6 +303,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_job(self, name, namespace, body, **kwargs):
@@ -363,6 +367,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -434,6 +439,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def get_api_resources(self, **kwargs):
@@ -485,6 +491,7 @@ class BatchV1Api(object):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -535,6 +542,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_job_for_all_namespaces(self, **kwargs):
@@ -598,6 +606,7 @@ class BatchV1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -660,6 +669,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_job(self, namespace, **kwargs):
@@ -725,6 +735,7 @@ class BatchV1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -792,6 +803,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_job(self, name, namespace, body, **kwargs):
@@ -851,6 +863,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -918,6 +931,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_job_status(self, name, namespace, body, **kwargs):
@@ -977,6 +991,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1044,6 +1059,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_job(self, name, namespace, **kwargs):
@@ -1105,6 +1121,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1171,6 +1188,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_job_status(self, name, namespace, **kwargs):
@@ -1228,6 +1246,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1290,6 +1309,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_job(self, name, namespace, body, **kwargs):
@@ -1349,6 +1369,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1416,6 +1437,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_job_status(self, name, namespace, body, **kwargs):
@@ -1475,6 +1497,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1542,6 +1565,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_job_list_for_all_namespaces(self, **kwargs):
@@ -1605,6 +1629,7 @@ class BatchV1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1667,6 +1692,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_job(self, name, namespace, **kwargs):
@@ -1734,6 +1760,7 @@ class BatchV1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1806,6 +1833,7 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_job_list(self, namespace, **kwargs):
@@ -1871,6 +1899,7 @@ class BatchV1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1938,4 +1967,5 @@ class BatchV1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)

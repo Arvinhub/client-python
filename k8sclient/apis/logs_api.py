@@ -102,6 +102,7 @@ class LogsApi(object):
         all_params = ['logpath']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -157,6 +158,7 @@ class LogsApi(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def log_file_list_handler(self, **kwargs):
@@ -208,6 +210,7 @@ class LogsApi(object):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -258,4 +261,5 @@ class LogsApi(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)

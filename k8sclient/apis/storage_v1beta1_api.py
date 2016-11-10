@@ -104,6 +104,7 @@ class StorageV1beta1Api(object):
         all_params = ['body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -161,6 +162,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_storage_class(self, **kwargs):
@@ -224,6 +226,7 @@ class StorageV1beta1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -286,6 +289,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_storage_class(self, name, body, **kwargs):
@@ -347,6 +351,7 @@ class StorageV1beta1Api(object):
         all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -413,6 +418,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def get_api_resources(self, **kwargs):
@@ -464,6 +470,7 @@ class StorageV1beta1Api(object):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -514,6 +521,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_storage_class(self, **kwargs):
@@ -577,6 +585,7 @@ class StorageV1beta1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -639,6 +648,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_storage_class(self, name, body, **kwargs):
@@ -696,6 +706,7 @@ class StorageV1beta1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -758,6 +769,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_storage_class(self, name, **kwargs):
@@ -817,6 +829,7 @@ class StorageV1beta1Api(object):
         all_params = ['name', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -878,6 +891,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_storage_class(self, name, body, **kwargs):
@@ -935,6 +949,7 @@ class StorageV1beta1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -997,6 +1012,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_storage_class(self, name, **kwargs):
@@ -1062,6 +1078,7 @@ class StorageV1beta1Api(object):
         all_params = ['name', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1129,6 +1146,7 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_storage_class_list(self, **kwargs):
@@ -1192,6 +1210,7 @@ class StorageV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1254,4 +1273,5 @@ class StorageV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)

@@ -106,6 +106,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -168,6 +169,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_deployment(self, namespace, body, **kwargs):
@@ -225,6 +227,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -287,6 +290,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_deployment_rollback_rollback(self, body, name, namespace, **kwargs):
@@ -346,6 +350,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['body', 'name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -413,6 +418,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_horizontal_pod_autoscaler(self, namespace, body, **kwargs):
@@ -470,6 +476,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -532,6 +539,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_ingress(self, namespace, body, **kwargs):
@@ -589,6 +597,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -651,6 +660,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_job(self, namespace, body, **kwargs):
@@ -708,6 +718,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -770,6 +781,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_network_policy(self, namespace, body, **kwargs):
@@ -827,6 +839,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -889,6 +902,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_namespaced_replica_set(self, namespace, body, **kwargs):
@@ -946,6 +960,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1008,6 +1023,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def create_third_party_resource(self, body, **kwargs):
@@ -1063,6 +1079,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1120,6 +1137,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_daemon_set(self, namespace, **kwargs):
@@ -1185,6 +1203,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1252,6 +1271,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_deployment(self, namespace, **kwargs):
@@ -1317,6 +1337,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1384,6 +1405,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_horizontal_pod_autoscaler(self, namespace, **kwargs):
@@ -1449,6 +1471,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1516,6 +1539,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_ingress(self, namespace, **kwargs):
@@ -1581,6 +1605,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1648,6 +1673,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_job(self, namespace, **kwargs):
@@ -1713,6 +1739,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1780,6 +1807,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_network_policy(self, namespace, **kwargs):
@@ -1845,6 +1873,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -1912,6 +1941,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_namespaced_replica_set(self, namespace, **kwargs):
@@ -1977,6 +2007,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2044,6 +2075,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_collection_third_party_resource(self, **kwargs):
@@ -2107,6 +2139,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2169,6 +2202,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_daemon_set(self, name, namespace, body, **kwargs):
@@ -2232,6 +2266,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2303,6 +2338,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_deployment(self, name, namespace, body, **kwargs):
@@ -2366,6 +2402,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2437,6 +2474,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_horizontal_pod_autoscaler(self, name, namespace, body, **kwargs):
@@ -2500,6 +2538,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2571,6 +2610,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_ingress(self, name, namespace, body, **kwargs):
@@ -2634,6 +2674,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2705,6 +2746,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_job(self, name, namespace, body, **kwargs):
@@ -2768,6 +2810,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2839,6 +2882,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_network_policy(self, name, namespace, body, **kwargs):
@@ -2902,6 +2946,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -2973,6 +3018,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_namespaced_replica_set(self, name, namespace, body, **kwargs):
@@ -3036,6 +3082,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3107,6 +3154,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def delete_third_party_resource(self, name, body, **kwargs):
@@ -3168,6 +3216,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'body', 'pretty', 'grace_period_seconds', 'orphan_dependents']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3234,6 +3283,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def get_api_resources(self, **kwargs):
@@ -3285,6 +3335,7 @@ class ExtensionsV1beta1Api(object):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3335,6 +3386,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_daemon_set_for_all_namespaces(self, **kwargs):
@@ -3398,6 +3450,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3460,6 +3513,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_deployment_for_all_namespaces(self, **kwargs):
@@ -3523,6 +3577,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3585,6 +3640,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_horizontal_pod_autoscaler_for_all_namespaces(self, **kwargs):
@@ -3648,6 +3704,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3710,6 +3767,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_ingress_for_all_namespaces(self, **kwargs):
@@ -3773,6 +3831,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3835,6 +3894,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_job_for_all_namespaces(self, **kwargs):
@@ -3898,6 +3958,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -3960,6 +4021,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_daemon_set(self, namespace, **kwargs):
@@ -4025,6 +4087,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4092,6 +4155,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_deployment(self, namespace, **kwargs):
@@ -4157,6 +4221,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4224,6 +4289,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_horizontal_pod_autoscaler(self, namespace, **kwargs):
@@ -4289,6 +4355,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4356,6 +4423,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_ingress(self, namespace, **kwargs):
@@ -4421,6 +4489,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4488,6 +4557,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_job(self, namespace, **kwargs):
@@ -4553,6 +4623,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4620,6 +4691,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_network_policy(self, namespace, **kwargs):
@@ -4685,6 +4757,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4752,6 +4825,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_namespaced_replica_set(self, namespace, **kwargs):
@@ -4817,6 +4891,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -4884,6 +4959,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_network_policy_for_all_namespaces(self, **kwargs):
@@ -4947,6 +5023,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5009,6 +5086,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_replica_set_for_all_namespaces(self, **kwargs):
@@ -5072,6 +5150,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5134,6 +5213,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def list_third_party_resource(self, **kwargs):
@@ -5197,6 +5277,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['pretty', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5259,6 +5340,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_daemon_set(self, name, namespace, body, **kwargs):
@@ -5318,6 +5400,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5385,6 +5468,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_daemon_set_status(self, name, namespace, body, **kwargs):
@@ -5444,6 +5528,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5511,6 +5596,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_deployment(self, name, namespace, body, **kwargs):
@@ -5570,6 +5656,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5637,6 +5724,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_deployment_status(self, name, namespace, body, **kwargs):
@@ -5696,6 +5784,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5763,6 +5852,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_deployments_scale(self, name, namespace, body, **kwargs):
@@ -5822,6 +5912,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -5889,6 +5980,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_horizontal_pod_autoscaler(self, name, namespace, body, **kwargs):
@@ -5948,6 +6040,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6015,6 +6108,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_horizontal_pod_autoscaler_status(self, name, namespace, body, **kwargs):
@@ -6074,6 +6168,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6141,6 +6236,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_ingress(self, name, namespace, body, **kwargs):
@@ -6200,6 +6296,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6267,6 +6364,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_ingress_status(self, name, namespace, body, **kwargs):
@@ -6326,6 +6424,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6393,6 +6492,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_job(self, name, namespace, body, **kwargs):
@@ -6452,6 +6552,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6519,6 +6620,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_job_status(self, name, namespace, body, **kwargs):
@@ -6578,6 +6680,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6645,6 +6748,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_network_policy(self, name, namespace, body, **kwargs):
@@ -6704,6 +6808,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6771,6 +6876,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_replica_set(self, name, namespace, body, **kwargs):
@@ -6830,6 +6936,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -6897,6 +7004,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_replica_set_status(self, name, namespace, body, **kwargs):
@@ -6956,6 +7064,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7023,6 +7132,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_replicasets_scale(self, name, namespace, body, **kwargs):
@@ -7082,6 +7192,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7149,6 +7260,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_namespaced_replicationcontrollers_scale(self, name, namespace, body, **kwargs):
@@ -7208,6 +7320,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7275,6 +7388,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def patch_third_party_resource(self, name, body, **kwargs):
@@ -7332,6 +7446,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7394,6 +7509,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_daemon_set(self, name, namespace, **kwargs):
@@ -7455,6 +7571,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7521,6 +7638,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_daemon_set_status(self, name, namespace, **kwargs):
@@ -7578,6 +7696,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7640,6 +7759,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_deployment(self, name, namespace, **kwargs):
@@ -7701,6 +7821,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7767,6 +7888,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_deployment_status(self, name, namespace, **kwargs):
@@ -7824,6 +7946,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -7886,6 +8009,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_deployments_scale(self, name, namespace, **kwargs):
@@ -7943,6 +8067,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8005,6 +8130,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_horizontal_pod_autoscaler(self, name, namespace, **kwargs):
@@ -8066,6 +8192,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8132,6 +8259,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_horizontal_pod_autoscaler_status(self, name, namespace, **kwargs):
@@ -8189,6 +8317,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8251,6 +8380,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_ingress(self, name, namespace, **kwargs):
@@ -8312,6 +8442,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8378,6 +8509,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_ingress_status(self, name, namespace, **kwargs):
@@ -8435,6 +8567,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8497,6 +8630,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_job(self, name, namespace, **kwargs):
@@ -8558,6 +8692,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8624,6 +8759,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_job_status(self, name, namespace, **kwargs):
@@ -8681,6 +8817,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8743,6 +8880,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_network_policy(self, name, namespace, **kwargs):
@@ -8804,6 +8942,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8870,6 +9009,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_replica_set(self, name, namespace, **kwargs):
@@ -8931,6 +9071,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -8997,6 +9138,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_replica_set_status(self, name, namespace, **kwargs):
@@ -9054,6 +9196,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9116,6 +9259,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_replicasets_scale(self, name, namespace, **kwargs):
@@ -9173,6 +9317,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9235,6 +9380,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_namespaced_replicationcontrollers_scale(self, name, namespace, **kwargs):
@@ -9292,6 +9438,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9354,6 +9501,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def read_third_party_resource(self, name, **kwargs):
@@ -9413,6 +9561,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'pretty', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9474,6 +9623,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_daemon_set(self, name, namespace, body, **kwargs):
@@ -9533,6 +9683,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9600,6 +9751,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_daemon_set_status(self, name, namespace, body, **kwargs):
@@ -9659,6 +9811,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9726,6 +9879,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_deployment(self, name, namespace, body, **kwargs):
@@ -9785,6 +9939,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9852,6 +10007,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_deployment_status(self, name, namespace, body, **kwargs):
@@ -9911,6 +10067,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -9978,6 +10135,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_deployments_scale(self, name, namespace, body, **kwargs):
@@ -10037,6 +10195,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10104,6 +10263,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_horizontal_pod_autoscaler(self, name, namespace, body, **kwargs):
@@ -10163,6 +10323,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10230,6 +10391,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_horizontal_pod_autoscaler_status(self, name, namespace, body, **kwargs):
@@ -10289,6 +10451,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10356,6 +10519,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_ingress(self, name, namespace, body, **kwargs):
@@ -10415,6 +10579,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10482,6 +10647,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_ingress_status(self, name, namespace, body, **kwargs):
@@ -10541,6 +10707,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10608,6 +10775,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_job(self, name, namespace, body, **kwargs):
@@ -10667,6 +10835,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10734,6 +10903,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_job_status(self, name, namespace, body, **kwargs):
@@ -10793,6 +10963,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10860,6 +11031,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_network_policy(self, name, namespace, body, **kwargs):
@@ -10919,6 +11091,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -10986,6 +11159,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_replica_set(self, name, namespace, body, **kwargs):
@@ -11045,6 +11219,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11112,6 +11287,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_replica_set_status(self, name, namespace, body, **kwargs):
@@ -11171,6 +11347,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11238,6 +11415,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_replicasets_scale(self, name, namespace, body, **kwargs):
@@ -11297,6 +11475,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11364,6 +11543,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_namespaced_replicationcontrollers_scale(self, name, namespace, body, **kwargs):
@@ -11423,6 +11603,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11490,6 +11671,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def replace_third_party_resource(self, name, body, **kwargs):
@@ -11547,6 +11729,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'body', 'pretty']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11609,6 +11792,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_daemon_set_list_for_all_namespaces(self, **kwargs):
@@ -11672,6 +11856,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11734,6 +11919,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_deployment_list_for_all_namespaces(self, **kwargs):
@@ -11797,6 +11983,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11859,6 +12046,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_horizontal_pod_autoscaler_list_for_all_namespaces(self, **kwargs):
@@ -11922,6 +12110,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -11984,6 +12173,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_ingress_list_for_all_namespaces(self, **kwargs):
@@ -12047,6 +12237,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -12109,6 +12300,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_job_list_for_all_namespaces(self, **kwargs):
@@ -12172,6 +12364,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -12234,6 +12427,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_daemon_set(self, name, namespace, **kwargs):
@@ -12301,6 +12495,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -12373,6 +12568,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_daemon_set_list(self, namespace, **kwargs):
@@ -12438,6 +12634,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -12505,6 +12702,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_deployment(self, name, namespace, **kwargs):
@@ -12572,6 +12770,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -12644,6 +12843,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_deployment_list(self, namespace, **kwargs):
@@ -12709,6 +12909,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -12776,6 +12977,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_horizontal_pod_autoscaler(self, name, namespace, **kwargs):
@@ -12843,6 +13045,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -12915,6 +13118,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_horizontal_pod_autoscaler_list(self, namespace, **kwargs):
@@ -12980,6 +13184,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13047,6 +13252,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_ingress(self, name, namespace, **kwargs):
@@ -13114,6 +13320,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13186,6 +13393,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_ingress_list(self, namespace, **kwargs):
@@ -13251,6 +13459,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13318,6 +13527,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_job(self, name, namespace, **kwargs):
@@ -13385,6 +13595,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13457,6 +13668,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_job_list(self, namespace, **kwargs):
@@ -13522,6 +13734,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13589,6 +13802,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_network_policy(self, name, namespace, **kwargs):
@@ -13656,6 +13870,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13728,6 +13943,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_network_policy_list(self, namespace, **kwargs):
@@ -13793,6 +14009,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13860,6 +14077,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_replica_set(self, name, namespace, **kwargs):
@@ -13927,6 +14145,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -13999,6 +14218,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_namespaced_replica_set_list(self, namespace, **kwargs):
@@ -14064,6 +14284,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['namespace', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -14131,6 +14352,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_network_policy_list_for_all_namespaces(self, **kwargs):
@@ -14194,6 +14416,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -14256,6 +14479,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_replica_set_list_for_all_namespaces(self, **kwargs):
@@ -14319,6 +14543,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -14381,6 +14606,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_third_party_resource(self, name, **kwargs):
@@ -14446,6 +14672,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['name', 'field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -14513,6 +14740,7 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)
 
     def watch_third_party_resource_list(self, **kwargs):
@@ -14576,6 +14804,7 @@ class ExtensionsV1beta1Api(object):
         all_params = ['field_selector', 'label_selector', 'pretty', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -14638,4 +14867,5 @@ class ExtensionsV1beta1Api(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
+                                            _preload_content=params.get('preload_content'),
                                             collection_formats=collection_formats)

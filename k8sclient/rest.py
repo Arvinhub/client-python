@@ -105,7 +105,7 @@ class RESTClientObject(object):
         )
 
     def request(self, method, url, query_params=None, headers=None,
-                body=None, post_params=None):
+                body=None, post_params=None, preload_content=True):
         """
         :param method: http request method
         :param url: http request url
@@ -115,6 +115,7 @@ class RESTClientObject(object):
         :param post_params: request post parameters,
                             `application/x-www-form-urlencoded`
                             and `multipart/form-data`
+        :param preload_content: if False, the urllib3.HTTPResponse object will be returned without reading content.
         """
         method = method.upper()
         assert method in ['GET', 'HEAD', 'DELETE', 'POST', 'PUT', 'PATCH', 'OPTIONS']
@@ -141,11 +142,13 @@ class RESTClientObject(object):
                         request_body = json.dumps(body)
                     r = self.pool_manager.request(method, url,
                                                   body=request_body,
+                                                  preload_content=preload_content,
                                                   headers=headers)
                 elif headers['Content-Type'] == 'application/x-www-form-urlencoded':
                     r = self.pool_manager.request(method, url,
                                                   fields=post_params,
                                                   encode_multipart=False,
+                                                  preload_content=preload_content,
                                                   headers=headers)
                 elif headers['Content-Type'] == 'multipart/form-data':
                     # must del headers['Content-Type'], or the correct Content-Type
@@ -154,6 +157,7 @@ class RESTClientObject(object):
                     r = self.pool_manager.request(method, url,
                                                   fields=post_params,
                                                   encode_multipart=True,
+                                                  preload_content=preload_content,
                                                   headers=headers)
                 # Pass a `string` parameter directly in the body to support
                 # other content types than Json when `body` argument is provided
@@ -162,6 +166,7 @@ class RESTClientObject(object):
                     request_body = body
                     r = self.pool_manager.request(method, url,
                                                   body=request_body,
+                                                  preload_content=preload_content,
                                                   headers=headers)
                 else:
                     # Cannot generate the request from given parameters
@@ -172,10 +177,14 @@ class RESTClientObject(object):
             else:
                 r = self.pool_manager.request(method, url,
                                               fields=query_params,
+                                              preload_content=preload_content,
                                               headers=headers)
         except urllib3.exceptions.SSLError as e:
             msg = "{0}\n{1}".format(type(e).__name__, str(e))
             raise ApiException(status=0, reason=msg)
+
+        if not preload_content:
+            return r
 
         r = RESTResponse(r)
 
@@ -192,48 +201,55 @@ class RESTClientObject(object):
 
         return r
 
-    def GET(self, url, headers=None, query_params=None):
+    def GET(self, url, headers=None, query_params=None, preload_content=True):
         return self.request("GET", url,
                             headers=headers,
+                            preload_content=preload_content,
                             query_params=query_params)
 
-    def HEAD(self, url, headers=None, query_params=None):
+    def HEAD(self, url, headers=None, query_params=None, preload_content=True):
         return self.request("HEAD", url,
                             headers=headers,
+                            preload_content=preload_content,
                             query_params=query_params)
 
-    def OPTIONS(self, url, headers=None, query_params=None, post_params=None, body=None):
+    def OPTIONS(self, url, headers=None, query_params=None, post_params=None, body=None, preload_content=True):
         return self.request("OPTIONS", url,
                             headers=headers,
                             query_params=query_params,
                             post_params=post_params,
+                            preload_content=preload_content,
                             body=body)
 
-    def DELETE(self, url, headers=None, query_params=None, body=None):
+    def DELETE(self, url, headers=None, query_params=None, body=None, preload_content=True):
         return self.request("DELETE", url,
                             headers=headers,
                             query_params=query_params,
+                            preload_content=preload_content,
                             body=body)
 
-    def POST(self, url, headers=None, query_params=None, post_params=None, body=None):
+    def POST(self, url, headers=None, query_params=None, post_params=None, body=None, preload_content=True):
         return self.request("POST", url,
                             headers=headers,
                             query_params=query_params,
                             post_params=post_params,
+                            preload_content=preload_content,
                             body=body)
 
-    def PUT(self, url, headers=None, query_params=None, post_params=None, body=None):
+    def PUT(self, url, headers=None, query_params=None, post_params=None, body=None, preload_content=True):
         return self.request("PUT", url,
                             headers=headers,
                             query_params=query_params,
                             post_params=post_params,
+                            preload_content=preload_content,
                             body=body)
 
-    def PATCH(self, url, headers=None, query_params=None, post_params=None, body=None):
+    def PATCH(self, url, headers=None, query_params=None, post_params=None, body=None, preload_content=True):
         return self.request("PATCH", url,
                             headers=headers,
                             query_params=query_params,
                             post_params=post_params,
+                            preload_content=preload_content,
                             body=body)
 
 
