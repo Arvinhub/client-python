@@ -17,3 +17,4 @@ from __future__ import absolute_import
 
 from .kube_config import load_kube_config
 from .ssl import fix_ssl_hosts_with_ipaddress
+from .watch import Watch

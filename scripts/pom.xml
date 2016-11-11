@@ -19,6 +19,7 @@
                         <configuration>
                             <inputSpec>${generator.spec.path}</inputSpec>
                             <language>python</language>
+                            <templateDirectory>/Users/mehdy/projects/swagger-codegen/modules/swagger-codegen/src/main/resources/python</templateDirectory>
                             <configOptions>
                                 <packageName>${generator.package.name}</packageName>
                                 <sortParamsByRequiredFlag>true</sortParamsByRequiredFlag>

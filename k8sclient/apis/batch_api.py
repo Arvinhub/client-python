@@ -101,6 +101,7 @@ class BatchApi(object):
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
+        all_params.append('_request_timeout')
 
         params = locals()
         for key, val in iteritems(params['kwargs']):
@@ -151,5 +152,6 @@ class BatchApi(object):
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('preload_content'),
+                                            _preload_content=params.get('_preload_content', True),
+                                            _request_timeout=params.get('_request_timeout'),
                                             collection_formats=collection_formats)

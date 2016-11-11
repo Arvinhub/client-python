@@ -16,6 +16,8 @@ import urllib3
 import ipaddress
 import sys
 
+from six import PY3
+
 prev_match_hostname = None
 
 
@@ -47,10 +49,13 @@ def _match_hostname(cert, hostname):
 
 def fix_ssl_hosts_with_ipaddress():
     """urllib3 match_hostname does not support IP addresses. This function is adding the support."""
-    global prev_match_hostname
-    if getattr(getattr(urllib3, "connectionpool", None), "match_hostname", None):
-        prev_match_hostname=urllib3.connectionpool.match_hostname
-        urllib3.connectionpool.match_hostname = _match_hostname
-    if getattr(getattr(urllib3, "connection", None), "match_hostname", None):
-        prev_match_hostname=urllib3.connection.match_hostname
-        urllib3.connection.match_hostname = _match_hostname
+
+    # Python 3 already supports this
+    if not PY3:
+        global prev_match_hostname
+        if getattr(getattr(urllib3, "connectionpool", None), "match_hostname", None):
+            prev_match_hostname=urllib3.connectionpool.match_hostname
+            urllib3.connectionpool.match_hostname = _match_hostname
+        if getattr(getattr(urllib3, "connection", None), "match_hostname", None):
+            prev_match_hostname=urllib3.connection.match_hostname
+            urllib3.connection.match_hostname = _match_hostname
