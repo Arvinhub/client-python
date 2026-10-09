@@ -1,0 +1,11 @@
+include LICENSE
+include OWNERS
+include *.md
+include *.txt
+include *.ini
+include kubernetes/py.typed
+include kubernetes/client/py.typed
+exclude .gitignore
+exclude .gitreview
+
+global-exclude *.pyc

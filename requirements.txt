@@ -1,5 +1,11 @@
-certifi >= 14.05.14
-six == 1.8.0
-python_dateutil >= 2.5.3
-setuptools >= 21.0.0
-urllib3 >= 1.15.1
+certifi>=2026.7.22 # MPL
+python-dateutil>=2.8.2  # BSD
+pydantic>=2.13.5  # MIT
+setuptools>=84.0.0  # PSF/ZPL
+PyYAML>=6.0.3  # MIT
+websocket-client>=0.32.0,!=0.40.0,!=0.41.*,!=0.42.* # LGPLv2+
+requests # Apache-2.0
+requests-oauthlib # ISC
+typing-extensions>=4.16.0  # PSF
+urllib3>=2.8.0,<3.0.0 # MIT
+durationpy>=0.11 # MIT
